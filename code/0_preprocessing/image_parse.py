@@ -10,8 +10,8 @@ def flatten_channels(img):
     of length x width. The channels are summed and the overall image is normed.
     '''
     if len(img.shape) == 3:
-        c = min(3, img.shape[-1]) # picks out the rgb channels from rgba
-        return np.dot(img[...,:c], np.ones(c))
+        c = min(3, img.shape[-1])  # picks out the rgb channels from rgba
+        return np.dot(img[..., :c], np.ones(c))
 
 
 def process_image(input_file, standardize=False):
@@ -30,7 +30,7 @@ def process_image(input_file, standardize=False):
         input_img = (input_img - np.mean(input_img))/np.std(input_img)
 
     img_shape = len(input_img.shape)
-    assert  img_shape == 2, "improper image shape of " + str(img_shape)
+    assert img_shape == 2, "improper image shape of " + str(img_shape)
     return input_img
 
 
@@ -62,11 +62,11 @@ def process_label(label_file_list, tol=1.e-5):
     label_data = np.zeros((nx, ny, num_classes))
 
     for i, label_file in enumerate(label_file_list):
-        img   = process_image(label_file, standardize=False)
-        img   = (img - np.min(img))/np.ptp(img)
-        label_data[:,:,i+1] = ((img > tol).astype(int))
+        img = process_image(label_file, standardize=False)
+        img = (img - np.min(img))/np.ptp(img)
+        label_data[:, :, i+1] = ((img > tol).astype(int))
 
-    label_data[:,:,0] = (np.sum(label_data[:,:,1:], axis=2) == 0).astype(int)
+    label_data[:, :, 0] = (np.sum(label_data[:, :, 1:], axis=2) == 0).astype(int)
     return label_data
 
 
@@ -84,8 +84,9 @@ def cut_data(data, lx, ly, stride=(1, 1)):
         print(lx, ly)
         exit()
 
-    return np.array([ data[i:i+lx, j:j+ly] for j in np.arange(0, ny - ly + 1, sy) \
-            for i in np.arange(0, nx - lx + 1, sx)])
+    return np.array([data[i:i+lx, j:j+ly] for j in np.arange(0, ny - ly + 1, sy)
+                     for i in np.arange(0, nx - lx + 1, sx)])
+
 
 def diff_images(label_input_fn, input_fn, save_fn, tol=1e-5):
     '''
@@ -94,13 +95,14 @@ def diff_images(label_input_fn, input_fn, save_fn, tol=1e-5):
     image
     '''
     label_input_img = Image.open(label_input_fn)
-    input_img       = Image.open(input_fn)
+    input_img = Image.open(input_fn)
 
     label_img = np.array((label_input_img - input_img)).astype(np.float64)
     label_img = flatten_channels(label_img)
     label_img = (label_img > tol).astype(int)
     imwrite(save_fn, label_img)
     return label_img
+
 
 def sift_cuts(input_cuts, label_cuts, ones_percent):
     '''
@@ -113,7 +115,7 @@ def sift_cuts(input_cuts, label_cuts, ones_percent):
     new_input_cuts = []
     new_label_cuts = []
     for idx, lbl in enumerate(label_cuts):
-        lbl_percent = np.sum(lbl[:,:,1:])/tot_pixels
+        lbl_percent = np.sum(lbl[:, :, 1:])/tot_pixels
         if lbl_percent >= ones_percent:
             new_input_cuts.append(input_cuts[idx])
             new_label_cuts.append(label_cuts[idx])
@@ -127,8 +129,10 @@ def get_classifier_label(label_img, ones_per_dot=75):
     """
     return np.sum(label_img) >= ones_per_dot
 
+
 def save_data(data, file_name):
     pickle.dump(data, open(file_name, "wb"))
+
 
 def load_data(data, file_name):
     return pickle.load(open(file_name, "rb"))

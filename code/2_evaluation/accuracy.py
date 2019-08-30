@@ -3,7 +3,7 @@ from scipy.signal import convolve2d
 
 
 def convolve(num_convs, label_img, thresh=0.6):
-    kernel = np.ones((3,3))/9.
+    kernel = np.ones((3, 3))/9.
     conv_label_img = (label_img - np.min(label_img))/np.ptp(label_img)
     conv_label_img = np.array(conv_label_img >= thresh).astype(int)
     for k in range(num_convs):
@@ -14,8 +14,8 @@ def convolve(num_convs, label_img, thresh=0.6):
 
 def get_center_list(conv_label_img, radius):
     size_x, size_y = conv_label_img.shape
-    center_list = [[i, j] for i in range(size_x) for j in range(size_y)\
-                  if conv_label_img[i,j]==1]
+    center_list = [[i, j] for i in range(size_x) for j in range(size_y)
+                   if conv_label_img[i, j] == 1]
 
     new_center_list = []
     while len(center_list) > 0:
@@ -61,10 +61,11 @@ def detect_diff(label_center, evals_center, radius=7.5):
             label_list.append((lx, ly))
     return match_list, label_list, evals_list
 
+
 def calculate_accuracy(label_file_list, evals_file_list, num_convs):
 
-    label_img = process_label(label_file_list)[:,:,1]
-    evals_img = process_label(evals_file_list)[:,:,1]
+    label_img = process_label(label_file_list)[:, :, 1]
+    evals_img = process_label(evals_file_list)[:, :, 1]
 
     conv_label_img = convolve(num_convs, label_img)
     conv_evals_img = convolve(num_convs, evals_img)
@@ -79,4 +80,22 @@ def calculate_accuracy(label_file_list, evals_file_list, num_convs):
     FN = len(label_list)
     TN = 304*16 - TP - FP - FN
 
-    return TP ,FP, FN, TN
+    return TP, FP, FN, TN
+
+
+def get_acc_list(lbl_list, num_images, num_convs, label_dir, predi_dir, image_dir):
+    acc_list = {}
+    for lbl in lbl_list:
+        acc_list[lbl] = []
+        print lbl
+        for i in range(num_images):
+            print "\t", i
+            label_file_list = [label_dir + 'label_' + lbl + '/image' + str(i) + '_label' + lbl + '.tiff']
+            evals_file_list = [predi_dir + 'label_' + lbl + '/image' + str(i) + '_' + lbl + '_prediction.png']
+
+            TP, FP, FN, TN = calculate_accuracy(label_file_list, evals_file_list, num_convs)
+
+            acc_list[lbl].append([TP, FP, FN, TN])
+
+        acc_list[lbl] = zip(*acc_list[lbl])
+    json.dump(acc_list, open(image_dir + "acc_list.json", 'w'))

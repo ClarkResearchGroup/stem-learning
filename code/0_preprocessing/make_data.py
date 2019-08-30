@@ -3,7 +3,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 from math import ceil
 from random import shuffle
-import os, subprocess, pickle
+import os
+import subprocess
+import pickle
+
 
 def diff_labels(input_dir, label_list, data_dirs, ftype, tol=1e-5):
     '''
@@ -12,8 +15,8 @@ def diff_labels(input_dir, label_list, data_dirs, ftype, tol=1e-5):
     '''
     for data_dir in data_dirs:
         for label in label_list:
-            label_fn       = input_dir + data_dir + "/label_" + label + ftype
-            input_fn       = input_dir + data_dir + "/input" + ftype
+            label_fn = input_dir + data_dir + "/label_" + label + ftype
+            input_fn = input_dir + data_dir + "/input" + ftype
             label_input_fn = input_dir + data_dir + "/label_input_" + label + ftype
             os.rename(label_fn, label_input_fn)
             diff_images(label_input_fn, input_fn, label_fn, tol)
@@ -40,11 +43,11 @@ def _pickle_data(info, parsed_dir, data):
     test_data = data[start + tr_bs:end]
 
     save_data(train_data, parsed_dir + "train/train_" + p_name + ".p")
-    save_data(test_data,  parsed_dir + "test/test_"  + p_name + ".p")
+    save_data(test_data,  parsed_dir + "test/test_" + p_name + ".p")
 
 
-def make_data(input_dir, label_list, data_dirs, l_shape, stride, ftype, parsed_dir_name='parsed',\
-        tr_bs=100, ts_bs=10, ones_percent=0, tol=1e-5, show_plots=False, one_pickle=False):
+def make_data(input_dir, label_list, data_dirs, l_shape, stride, ftype, parsed_dir_name='parsed',
+              tr_bs=100, ts_bs=10, ones_percent=0, tol=1e-5, show_plots=False, one_pickle=False):
     '''
     This function creates pickled data ready for training and testing. The input directory
     must contain a folder called augments in which contains folders of transformations of the
@@ -65,9 +68,7 @@ def make_data(input_dir, label_list, data_dirs, l_shape, stride, ftype, parsed_d
         os.mkdir(parsed_dir + "train/")
         os.mkdir(parsed_dir + "test/")
 
-
-
-    #go through each image
+    # go through each image
     data = []
     for f in data_dirs:
         augments = input_dir + f + "/augments/"
@@ -75,24 +76,23 @@ def make_data(input_dir, label_list, data_dirs, l_shape, stride, ftype, parsed_d
             continue
         print(f)
 
-        #go through each augment of the image
+        # go through each augment of the image
         for aug_dir in os.listdir(augments):
             print(aug_dir)
-            full_aug_dir =  augments + aug_dir
+            full_aug_dir = augments + aug_dir
             aug_name = f + "_" + aug_dir
 
             input_file = full_aug_dir + "/input" + ftype
-            label_files = [ full_aug_dir + "/label_" + label + ftype for label in label_list]
+            label_files = [full_aug_dir + "/label_" + label + ftype for label in label_list]
 
             input_img = process_image(input_file, standardize=True)
             label_img = process_label(label_files, tol=tol)
-
 
             if show_plots:
                 plt.imshow(input_img)
                 for c in range(len(label_files) + 1):
                     plt.figure()
-                    plt.imshow(label_img[:,:,c])
+                    plt.imshow(label_img[:, :, c])
                 plt.show()
                 continue
 
@@ -109,22 +109,21 @@ def make_data(input_dir, label_list, data_dirs, l_shape, stride, ftype, parsed_d
                 data = zip(input_cuts, label_cuts)
                 shuffle(data)
 
-
                 # save the cut data into picked data files
                 num_examples = len(input_cuts)
                 ex_per_p = tr_bs + ts_bs
                 num_pickles = int(num_examples/ex_per_p)
-                last_bs = num_examples%ex_per_p
+                last_bs = num_examples % ex_per_p
                 include_last = (last_bs > .1*tr_bs)
                 print(str(num_examples)+"examples and "+str(num_pickles+int(include_last))+" files")
 
-                data_idx_list = [(i*ex_per_p, (i+1)*ex_per_p, tr_bs, aug_name + str(i).zfill(3)) \
-                        for i in range(num_pickles)]
+                data_idx_list = [(i*ex_per_p, (i+1)*ex_per_p, tr_bs, aug_name + str(i).zfill(3))
+                                 for i in range(num_pickles)]
                 if include_last:
-                    data_idx_list.append((num_pickles*ex_per_p, num_pickles*ex_per_p + last_bs,\
-                            last_bs - int(last_bs/10), aug_name + str(num_pickles).zfill(3)))
+                    data_idx_list.append((num_pickles*ex_per_p, num_pickles*ex_per_p + last_bs,
+                                          last_bs - int(last_bs/10), aug_name + str(num_pickles).zfill(3)))
 
-                [_pickle_data(info, parsed_dir, data) for info in  data_idx_list]
+                [_pickle_data(info, parsed_dir, data) for info in data_idx_list]
 
         if one_pickle:
             shuffle(data)
@@ -134,7 +133,8 @@ def make_data(input_dir, label_list, data_dirs, l_shape, stride, ftype, parsed_d
             _pickle_data(info, parsed_dir, data)
             data = []
 
-def check_data(parsed_fn, idx=-1, l_shape=(128,128)):
+
+def check_data(parsed_fn, idx=-1, l_shape=(128, 128)):
     '''
     this script looks at data ready to be fed into the CNN.
     parsed_fn = the path to the pickled data
@@ -153,11 +153,5 @@ def check_data(parsed_fn, idx=-1, l_shape=(128,128)):
     for c in range(nb_classes):
         plt.figure()
         plt.imshow(img)
-        plt.imshow(lbl[:,:,c], alpha=0.5)
+        plt.imshow(lbl[:, :, c], alpha=0.5)
     plt.show()
-
-
-
-
-
-
