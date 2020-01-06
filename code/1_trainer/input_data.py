@@ -4,12 +4,11 @@
 import numpy as np
 import pickle
 
-
 class DataSet(object):
 
     def __init__(self, images, labels):
         assert np.shape(images)[0] == np.shape(labels)[0], (
-            "images.shape: %s labels.shape: %s" % (images.shape, labels.shape))
+                "images.shape: %s labels.shape: %s" % (images.shape, labels.shape))
         self._num_examples = images.shape[0]
         self._images = images
         self._labels = labels
@@ -28,9 +27,11 @@ class DataSet(object):
     def num_examples(self):
         return self._num_examples
 
+
     @property
     def epochs_completed(self):
         return self._epochs_completed
+
 
     def next_batch(self, batch_size, shuff=True):
         """Return the next `batch_size` examples from this data set."""
@@ -58,12 +59,12 @@ def read_data_sets(train_file, test_file, N, nb_classes):
         pass
     data_sets = DataSets()
     train_data = pickle.load(open(train_file, 'rb'))
-    train_images = np.asarray([train_data[i][0] for i in range(len(train_data))], dtype=np.float32)
-    train_labels = np.asarray([train_data[i][1] for i in range(len(train_data))], dtype=np.float32)
+    train_images=np.asarray([train_data[i][0] for i in range(len(train_data))], dtype=np.float32)
+    train_labels=np.asarray([train_data[i][1] for i in range(len(train_data))], dtype=np.float32)
 
     test_data = pickle.load(open(test_file, 'rb'))
-    test_images = np.asarray([test_data[i][0] for i in range(len(test_data))], dtype=np.float32)
-    test_labels = np.asarray([test_data[i][1] for i in range(len(test_data))], dtype=np.float32)
+    test_images=np.asarray([test_data[i][0] for i in range(len(test_data))], dtype=np.float32)
+    test_labels=np.asarray([test_data[i][1] for i in range(len(test_data))], dtype=np.float32)
 
     data_sets.train = DataSet(train_images, train_labels)
     data_sets.test = DataSet(test_images, test_labels)
@@ -74,8 +75,6 @@ def read_data_sets(train_file, test_file, N, nb_classes):
 
 
 stem_dict = {}
-
-
 def grab_data(data_dir, train_f, N, nb_classes):
     '''
     creates a dictionary of DataSet objects
