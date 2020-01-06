@@ -2,7 +2,11 @@
 
 """Functions for downloading and reading MNIST data."""
 import numpy as np
-import pickle
+try:
+    import cPickle as pickle
+except ModuleNotFoundError:
+    import pickle
+
 
 class DataSet(object):
 

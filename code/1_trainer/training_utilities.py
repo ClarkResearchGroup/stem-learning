@@ -35,12 +35,11 @@ def setup_diagnostics(diagnostics_fn):
     return step
 
 def calc_accuracy(model, x_test, y_true, N, nb_classes):
-    predictions = np.array(model.predict_on_batch(x_test))
-    predictions = np.reshape(predictions, [-1, N, N, nb_classes])
-    print(predictions.shape)
+    predictions = np.reshape(np.array(model.predict_on_batch(x_test)), [-1, N, N, nb_classes])
     y_evals = np.argmax(predictions, axis=3)
+    y_trues = np.argmax(np.reshape(np.array(y_true), [-1, N, N, nb_classes]), axis=3)
     TP, FP, FN, TN = 0, 0, 0, 0
-    for evals_img, label_img in zip(y_evals, y_true):
+    for evals_img, label_img in zip(y_evals, y_trues):
         conv_label_img = convolve(2, label_img)
         conv_evals_img = convolve(2, evals_img)
 
@@ -56,7 +55,7 @@ def calc_accuracy(model, x_test, y_true, N, nb_classes):
 
     TNR = TN/(TN + FP)
     TPR = TP/(TP + FN)
-    
+
     recall    = TP/(TP + FN)
     precision = TP/(TP + FP)
     F1        = 2*recall*precision/(recall + precision)
@@ -76,11 +75,15 @@ def train_step(model, stem, model_weights_fn, epochs=1, batch_size=32):
 
     (x_train, y_train) = get_xy('train')
     (x_test , y_test ) = get_xy('test')
-    
-    recall, precision, F1, bal_acc = calc_accuracy(model, x_test, y_test, N, nb_classes)
+
 
     history = model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs,\
             validation_data=(x_test, y_test), verbose=1)
+
+    print("\tcalculating accuracy")
+    recall, precision, F1, bal_acc = calc_accuracy(model, x_test, y_test, N, nb_classes)
+    print("\tdone")
+
     model.save_weights(model_weights_fn)
 
     return history, recall, precision, F1, bal_acc
@@ -99,7 +102,9 @@ def train(step, data_dir, N, nb_classes, model, diagnostics_fn, model_weights_fn
         print("training step: " + str(step) + "\ttraining file: " + train_f)
 
         # grab data for training
+        print("\tgrabbing data")
         stem = grab_data(data_dir, train_f, N, nb_classes)
+        print("\tdone")
 
         # train
         history, recall, precision, F1, bal_acc = train_step(model, stem, model_weights_fn)

@@ -31,7 +31,7 @@ def get_center_list(conv_label_img, radius):
             else:
                 center_list.append([ik, jk])
 
-        avg_list = zip(*avg_list)
+        avg_list = list(zip(*avg_list))
         i_new = int(round(np.mean(avg_list[0])))
         j_new = int(round(np.mean(avg_list[1])))
         new_center_list.append((i_new, j_new))
