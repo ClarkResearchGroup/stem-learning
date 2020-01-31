@@ -3,6 +3,7 @@ import numpy as np
 from models import *
 from input_data import *
 from accuracy import *
+import matplotlib.pyplot as plt
 
 def construct_model(N, k_fac, nb_classes, sess_dir, model_fn, model_weights_fn):
     input_img = Input(shape=(N,N,1))
@@ -30,15 +31,21 @@ def setup_diagnostics(diagnostics_fn):
     else:
         print("creating new session")
         with open(diagnostics_fn, "w") as f:
-             f.write('{:>15}\t{:>15}\t{:>15}\t{:>15}\t{:>15}\t{:>15}\t{:>15}\t{:>15}\t{:>15}\n'.format(\
-                'step','loss','acc','val_loss','val_acc', 'recall', 'precision', 'F1', 'bal_acc'))
+             f.write('{:>15}\t{:>15}\t{:>15}\t{:>15}\t{:>15}\t{:>15}\t{:>15}\t{:>15}\t{:>15}\t{:>15}\t{:>15}\t{:>15}\t{:>15}\n'.format(\
+                'step','loss','acc','val_loss','val_acc', 'TP', 'FP', 'FN', 'TN', 'recall', 'precision', 'F1', 'bal_acc'))
     return step
 
-def calc_accuracy(model, x_test, y_true, N, nb_classes):
+def calc_accuracy(model, x_test, y_true, N, nb_classes, plots):
     predictions = np.reshape(np.array(model.predict_on_batch(x_test)), [-1, N, N, nb_classes])
     y_evals = np.argmax(predictions, axis=3)
     y_trues = np.argmax(np.reshape(np.array(y_true), [-1, N, N, nb_classes]), axis=3)
-    TP, FP, FN, TN = 0, 0, 0, 0
+
+    r = np.sum(y_evals)/(len(y_evals)*len(y_evals[0])*len(y_evals[0][0]))
+    print(r)
+    if r > 0.05:
+        return -1, -1, -1, -1, -1, -1, -1, -1
+
+    TP, FP, FN = 0, 0, 0
     for evals_img, label_img in zip(y_evals, y_trues):
         conv_label_img = convolve(2, label_img)
         conv_evals_img = convolve(2, evals_img)
@@ -51,18 +58,51 @@ def calc_accuracy(model, x_test, y_true, N, nb_classes):
         TP += len(match_list)
         FP += len(evals_list)
         FN += len(label_list)
-        TN += 304 - TP - FP - FN
+    TN = 304*len(y_evals) - TP - FP - FN
 
-    TNR = TN/(TN + FP)
-    TPR = TP/(TP + FN)
+    if plots:
+        label_cen = [[],[]] if len(conv_label_cen) == 0 else list(zip(*conv_label_cen))
+        evals_cen = [[],[]] if len(conv_evals_cen) == 0 else list(zip(*conv_evals_cen))
+        m_xy      = [[],[]] if len(match_list)     == 0 else list(zip(*match_list))
+        l_xy      = [[],[]] if len(label_list)     == 0 else list(zip(*label_list))
+        e_xy      = [[],[]] if len(evals_list)     == 0 else list(zip(*evals_list))
 
-    recall    = TP/(TP + FN)
-    precision = TP/(TP + FP)
-    F1        = 2*recall*precision/(recall + precision)
-    bal_acc   = 0.5*(TNR + TPR)
-    return recall, precision, F1, bal_acc
+        plt.subplot(131)
+        plt.scatter(label_cen[0], label_cen[1], label='label')
+        plt.legend(loc='best')
+        plt.subplot(132)
+        plt.scatter(evals_cen[0], evals_cen[1], label='evals')
+        plt.legend(loc='best')
+        plt.subplot(133)
+        plt.scatter(list(m_xy[0]), list(m_xy[1]), label='match')
+        plt.scatter(list(l_xy[0]), list(l_xy[1]), label='label')
+        plt.scatter(list(e_xy[0]), list(e_xy[1]), label='evals')
+        plt.legend(loc='best')
 
-def train_step(model, stem, model_weights_fn, epochs=1, batch_size=32):
+        plt.figure()
+        plt.imshow(evals_img)
+        plt.title("evaluation")
+
+        plt.figure()
+        plt.imshow(label_img)
+        plt.title("label")
+
+        plt.figure()
+        plt.imshow(evals_img - label_img)
+        plt.title("diff")
+        plt.show()
+
+    TNR = -1 if (TN + FP) == 0 else TN/(TN + FP)
+    TPR = -1 if (TP + FN) == 0 else TP/(TP + FN)
+
+    recall    = -1 if (TP + FN)            == 0 else TP/(TP + FN)
+    precision = -1 if (TP + FP)            == 0 else TP/(TP + FP)
+    F1        = -1 if (recall + precision) <= 0 else 2*recall*precision/(recall + precision)
+    bal_acc   = -1 if (TNR + TPR)          <= 0 else 0.5*(TNR + TPR)
+
+    return TP, FP, FN, TN, recall, precision, F1, bal_acc
+
+def train_step(model, stem, model_weights_fn, plots, epochs=1, batch_size=32, ):
     '''
     trains on the model for one step
     '''
@@ -76,20 +116,19 @@ def train_step(model, stem, model_weights_fn, epochs=1, batch_size=32):
     (x_train, y_train) = get_xy('train')
     (x_test , y_test ) = get_xy('test')
 
-
     history = model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs,\
             validation_data=(x_test, y_test), verbose=1)
 
     print("\tcalculating accuracy")
-    recall, precision, F1, bal_acc = calc_accuracy(model, x_test, y_test, N, nb_classes)
+    TP, FP, FN, TN, recall, precision, F1, bal_acc = calc_accuracy(model, x_test, y_test, N, nb_classes, plots)
     print("\tdone")
 
     model.save_weights(model_weights_fn)
 
-    return history, recall, precision, F1, bal_acc
+    return history, TP, FP, FN, TN, recall, precision, F1, bal_acc
 
 
-def train(step, data_dir, N, nb_classes, model, diagnostics_fn, model_weights_fn):
+def train(step, data_dir, N, nb_classes, model, diagnostics_fn, model_weights_fn, plots=False):
     '''
     trains continuously until force stopped
     '''
@@ -107,15 +146,15 @@ def train(step, data_dir, N, nb_classes, model, diagnostics_fn, model_weights_fn
         print("\tdone")
 
         # train
-        history, recall, precision, F1, bal_acc = train_step(model, stem, model_weights_fn)
-        print("recall = {}, precision = {}, F1 = {}, bal_acc = {}".format(recall, \
-                        precision, F1, bal_acc))
+        history, TP, FP, FN, TN, recall, precision, F1, bal_acc = train_step(model, stem, model_weights_fn, plots)
+        print("TP = {}, FP = {}, FN = {}, TN = {}".format(TP, FP, FN, TN))
+        print("recall = {}, precision = {}, F1 = {}, bal_acc = {}".format(recall, precision, F1, bal_acc))
         # record training step results
         loss     = history.history['loss'][0]
         val_loss = history.history['val_loss'][0]
         acc      = history.history['acc'][0]
         val_acc  = history.history['val_acc'][0]
         with open(diagnostics_fn, "a") as f:
-             f.write('{:15d}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\n'.format(\
-                step ,loss,acc,val_loss,val_acc,recall, precision, F1, bal_acc))
+             f.write('{:15d}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\n'.format(\
+                step ,loss,acc,val_loss,val_acc,TP, FP, FN, TN, recall, precision, F1, bal_acc))
         step += 1

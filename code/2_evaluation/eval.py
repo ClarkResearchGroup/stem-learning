@@ -31,15 +31,14 @@ path             = "/home/aakhan3/" + arg + "/" + datasave_dir + avg_path
 
 '''
 
-parent_dir  = "/home/aakhan3/scratch/stem-learning/"
-results_dir = parent_dir + "results/04-19-2019-0016/"
-model_fn = results_dir + "A_4_2.json"
+parent_dir  = "/home/abid/Dropbox/Development/programs/stem-learning/"
+results_dir = parent_dir + "results_v2/2Te/"
+model_fn = results_dir + "model.json"
 model_weights_fn = results_dir + "weights.h5"
-#model_weights_fn = "/home/aakhan3/scratch/old_src/old_stem-learning/model/model08-23-2018+1_weigths.h5"
-data_dir = parent_dir + "data/WSeTe/experimental/bkg_2304/"
-#data_dir = parent_dir + "data/MoWTe2/01_8Mx_1K_0.019876nm_RGB_PPT/"
-input_file =  data_dir + "input.tif"
-label_file_list = [data_dir + "label_2Te.tif"]#, data_dir + "label_TeSe.tif"]
+data_dir = parent_dir + "data/WSeTe/simulated/0/"
+input_file =  data_dir + "input.tiff"
+label_file_list = [data_dir + "label_2Te.tiff"]#, data_dir + "label_TeSe.tif"]
+print(input_file)
 #label_file_list = [data_dir + "label_W.tif"]
 Tol = 0.05
 avg = 1

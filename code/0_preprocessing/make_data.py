@@ -69,24 +69,23 @@ def make_data(input_dir, label_list, data_dirs, l_shape, stride, ftype, parsed_d
 
     #go through each image
     data = []
+    i = 0
     for f in data_dirs:
-        augments = input_dir + f + "/augments/"
         if f == 'parsed':
             continue
+        augments = input_dir + f + "/augments/"
         print(f)
 
         #go through each augment of the image
         for aug_dir in os.listdir(augments):
             print(aug_dir)
             full_aug_dir =  augments + aug_dir
-            aug_name = f + "_" + aug_dir
 
             input_file = full_aug_dir + "/input" + ftype
             label_files = [ full_aug_dir + "/label_" + label + ftype for label in label_list]
 
             input_img = process_image(input_file, standardize=True)
             label_img = process_label(label_files, tol=tol)
-
 
             if show_plots:
                 plt.imshow(input_img)
@@ -102,29 +101,17 @@ def make_data(input_dir, label_list, data_dirs, l_shape, stride, ftype, parsed_d
             # only allow labels that have more than a certain proportion of ones
             (input_cuts, label_cuts) = sift_cuts(input_cuts, label_cuts, ones_percent)
 
-            if one_save:
-                data += list(zip(input_cuts, label_cuts))
-
-            else:
-                data = list(zip(input_cuts, label_cuts))
-                shuffle(data)
+            data += list(zip(input_cuts, label_cuts))
 
 
+            if not one_save and len(data) >= tr_bs + ts_bs:
                 # save the cut data into picked data files
-                num_examples = len(input_cuts)
-                ex_per_p = tr_bs + ts_bs
-                num_saves = int(num_examples/ex_per_p)
-                last_bs = num_examples%ex_per_p
-                include_last = (last_bs > .1*tr_bs)
-                print(str(num_examples)+"examples and "+str(num_saves+int(include_last))+" files")
-
-                data_idx_list = [(i*ex_per_p, (i+1)*ex_per_p, tr_bs, aug_name + str(i).zfill(3)) \
-                        for i in range(num_saves)]
-                if include_last:
-                    data_idx_list.append((num_saves*ex_per_p, num_saves*ex_per_p + last_bs,\
-                            last_bs - int(last_bs/10), aug_name + str(num_saves).zfill(3)))
-
-                [_save_data(info, parsed_dir, data) for info in  data_idx_list]
+                print("saving file {}".format(i))
+                shuffle(data)
+                info = (0, tr_bs + ts_bs, tr_bs, str(i).zfill(5))
+                _save_data(info, parsed_dir, data)
+                data = data[tr_bs + ts_bs:]
+                i += 1
 
         if one_save:
             shuffle(data)
@@ -133,6 +120,8 @@ def make_data(input_dir, label_list, data_dirs, l_shape, stride, ftype, parsed_d
             info = (0, num_ex, int(.9*num_ex), f)
             _save_data(info, parsed_dir, data)
             data = []
+
+
 
 def check_data(parsed_fn, idx=-1, l_shape=(128,128)):
     '''
