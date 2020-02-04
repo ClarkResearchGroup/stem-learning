@@ -1,9 +1,24 @@
-# stem-learning
-Package to use an FCN to learn defects from STEM imaging
-## Generating Training Set
-This part will show you why we need generate simualted STEM images as training set of deep learning model and how to use these code generate and process these images.
-### Purpose
-In deep learning, whether people can get a good model always depends on the amounts and quality of their training set. While in nano-scale, especially for electron microscope images, there are no specific images sets for training DL models. If people  want to use deep learning to recognize features, like point defects in electron microscope images, how to get enough high quality, labeled training image is the key question. In previous work, researchers in EM field use several methods to get training set, including manually labeling and using fourier filter to label features. But these methods are time consuming or unaccurate. Here we come up a method to generate large amount simulated STEM images with high quality labels to train DL models.
-Our method is based on computem written by Earl J. Kirkland, which is used for Transmission Electron Microscope Image Simulation. With computem people can get single high quality EM images, our purpose is to batchly generate EM images and its defect maps for training.
-### How to use the code.
-The code used for generating training sets hase two parts: the first part is used for generate .xyz and .param files, which can be input into computem to get simulate images and defect labels, the second part is used to add noises on simulated images to make them more "realistic".
+# Deep learning models for defect identification in STEM images
+
+This "stem-learning" repo contains 2 part of codes:
+1. Generate and post-process simulated STEM images
+2. Train deep learning models (FCN, or more specifically, ResUNet) that can identify atomic defects like substitutions or vacancies
+
+These models are used to identify point defects like Te substitutions or Se vacancies in WSe<sub>2-2x</sub>Te<sub>2x</sub> and have made sub-pm precision measurement of strain fields of single-atom defects possible. More discussion of the results can be found on arXiv <https://arxiv.org/abs/2001.08233>.
+
+## Quick Overview
+
+
+ 
+## Getting Started
+
+The code can be acquired by cloning this repository to your computer, using the green "Clone or download" button, or by typing into the command line
+
+```
+https://github.com/ClarkResearchGroup/stem-learning.git
+```
+
+It's recommended to use Google Colab for the model training/evaluation since it's not taking too much time. If you want to train/evaluate on your local machine, here's our build.
+
+### Local build
+Python 3, Keras 2.2.4, TensorFlow 1.3
