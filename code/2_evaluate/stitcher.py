@@ -30,7 +30,7 @@ def stitch(size_x, size_y, sx, sy, images):
     final_img = [[[] for j in range(size_y)] for i in range(size_x)]
     for idx, img in enumerate(images):
         nx = idx % Nx
-        ny = int(idx / Nx)
+        ny = idx // Nx
         [ final_img[nx*sx + x][ny*sy + y].append(img[x,y]) for x in range(lx) for y in range(ly) ]
 
     ret = [[np.median(np.array(final_img[i][j]), axis=0) for j in range(size_y)] \
@@ -58,14 +58,15 @@ def get_avg_pred(model, cut):
     return sum(preds)/8.0
 
 
-def make_prediction(model_fn, model_weights_fn, input_file, label_file_list, Tol, avg, save_dir,\
-        thresh=-1, prefix="", plot=False, save_data=False):
+def make_prediction(model_fn, model_weights_fn, input_file,  Tol, avg, save_dir,
+        thresh=-1, prefix="", plot=False, save_data=False, label_file_list=None):
 
     print("processing data")
     print(input_file)
-    input_img = process_image(input_file)
-    label_img = process_label(label_file_list, tol=Tol)
-    (size_x, size_y, nb_classes) = label_img.shape
+    input_img = process_image(input_file, standardize=True)
+    if label_file_list:
+        label_img = process_label(label_file_list, tol=Tol)
+        (size_x, size_y, nb_classes) = label_img.shape
 
     print("loading model")
     model = model_load(model_fn, model_weights_fn)
@@ -84,14 +85,17 @@ def make_prediction(model_fn, model_weights_fn, input_file, label_file_list, Tol
     print("stitching data")
     a = stitch(size_x, size_y, sx, sy, predictions)
     a = np.argmax(a, axis=2)
-    label_img = np.argmax(label_img, axis=2)
-    b = a - label_img
+    if label_file_list:
+        label_img = np.argmax(label_img, axis=2)
+        b = a - label_img
 
     if save_data:
         print("saving data")
         imsave(save_dir + prefix + "prediction.png", a)
-        imsave(save_dir + prefix + "label.png", label_img)
-        imsave(save_dir + prefix + "diff.png", b)
+
+        if label_file_list:
+            imsave(save_dir + prefix + "label.png", label_img)
+            imsave(save_dir + prefix + "diff.png", b)
 
     if plot:
         if plot:
@@ -100,12 +104,13 @@ def make_prediction(model_fn, model_weights_fn, input_file, label_file_list, Tol
             plt.imshow(a)
             plt.colorbar()
 
-            plt.figure()
-            plt.imshow(label_img)
-            plt.colorbar()
+            if label_file_list:
+                plt.figure()
+                plt.imshow(label_img)
+                plt.colorbar()
 
-            plt.figure()
-            plt.imshow(b)
-            plt.colorbar()
+                plt.figure()
+                plt.imshow(b)
+                plt.colorbar()
 
             plt.show()
