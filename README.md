@@ -25,5 +25,7 @@ It's recommended to use Google Colab for the model training/evaluation since it'
 Python 3, Keras 2.2.4, TensorFlow 1.3
 
 If you have any questions, feel free to contact 
+
 Abid Khan:     aakhan3@illinois.edu
+
 Chia-Hao Lee: chiahao3@illinois.edu
