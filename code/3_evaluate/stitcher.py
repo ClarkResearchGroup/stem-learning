@@ -1,7 +1,7 @@
 import numpy as np
 import sys
 from matplotlib.pyplot import imsave
-sys.path.insert(0, '../0_preprocessing')
+sys.path.insert(0, '../1_preprocessing')
 from image_parse import *
 from keras.models import model_from_json
 
@@ -58,8 +58,9 @@ def get_avg_pred(model, cut):
     return sum(preds)/8.0
 
 
-def make_prediction(model_fn, model_weights_fn, input_file,  Tol, avg, save_dir,
-        thresh=-1, prefix="", plot=False, save_data=False, label_file_list=None):
+def make_prediction(model_fn, model_weights_fn, input_file, Tol, avg, l_shape,\
+                    stride, label_file_list=None, thresh=-1, plot=False, \
+                    save_data=False, save_dir='./', prefix=""):
 
     print("processing data")
     print(input_file)
@@ -72,8 +73,8 @@ def make_prediction(model_fn, model_weights_fn, input_file,  Tol, avg, save_dir,
     model = model_load(model_fn, model_weights_fn)
 
     print("cutting data")
-    (sx, sy) = (64, 64)
-    (lx, ly) = (256, 256)
+    (sx, sy) = stride
+    (lx, ly) = l_shape
     input_cuts = cut_data(input_img, lx, ly, (sx, sy))
     input_cuts = np.reshape(input_cuts, [-1, lx, ly, 1])
     num_cuts = len(input_cuts)
