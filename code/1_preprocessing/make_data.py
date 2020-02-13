@@ -1,10 +1,9 @@
 from image_parse import *
 import numpy as np
 import matplotlib.pyplot as plt
-from math import ceil
 from random import shuffle
-import os, subprocess
 from generate_training_set import make_augments
+import os
 
 def diff_labels(input_dir, label_list, data_dirs, ftype, tol=1e-5):
     '''
