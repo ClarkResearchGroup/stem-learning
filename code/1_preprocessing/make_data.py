@@ -70,8 +70,6 @@ def make_data(input_dir, label_list, data_dirs, l_shape, stride, ftype, parsed_d
     data = []
     i = 0
     for f in data_dirs:
-        if f == 'parsed':
-            continue
         augments = input_dir + f + "/augments/"
         print(f)
 
@@ -109,7 +107,7 @@ def make_data(input_dir, label_list, data_dirs, l_shape, stride, ftype, parsed_d
                 shuffle(data)
                 info = (0, tr_bs + ts_bs, tr_bs, str(i).zfill(5))
                 _save_data(info, parsed_dir, data)
-                data = data[tr_bs + ts_bs:]
+                del data[:(tr_bs + ts_bs)]
                 i += 1
 
         if one_save:
