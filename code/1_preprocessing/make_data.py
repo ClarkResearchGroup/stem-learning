@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from random import shuffle
 from generate_training_set import make_augments
 import os
+from memory_profiler import profile
 
 def diff_labels(input_dir, label_list, data_dirs, ftype, tol=1e-5):
     '''
@@ -42,6 +43,7 @@ def _save_data(info, parsed_dir, data):
     save_data(test_data,  parsed_dir + "test/test_"  + p_name + ".p")
 
 
+@profile(precision=4)
 def make_data(input_dir, label_list, data_dirs, l_shape, stride, ftype, parsed_dir_name='parsed',\
         tr_bs=100, ts_bs=10, ones_percent=0, tol=1e-5, show_plots=False, one_save=False):
     '''
