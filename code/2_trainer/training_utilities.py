@@ -47,11 +47,11 @@ def calc_accuracy(model, x_test, y_true, N, nb_classes, plots):
 
     TP, FP, FN = 0, 0, 0
     for evals_img, label_img in zip(y_evals, y_trues):
-        conv_label_img = convolve(2, label_img)
-        conv_evals_img = convolve(2, evals_img)
+        conv_label_img = convolve(1, label_img)
+        conv_evals_img = convolve(1, evals_img)
 
-        conv_label_cen = get_center_list(conv_label_img, 7.5)
-        conv_evals_cen = get_center_list(conv_evals_img, 7.5)
+        conv_label_cen = get_center_list(conv_label_img, 2)
+        conv_evals_cen = get_center_list(conv_evals_img, 2)
 
         match_list, label_list, evals_list = detect_diff(conv_label_cen, conv_evals_cen)
 
@@ -152,8 +152,8 @@ def train(step, data_dir, N, nb_classes, model, diagnostics_fn, model_weights_fn
         # record training step results
         loss     = history.history['loss'][0]
         val_loss = history.history['val_loss'][0]
-        acc      = history.history['acc'][0]
-        val_acc  = history.history['val_acc'][0]
+        acc      = history.history['accuracy'][0]
+        val_acc  = history.history['val_accuracy'][0]
         with open(diagnostics_fn, "a") as f:
              f.write('{:15d}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\n'.format(\
                 step ,loss,acc,val_loss,val_acc,TP, FP, FN, TN, recall, precision, F1, bal_acc))

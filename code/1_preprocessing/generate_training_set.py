@@ -60,11 +60,11 @@ def make_augments(imgdir, ftype):
         f  = join(augdir, d, "input" + ftype)
         img_arr = Image.open(f)
         l, w  = img_arr.size
-        l2 = int(l/2)
-        l4 = int(l/4)
+        l2, w2 = int(l/2), int(w/2)
+        l4, w4 = int(l/4), int(w/4)
 
-        l2_img = (img_arr.resize((l2, l2), Image.LANCZOS)).resize((l,l), Image.LANCZOS)
-        l4_img = (img_arr.resize((l4, l4), Image.LANCZOS)).resize((l,l), Image.LANCZOS)
+        l2_img = (img_arr.resize((l2, w2), Image.NEAREST)).resize((l,w), Image.NEAREST)
+        l4_img = (img_arr.resize((l4, w4), Image.NEAREST)).resize((l,w), Image.NEAREST)
 
         l2_img.save(join(augdir, "mag1_" + d, "input" + ftype))
         l4_img.save(join(augdir, "mag2_" + d, "input" + ftype))
