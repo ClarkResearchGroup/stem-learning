@@ -43,7 +43,7 @@ def _save_data(info, parsed_dir, data):
     save_data(test_data,  parsed_dir + "test/test_"  + p_name + ".p")
 
 
-@profile(precision=4)
+@profile
 def make_data(input_dir, label_list, data_dirs, l_shape, stride, ftype, parsed_dir_name='parsed',\
         tr_bs=100, ts_bs=10, ones_percent=0, tol=1e-5, show_plots=False, one_save=False):
     '''
@@ -67,19 +67,17 @@ def make_data(input_dir, label_list, data_dirs, l_shape, stride, ftype, parsed_d
         os.mkdir(parsed_dir + "test/")
 
 
-
     #go through each image
-    data = []
+    residual = []
     i = 0
+
     for f in data_dirs:
         augments = input_dir + f + "/augments/"
         print(f)
-
         #go through each augment of the image
         for aug_dir in os.listdir(augments):
             print(aug_dir)
             full_aug_dir =  augments + aug_dir
-
             input_file = full_aug_dir + "/input" + ftype
             label_files = [ full_aug_dir + "/label_" + label + ftype for label in label_list]
 
@@ -100,25 +98,28 @@ def make_data(input_dir, label_list, data_dirs, l_shape, stride, ftype, parsed_d
             # only allow labels that have more than a certain proportion of ones
             (input_cuts, label_cuts) = sift_cuts(input_cuts, label_cuts, ones_percent)
 
-            data += list(zip(input_cuts, label_cuts))
+            new_data = list(zip(input_cuts, label_cuts))
 
-
-            if not one_save and len(data) >= tr_bs + ts_bs:
+            if not one_save and len(residual + new_data) >= tr_bs + ts_bs:
                 # save the cut data into picked data files
+                data = residual + new_data
                 print("saving file {}".format(i))
                 shuffle(data)
                 info = (0, tr_bs + ts_bs, tr_bs, str(i).zfill(5))
                 _save_data(info, parsed_dir, data)
-                del data[:(tr_bs + ts_bs)]
+                residual = data[:len(data) - (tr_bs + ts_bs)]
                 i += 1
+            else:
+                tmp = residual + new_data
+                residual = tmp
 
         if one_save:
-            shuffle(data)
-            num_ex = len(data)
+            shuffle(residual)
+            num_ex = len(residual)
             print(str(num_ex) + " total examples")
             info = (0, num_ex, int(.9*num_ex), f)
-            _save_data(info, parsed_dir, data)
-            data = []
+            _save_data(info, parsed_dir, residual)
+            residual = []
 
 
 
