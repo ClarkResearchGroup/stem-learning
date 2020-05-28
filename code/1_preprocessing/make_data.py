@@ -94,15 +94,11 @@ def make_data(input_dir, label_list, data_dirs, l_shape, stride, ftype, parsed_d
             input_cuts = cut_data(input_img, lx, ly, stride=(sx, sy))
             label_cuts = cut_data(label_img, lx, ly, stride=(sx, sy))
 
-            print("i_cuts: {}".format(getsizeof(input_cuts)/1000000000.))
-            print("l_cuts: {}".format(getsizeof(label_cuts)/1000000000.))
-
             # only allow labels that have more than a certain proportion of ones
             (input_cuts, label_cuts) = sift_cuts(input_cuts, label_cuts, ones_percent)
 
             data = residual + list(zip(input_cuts, label_cuts))
 
-            print("data: {}".format(getsizeof(label_cuts)/1000000000.))
 
             if not one_save and len(data) >= tr_bs + ts_bs:
                 # save the cut data into picked data files
@@ -115,7 +111,6 @@ def make_data(input_dir, label_list, data_dirs, l_shape, stride, ftype, parsed_d
             else:
                 residual = data
 
-            print("residual: {}".format(getsizeof(residual)/1000000000.))
 
         if one_save:
             shuffle(residual)
