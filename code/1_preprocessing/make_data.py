@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from random import shuffle
 from generate_training_set import make_augments
 import os
+from sys import getsizeof
 
 def diff_labels(input_dir, label_list, data_dirs, ftype, tol=1e-5):
     '''
@@ -93,14 +94,18 @@ def make_data(input_dir, label_list, data_dirs, l_shape, stride, ftype, parsed_d
             input_cuts = cut_data(input_img, lx, ly, stride=(sx, sy))
             label_cuts = cut_data(label_img, lx, ly, stride=(sx, sy))
 
+            print("i_cuts: {}".format(getsizeof(input_cuts)/1000000000.))
+            print("l_cuts: {}".format(getsizeof(label_cuts)/1000000000.))
+
             # only allow labels that have more than a certain proportion of ones
             (input_cuts, label_cuts) = sift_cuts(input_cuts, label_cuts, ones_percent)
 
-            new_data = list(zip(input_cuts, label_cuts))
+            data = residual + list(zip(input_cuts, label_cuts))
 
-            if not one_save and len(residual + new_data) >= tr_bs + ts_bs:
+            print("data: {}".format(getsizeof(label_cuts)/1000000000.))
+
+            if not one_save and len(data) >= tr_bs + ts_bs:
                 # save the cut data into picked data files
-                data = residual + new_data
                 print("saving file {}".format(i))
                 shuffle(data)
                 info = (0, tr_bs + ts_bs, tr_bs, str(i).zfill(5))
@@ -108,8 +113,9 @@ def make_data(input_dir, label_list, data_dirs, l_shape, stride, ftype, parsed_d
                 residual = data[:len(data) - (tr_bs + ts_bs)]
                 i += 1
             else:
-                tmp = residual + new_data
-                residual = tmp
+                residual = data
+
+            print("residual: {}".format(getsizeof(residual)/1000000000.))
 
         if one_save:
             shuffle(residual)
