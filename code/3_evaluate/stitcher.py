@@ -85,6 +85,7 @@ def make_prediction(model_fn, model_weights_fn, input_file, Tol, avg, l_shape,\
 
     print("stitching data")
     a = stitch(size_x, size_y, sx, sy, predictions)
+    print(a.shape)
     a = np.argmax(a, axis=2)
     if label_file_list:
         label_img = np.argmax(label_img, axis=2)
