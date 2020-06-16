@@ -101,15 +101,16 @@ def evaluate(model_fn, model_weights_fn, input_file, l_shape, stride=None, avg=F
     a = stitch(size_x, size_y, sx, sy, predictions)
     a = np.argmax(a, axis=2)
 
-    if save_data:
-        print("saving data")
-        imsave(save_dir + prefix + "prediction.png", a)
-
     if plot:
         plt.figure()
         plt.imshow(a)
         plt.colorbar()
         plt.show()
+
+    if save_data:
+        print("saving data")
+        imsave(save_dir + prefix + "prediction.png", a)
+
     return a
 
 def calc_accuracy(evals_img, label_file_list, tol=0, nconvs=1, r=2, TN=0,
@@ -131,16 +132,16 @@ def calc_accuracy(evals_img, label_file_list, tol=0, nconvs=1, r=2, TN=0,
     l_xy      = [[],[]] if len(label_list)     == 0 else list(zip(*label_list))
     e_xy      = [[],[]] if len(evals_list)     == 0 else list(zip(*evals_list))
 
-    plt.scatter(list(l_xy[0]), list(l_xy[1]), c='r', label='FN')
-    plt.scatter(list(e_xy[0]), list(e_xy[1]), c='k', label='FP')
-    plt.scatter(list(m_xy[0]), list(m_xy[1]), c='b', label='TP')
-    plt.legend(loc='best')
-    plt.xlim(0, len(evals_img))
-    plt.ylim(0, len(evals_img[0]))
-    plt.gca().invert_yaxis()
-
     if plot:
+        plt.scatter(list(l_xy[1]), list(l_xy[0]), c='r', label='FN')
+        plt.scatter(list(e_xy[1]), list(e_xy[0]), c='k', label='FP')
+        plt.scatter(list(m_xy[1]), list(m_xy[0]), c='b', label='TP')
+        plt.legend(loc='best')
+        plt.xlim(0, len(evals_img[0]))
+        plt.ylim(0, len(evals_img))
+        plt.gca().invert_yaxis()
         plt.show()
+
     if save_data:
         fig.savefig("{}{}accuracy_plot.png".format(save_dir, prefix))
 
@@ -170,23 +171,65 @@ def calc_accuracy(evals_img, label_file_list, tol=0, nconvs=1, r=2, TN=0,
     return TP, FP, FN, TN, recall, precision, F1, bal_acc
 
 
-def get_diagnostic_data(defect_dir, verbose=False):
-    d = open(defect_dir + "diagnostics.dat", 'r')
-    lines = [line.split() for line in d]
-    vals = lines[0]
-    data = []
-    for line in lines:
-        try:
-            if len(line) == len(vals):
-                x = np.array(line).astype(float)
-                x[x<0] = 0
-                data.append(x)
-        except:
-            continue
-    if verbose:
-        print("values: {}".format(vals))
-        print("number of data points: {}".format(len(data)))
-    return np.array(data)
+def get_diagnostic_data(defect_dir_list, verbose=False):
+    data_list = []
+    for defect_dir in defect_dir_list:
+        d = open(defect_dir + "diagnostics.dat", 'r')
+        lines = [line.split() for line in d]
+        vals = lines[0]
+        data = []
+        for line in lines:
+            try:
+                if len(line) == len(vals):
+                    x = np.array(line).astype(float)
+                    x[x<0] = 0
+                    data.append(x)
+            except:
+                continue
+        if verbose:
+            print("values: {}".format(vals))
+            print("number of data points: {}".format(len(data)))
+        data_list.append(np.array(data))
+    return data_list
+
+
+def plot_diagnostics(data_list, label_list, diag="loss", log=True, invert=False, N=1):
+
+    if   diag == "accuracy":
+        i1, i2 = 2, 4
+    elif diag == "recall":
+        i1, i2 = 9, -1
+    elif diag == "precision":
+        i1, i2 = 10, -1
+
+    def f(x):
+        g = 1 - x if invert else x
+        g = np.log10(g) if log else g
+        return np.convolve(g, np.ones((N,))/N, mode='valid')
+
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+    if i2 >=0:
+        t, = ax.plot(f(data_list[0][:,i1]), 'k',   lw=2)
+        v, = ax.plot(f(data_list[0][:,i2]), 'k--', lw=2)
+
+
+    for i in range(len(data_list)):
+        ax.plot(f(data_list[i][:,i1]), 'C{}'.format(i),  label=label_list[i], lw=2)
+    if i2 >=0:
+        for i in range(len(data_list)):
+            ax.plot(f(data_list[i][:,i2]), 'C{}--'.format(i), lw=2)
+
+    ax.tick_params(labelsize=15)
+    plt.ylabel(diag, size=16)
+    plt.xlabel("Number of epochs", size=16)
+    leg1 = ax.legend(loc='best')
+    if i2 >=0:
+        leg2 = ax.legend([t,v],['Training','Validation'], loc='lower left')
+    ax.add_artist(leg1)
+    plt.tight_layout()
+    fig.savefig("loss.png", dpi=500)
+    plt.show()
 
 
 def get_diff(evals_img, label_file_list, tol=.1, plot=False, save_data=False,
