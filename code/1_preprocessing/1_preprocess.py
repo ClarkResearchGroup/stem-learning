@@ -1,21 +1,29 @@
 from make_data import *
+from sys import argv
 
-input_dir = "../../data/ZnPc/"
-data_dirs = ["1149_0"]#, "1149_1", "1149_2", "1149_3", "1153"]
-label_list = ["ZnPc"]
-parsed_dir_name='parsed_label_ZnPc'
+i = int(argv[1])
+
+all_input_dirs = ["../../data/CuPcCl/original/", "../../data/CoMTPP/", "../../data/ZnPc/", "../../data/CuPcCl_CoMTPP/"]
+all_data_dirs = [["0"], ["0"], ["1149_00"], ["combined"]]
+all_label_list = [["CuPcCl"], ["CoMTPP"], ["ZnPc"], ["combined"]]
+
+
+input_dir = all_input_dirs[i]
+data_dirs = all_data_dirs[i]
+label_list = all_label_list[i]
+parsed_dir_name='parsed_label_{}'.format(label_list[0])
 ftype = '.tif'
 
-l_shape = (256,256)
-stride = (64,64)
-one_pickle=False
+l_shape = (64,64)
+stride = (32, 32)
+one_pickle=True
 tr_bs = 2000
 ts_bs = 200
 ones_percent = .00
 tol = 0.05
 show_plots=False
 
-#create_augments(input_dir, data_dirs, ftype)
+create_augments(input_dir, data_dirs, ftype)
 
 make_data(input_dir, label_list, data_dirs, l_shape, stride, ftype,\
         parsed_dir_name=parsed_dir_name, tr_bs=tr_bs, ts_bs=ts_bs, ones_percent=ones_percent, \

@@ -1,9 +1,9 @@
-from keras.layers import Input, MaxPooling2D, UpSampling2D, Add
-from keras.layers import Dropout, Activation, Reshape, concatenate
-from keras.layers.convolutional import Conv2D, Conv2DTranspose
-from keras.models import Model
-from keras.layers.normalization import BatchNormalization
-from keras.initializers import glorot_uniform
+from tensorflow.keras.layers import Input, MaxPooling2D, UpSampling2D, Add
+from tensorflow.keras.layers import Dropout, Activation, Reshape, concatenate
+from tensorflow.keras.layers import Conv2D, Conv2DTranspose
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import BatchNormalization
+from tensorflow.keras.initializers import glorot_uniform
 
 def model_lattice(input_img, N, k_fac, nb_classes):
     '''

@@ -117,7 +117,7 @@ def train_step(model, stem, model_weights_fn, plots, epochs=1, batch_size=32, ):
     (x_test , y_test ) = get_xy('test')
 
     history = model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs,\
-            validation_data=(x_test, y_test), verbose=1)
+            validation_data=(x_test, y_test), verbose=2)
 
     print("\tcalculating accuracy")
     TP, FP, FN, TN, recall, precision, F1, bal_acc = calc_accuracy(model, x_test, y_test, N, nb_classes, plots)
