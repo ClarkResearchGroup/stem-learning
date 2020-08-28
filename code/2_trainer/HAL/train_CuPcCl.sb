@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#SBATCH --job-name="CuPcCl_8_0.35"
+#SBATCH --output="CuPcCl.%j.%N.out"
+#SBATCH --partition=gpu
+#SBATCH --time=06:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=16
+#SBATCH --sockets-per-node=1 
+#SBATCH --cores-per-socket=4 
+#SBATCH --threads-per-core=4 
+#SBATCH --mem-per-cpu=1200 
+#SBATCH --gres=gpu:v100:1
+
+module load wmlce
+kfac=8
+dropout=0.35
+
+
+python 2_train.py 0 $kfac $dropout

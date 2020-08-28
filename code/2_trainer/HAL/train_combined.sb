@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#SBATCH --job-name="combined"
+#SBATCH --output="combined.%j.%N.out"
+#SBATCH --partition=gpu
+#SBATCH --time=24:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=16
+#SBATCH --sockets-per-node=1 
+#SBATCH --cores-per-socket=4 
+#SBATCH --threads-per-core=4 
+#SBATCH --mem-per-cpu=1200 
+#SBATCH --gres=gpu:v100:1
+
+module load wmlce
+
+python 2_train.py 3

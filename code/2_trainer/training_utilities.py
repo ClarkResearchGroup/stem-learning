@@ -5,9 +5,9 @@ from input_data import *
 from accuracy import *
 import matplotlib.pyplot as plt
 
-def construct_model(N, k_fac, nb_classes, sess_dir, model_fn, model_weights_fn):
+def construct_model(N, k_fac, nb_classes, sess_dir, model_fn, model_weights_fn, dropout=0.1):
     input_img = Input(shape=(N,N,1))
-    model = model_resunet(input_img, N, k_fac, nb_classes)
+    model = model_resunet(input_img, N, k_fac, nb_classes, dropout=dropout)
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics = ['accuracy'])
     model_json = model.to_json()
 
