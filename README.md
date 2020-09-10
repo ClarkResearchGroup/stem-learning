@@ -5,7 +5,7 @@ This "stem-learning" repo contains 2 parts:
 1. Generating and post-processing of simulated STEM images
 2. Training fully convolutional network (FCN) models that can identify atomic defects like substitutions or vacancies
 
-These models are used to identify point defects like Te substitutions or Se vacancies in WSe<sub>2-2x</sub>Te<sub>2x</sub> and have made sub-pm precision measurement of strain fields of single-atom defects possible. More discussion of the results can be found on arXiv <https://arxiv.org/abs/2001.08233>.
+These models are used to identify point defects like Te substitutions or Se vacancies in WSe<sub>2-2x</sub>Te<sub>2x</sub> and have made sub-pm precision measurement of strain fields of single-atom defects possible. More discussion of the results can be found on this NanoLetter paper <https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.0c00269>.
 
  
 ## Getting Started
