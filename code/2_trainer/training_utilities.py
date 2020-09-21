@@ -61,7 +61,7 @@ def calc_accuracy(model, x_test, y_true, N, nb_classes, plots):
     TN = 304*len(y_evals) - TP - FP - FN
 
     if plots:
-        print(plotting)
+        print("plotting")
         label_cen = [[],[]] if len(conv_label_cen) == 0 else list(zip(*conv_label_cen))
         evals_cen = [[],[]] if len(conv_evals_cen) == 0 else list(zip(*conv_evals_cen))
         m_xy      = [[],[]] if len(match_list)     == 0 else list(zip(*match_list))
