@@ -61,6 +61,7 @@ def calc_accuracy(model, x_test, y_true, N, nb_classes, plots):
     TN = 304*len(y_evals) - TP - FP - FN
 
     if plots:
+        print(plotting)
         label_cen = [[],[]] if len(conv_label_cen) == 0 else list(zip(*conv_label_cen))
         evals_cen = [[],[]] if len(conv_evals_cen) == 0 else list(zip(*conv_evals_cen))
         m_xy      = [[],[]] if len(match_list)     == 0 else list(zip(*match_list))
@@ -102,7 +103,7 @@ def calc_accuracy(model, x_test, y_true, N, nb_classes, plots):
 
     return TP, FP, FN, TN, recall, precision, F1, bal_acc
 
-def train_step(model, train_stem, test_stem, model_weights_fn, plots, epochs=1, batch_size=32, ):
+def train_step(model, train_stem, test_stem, model_weights_fn, plots, epochs=1, batch_size=32):
     '''
     trains on the model for one step
     '''
