@@ -111,6 +111,7 @@ def sift_cuts(input_cuts, label_cuts, ones_percent):
     given an array of input images and label images, returns a new list of input and label images
     that have a proportion of ones of at least ones_percent in the label images.
     '''
+    ones_percent /=100
 
     lbl_shape = label_cuts[0].shape
     tot_pixels = float(lbl_shape[0]*lbl_shape[1]*(lbl_shape[2]-1))
