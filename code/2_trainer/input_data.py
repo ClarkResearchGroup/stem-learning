@@ -58,20 +58,15 @@ class DataSet(object):
         return self._images[start:end], self._labels[start:end]
 
 
-def read_data_sets(train_file, test_file, N, nb_classes):
+def read_data_set(data_file, N, nb_classes):
     class DataSets(object):
         pass
     data_sets = DataSets()
-    train_data = pickle.load(open(train_file, 'rb'))
-    train_images=np.asarray([train_data[i][0] for i in range(len(train_data))], dtype=np.float32)
-    train_labels=np.asarray([train_data[i][1] for i in range(len(train_data))], dtype=np.float32)
+    data = pickle.load(open(data_file, 'rb'))
+    data_images=np.asarray([data[i][0] for i in range(len(data))], dtype=np.float32)
+    data_labels=np.asarray([data[i][1] for i in range(len(data))], dtype=np.float32)
 
-    test_data = pickle.load(open(test_file, 'rb'))
-    test_images=np.asarray([test_data[i][0] for i in range(len(test_data))], dtype=np.float32)
-    test_labels=np.asarray([test_data[i][1] for i in range(len(test_data))], dtype=np.float32)
-
-    data_sets.train = DataSet(train_images, train_labels)
-    data_sets.test = DataSet(test_images, test_labels)
+    data_sets.data = DataSet(data_images, data_labels)
     data_sets.N = N
     data_sets.nb_classes = nb_classes
 
@@ -84,9 +79,8 @@ def grab_data(data_dir, train_f, N, nb_classes):
     creates a dictionary of DataSet objects
     '''
     if not train_f in stem_dict.keys():
-        test_path = data_dir + "test/test_" + train_f[6:]
-        train_path = data_dir + "train/" + train_f
-        stem = read_data_sets(train_path, test_path, N, nb_classes)
+        train_path = data_dir + train_f
+        stem = read_data_set(train_path, N, nb_classes)
         try:
             stem_dict[train_f] = stem
         except:

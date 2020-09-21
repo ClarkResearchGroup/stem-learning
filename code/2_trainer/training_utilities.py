@@ -102,15 +102,16 @@ def calc_accuracy(model, x_test, y_true, N, nb_classes, plots):
 
     return TP, FP, FN, TN, recall, precision, F1, bal_acc
 
-def train_step(model, stem, model_weights_fn, plots, epochs=1, batch_size=32, ):
+def train_step(model, train_stem, test_stem, model_weights_fn, plots, epochs=1, batch_size=32, ):
     '''
     trains on the model for one step
     '''
-    N = stem.N
-    nb_classes = stem.nb_classes
-    [tr_bs, ts_bs] = [stem.train._num_examples, stem.test._num_examples]
+    N = train_stem.N
+    nb_classes = train_stem.nb_classes
+    [tr_bs, ts_bs] = [train_stem.data._num_examples, test_stem.data._num_examples]
     def get_xy(batch_lbl):
-        batch = stem.train.next_batch(tr_bs) if batch_lbl == 'train' else stem.test.next_batch(ts_bs)
+        batch = train_stem.data.next_batch(tr_bs) if batch_lbl == 'train' else \
+                test_stem.data.next_batch(ts_bs)
         return (np.reshape(batch[0], [-1,N,N,1]),  np.reshape(batch[1], [-1,N*N,nb_classes]))
 
     (x_train, y_train) = get_xy('train')
@@ -120,7 +121,8 @@ def train_step(model, stem, model_weights_fn, plots, epochs=1, batch_size=32, ):
             validation_data=(x_test, y_test), verbose=2)
 
     print("\tcalculating accuracy")
-    TP, FP, FN, TN, recall, precision, F1, bal_acc = calc_accuracy(model, x_test, y_test, N, nb_classes, plots)
+    TP, FP, FN, TN, recall, precision, F1, bal_acc = calc_accuracy(model, x_test, y_test, N, \
+            nb_classes, plots)
     print("\tdone")
 
     model.save_weights(model_weights_fn)
@@ -128,27 +130,33 @@ def train_step(model, stem, model_weights_fn, plots, epochs=1, batch_size=32, ):
     return history, TP, FP, FN, TN, recall, precision, F1, bal_acc
 
 
-def train(step, data_dir, N, nb_classes, model, diagnostics_fn, model_weights_fn, plots=False):
+def train(step, data_dir, N, nb_classes, model, diagnostics_fn, model_weights_fn, num_steps=-1, plots=False):
     '''
     trains continuously until force stopped
     '''
-    file_list = os.listdir(data_dir + "train/")
-    num_files = len(file_list)
-    while True:
+    train_list = [f for f in os.listdir(data_dir) if "train" in f]
+    test_f     = data_dir + "test_00000.p"
+    test_stem  = read_data_set(test_f, N, nb_classes)
+
+    num_files = len(train_list)
+    steps_left = num_steps
+    while steps_left > 0 or num_steps==-1:
         #pick a random augmented dataset from parsed_dir
         i = np.random.randint(num_files)
-        train_f = file_list[i]
+        train_f = train_list[i]
         print("training step: " + str(step) + "\ttraining file: " + train_f)
 
         # grab data for training
         print("\tgrabbing data")
-        stem = grab_data(data_dir, train_f, N, nb_classes)
+        train_stem = grab_data(data_dir, train_f, N, nb_classes)
         print("\tdone")
 
         # train
-        history, TP, FP, FN, TN, recall, precision, F1, bal_acc = train_step(model, stem, model_weights_fn, plots)
+        history, TP, FP, FN, TN, recall, precision, F1, bal_acc = train_step(model, train_stem,
+                test_stem, model_weights_fn, plots)
         print("TP = {}, FP = {}, FN = {}, TN = {}".format(TP, FP, FN, TN))
-        print("recall = {}, precision = {}, F1 = {}, bal_acc = {}".format(recall, precision, F1, bal_acc))
+        print("recall = {}, precision = {}, F1 = {}, bal_acc = {}".format(recall, precision, F1,\
+                bal_acc))
         # record training step results
         loss     = history.history['loss'][0]
         val_loss = history.history['val_loss'][0]
@@ -158,3 +166,4 @@ def train(step, data_dir, N, nb_classes, model, diagnostics_fn, model_weights_fn
              f.write('{:15d}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\t{:.15e}\n'.format(\
                 step ,loss,acc,val_loss,val_acc,TP, FP, FN, TN, recall, precision, F1, bal_acc))
         step += 1
+        steps_left -= 1
