@@ -5,7 +5,7 @@ sys.path.insert(0, '../1_preprocessing')
 sys.path.insert(0, '../2_trainer')
 from image_parse import *
 from accuracy import *
-from keras.models import model_from_json
+from tensorflow.keras.models import model_from_json
 import matplotlib.pyplot as plt
 
 
@@ -193,8 +193,9 @@ def get_diagnostic_data(defect_dir_list, verbose=False):
     return data_list
 
 
-def plot_diagnostics(data_list, label_list, diag="loss", log=True, invert=False, N=1):
+def plot_diagnostics(data_list, label_list, diag="loss", log=True, invert=False, N=1, save=False, prefix=''):
 
+    i1, i2 = 1, 3
     if   diag == "accuracy":
         i1, i2 = 2, 4
     elif diag == "recall":
@@ -228,7 +229,8 @@ def plot_diagnostics(data_list, label_list, diag="loss", log=True, invert=False,
         leg2 = ax.legend([t,v],['Training','Validation'], loc='lower left')
     ax.add_artist(leg1)
     plt.tight_layout()
-    fig.savefig("loss.png", dpi=500)
+    if save:
+        fig.savefig("{}loss.png".format(prefix), dpi=500)
     plt.show()
 
 
