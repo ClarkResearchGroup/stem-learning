@@ -25,18 +25,19 @@ def stitch(size_x, size_y, sx, sy, images):
     '''
     Takes in a set of images, and stitches them into one image
     '''
-    (num_cuts, lx, ly, num_class) = np.shape(images)
-    Nx = len(np.arange(0, size_x - lx + 1, sx))
+    def stitch_sum(size_x, size_y, sx, sy, images):
+        (num_cuts, lx, ly, num_class) = np.shape(images)
+        Nx = len(np.arange(0, size_x - lx + 1, sx))
+        final_img = np.zeros((size_x, size_y, num_class))
+        for idx, img in enumerate(images):
+            nx = idx % Nx
+            ny = idx //Nx
+            final_img[nx*sx:nx*sx + lx,  ny*sy:ny*sy + ly, :] += img      
+        return final_img
     
-    final_img = np.empty((num_cuts, size_x, size_y, num_class))
-    final_img[:] = np.nan
-    for idx, img in enumerate(images):
-        
-        nx = idx % Nx
-        ny = idx //Nx
-        final_img[idx, nx*sx:nx*sx + lx,  ny*sy:ny*sy + ly, :] = img      
-
-    return np.nanmean(final_img, axis=0)
+    stitch_result = stitch_sum(size_x, size_y, sx, sy, images)/stitch_sum(size_x, size_y, sx, sy, np.ones_like(images))
+    
+    return stitch_result
 
 
 def get_avg_pred(model, cut):
