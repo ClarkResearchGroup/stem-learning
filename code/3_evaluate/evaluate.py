@@ -1,12 +1,12 @@
 import numpy as np
 import sys
-from matplotlib.pyplot import imsave
 sys.path.insert(0, '../1_preprocessing')
 sys.path.insert(0, '../2_trainer')
 from image_parse import *
 from accuracy import *
 from tensorflow.keras.models import model_from_json
 import matplotlib.pyplot as plt
+from tifffile import imsave
 
 
 
@@ -23,27 +23,23 @@ def predict(model, images):
 
 def stitch(size_x, size_y, sx, sy, images):
     '''
-    Takes in a set of images, and stitches them into one image
+    Modified stitch function for better performance while processing larger image
     '''
-    num_images = len(images)
-    lx = len(images[0])
-    ly = len(images[0][0])
-    Nx = len(np.arange(0, size_x - lx + 1, sx))
+    def stitch_sum(size_x, size_y, sx, sy, images):
+        (num_cuts, lx, ly, num_class) = np.shape(images)
+        Nx = len(np.arange(0, size_x - lx + 1, sx))
+        Ny = len(np.arange(0, size_y - ly + 1, sy))
 
-    final_img = [[[] for j in range(size_y)] for i in range(size_x)]
-    for idx, img in enumerate(images):
-        nx = idx % Nx
-        ny = idx // Nx
-        [ final_img[nx*sx + x][ny*sy + y].append(list(img[x,y])) for x in range(lx) for y in range(ly) ]
-    for i in range(len(final_img)):
-        for j in range(len(final_img[0])):
-            if len(final_img[i][j]) == 0:
-                final_img[i][j].append([1, 0])
-
-    ret = [[np.mean(np.array(final_img[i][j]), axis=0) for j in range(size_y)] \
-            for i in range(size_x)]
-
-    return np.nan_to_num(np.array(ret))
+        L_X = ((num_cuts-1)  % Nx)*sx + lx
+        L_Y = ((num_cuts-1) // Nx)*sy + ly
+        final_img = np.zeros((L_X, L_Y, num_class))
+        for idx, img in enumerate(images):
+            nx = idx % Nx
+            ny = idx //Nx
+            final_img[nx*sx:nx*sx + lx,  ny*sy:ny*sy + ly, :] += img      
+        return final_img
+    stitch_result = stitch_sum(size_x, size_y, sx, sy, images)/stitch_sum(size_x, size_y, sx, sy, np.ones_like(images))
+    return stitch_result
 
 
 def get_avg_pred(model, cut):
@@ -76,7 +72,7 @@ def get_s(size_x, lx):
 
 
 def evaluate(model_fn, model_weights_fn, input_file, l_shape, stride=None, avg=False, \
-        plot=False, save_data=False, save_dir='./', prefix=""):
+        plot=False, save_data=False, save_dir='./', fname="evaluated.tiff"):
     ''' evauates an input image given the model'''
 
     print("processing data")
@@ -109,7 +105,7 @@ def evaluate(model_fn, model_weights_fn, input_file, l_shape, stride=None, avg=F
 
     if save_data:
         print("saving data")
-        imsave(save_dir + prefix + "prediction.png", a)
+        imsave(save_dir + fname, a)
 
     return a
 
@@ -127,7 +123,7 @@ def calc_accuracy(evals_img, label_file_list, tol=0, nconvs=1, r=2, TN=0,
     match_list, label_list, evals_list = detect_diff(conv_label_cen, conv_evals_cen)
 
 
-    fig = plt.figure()
+    fig = plt.figure(figsize=(10,10))
     m_xy      = [[],[]] if len(match_list)     == 0 else list(zip(*match_list))
     l_xy      = [[],[]] if len(label_list)     == 0 else list(zip(*label_list))
     e_xy      = [[],[]] if len(evals_list)     == 0 else list(zip(*evals_list))
@@ -208,7 +204,7 @@ def plot_diagnostics(data_list, label_list, diag="loss", log=True, invert=False,
         g = np.log10(g) if log else g
         return np.convolve(g, np.ones((N,))/N, mode='valid')
 
-    fig = plt.figure()
+    fig = plt.figure(figsize=(10,10))
     ax = fig.add_subplot(111)
     if i2 >=0:
         t, = ax.plot(f(data_list[0][:,i1]), 'k',   lw=2)

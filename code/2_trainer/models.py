@@ -4,6 +4,7 @@ from tensorflow.keras.layers import Conv2D, Conv2DTranspose
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import BatchNormalization
 from tensorflow.keras.initializers import glorot_uniform
+from keras.layers import LeakyReLU
 
 def model_lattice(input_img, N, k_fac, nb_classes):
     '''
@@ -185,3 +186,55 @@ def model_resunet(input_img, N, n_filters, nb_classes, basic=True, dropout=0.1, 
     output = Activation('softmax')(x)
 
     return Model(input_img, output)
+
+def model_resunet_generator(input_img, N, n_filters, output_channels=1, basic=True, dropout=0.1, stride=1, f=3, conv=True):
+    """Creates a Deep Learning model for image generation"""
+    # Contracting Path
+    k = 2 if basic else 3
+    c1, r1 = res_conv_block(input_img, [n_filters*1]*k, '1', 'a', basic, f, conv, dropout, stride)
+    c2, r2 = res_conv_block(c1,        [n_filters*2]*k, '1', 'b', basic, f, conv, dropout, stride)
+    c3, r3 = res_conv_block(c2,        [n_filters*4]*k, '1', 'c', basic, f, conv, dropout, stride)
+    c4, r4 = res_conv_block(c3,        [n_filters*8]*k, '1', 'd', basic, f, conv, dropout, stride)
+
+    c5 = res_helper(c4, [n_filters*16]*k, stride=1, basic=basic, f=f)
+
+    # Expansive Path
+    c6 = res_upsamp_block(c5, r4, n_filters, k, 8, '2', 'a', basic, f, dropout, stride)
+    c7 = res_upsamp_block(c6, r3, n_filters, k, 4, '2', 'b', basic, f, dropout, stride)
+    c8 = res_upsamp_block(c7, r2, n_filters, k, 2, '2', 'c', basic, f, dropout, stride)
+    c9 = res_upsamp_block(c8, r1, n_filters, k, 1, '2', 'd', basic, f, dropout, stride)
+
+    x = Conv2D(output_channels, (1, 1), activation = 'linear', padding='same')(c9)
+    output = LeakyReLU()(x)
+    return Model(input_img, output)
+
+
+
+def discriminator(n_filters=64, input_channels=1):
+  """PatchGan discriminator model (https://arxiv.org/abs/1703.10593).
+
+  Returns:
+    Discriminator model
+  """
+
+  inp = Input(shape=[None, None, input_channels], name='input_image')
+
+  
+  x = Conv2D(1*n_filters, 4, strides=2, padding='same')(inp) # (bs, n_filters, 128, 128)
+  x = BatchNormalization()(x)
+
+  x = Conv2D(2*n_filters, 4, strides=2, padding='same')(x)   # (bs, 2*n_filters, 64, 64)
+  x = BatchNormalization()(x)
+  x = LeakyReLU(0.2)(x)
+
+  x = Conv2D(4*n_filters, 4, strides=2, padding='same')(x)   # (bs, 4*n_filters, 32, 32)
+  x = BatchNormalization()(x)
+  x = LeakyReLU(0.2)(x)
+
+  x = Conv2D(8*n_filters, 4, strides=1, padding='same')(x)   # (bs, 8*n_filters, 16, 16)
+  x = BatchNormalization()(x)
+  x = LeakyReLU(0.2)(x)
+
+  last = Conv2D(1, 4, strides=1)(x)
+
+  return Model(inputs=inp, outputs=last)

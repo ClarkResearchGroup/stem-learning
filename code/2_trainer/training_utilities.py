@@ -50,8 +50,8 @@ def calc_accuracy(model, x_test, y_true, N, nb_classes, plots):
         conv_label_img = convolve(1, label_img)
         conv_evals_img = convolve(1, evals_img)
 
-        conv_label_cen = get_center_list(conv_label_img, 5)
-        conv_evals_cen = get_center_list(conv_evals_img, 5)
+        conv_label_cen = get_center_list(conv_label_img, 7.5)
+        conv_evals_cen = get_center_list(conv_evals_img, 7.5)
 
         match_list, label_list, evals_list = detect_diff(conv_label_cen, conv_evals_cen)
 
