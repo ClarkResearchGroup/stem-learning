@@ -4,9 +4,11 @@ from params import *
 from post_process import *
 import shutil
 
-def create_simulated_image():
+def create_simulated_image(incostem_dir, save_path="./sim_image/", experimentalize=False, bkg_file=None, num_files=1):
+    cur_dir = os.getcwd()
+    os.chdir(incostem_dir)
     ### generate param and xyz files ####
-    generate_files(sample_param_dic, EM_param_dic, 1)
+    generate_files(sample_param_dic, EM_param_dic, num_files)
     #####################################
 
     ### use incostem to create images ###
@@ -20,28 +22,19 @@ def create_simulated_image():
     #####################################
 
     ### do postprocessing
-
-    def experimentalize(Mypostprocess):
-        #Mypostprocess.add_horizental_sheer((0.05,0.025))
-        #Mypostprocess.add_vertical_constrain((0.05,0.025))
-        Mypostprocess.crop(1024,1024)
-
-
-        Mypostprocess.image_stacks -= 10
-        Mypostprocess.image_stacks *= .0175/117.5
-        Mypostprocess.image_stacks += .086
-        Mypostprocess.add_gaussian_noise(0,.0025)
-
-        #bkg_stack = tifffile.imread('./bkg/Bkg_stack.tif')
-        Mypostprocess.add_bkg(bkg_stack)
-
-    Mypostprocess = post_process(image_path='./',file_num=1,defect_list = defect_list)
+    Mypostprocess = post_process(image_path=incostem_dir,file_num=num_files,defect_list = defect_list)
     Mypostprocess.read_image_and_label()
-    #experimentalize(Mypostprocess)
-    Mypostprocess.save_as_image('./sim_image/')
-
+    if experimentalize:
+        Mypostprocess.experimentalize(bkg_file)
+    Mypostprocess.save_as_image(save_path)
+    
+    if bkg_file:
+        os.rename(bkg_file, "tmp")
     [os.remove(f) for f in os.listdir() if ".tif" in f]
-
+    if bkg_file:
+        os.rename("tmp", bkg_file)
+	
+    print("Done generating simulated images!")
 
 
 

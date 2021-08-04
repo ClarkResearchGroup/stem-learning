@@ -68,17 +68,17 @@ class post_process():
                 image_stacks[i,:,:,j+1] = temp_defect_image
         self.image_stacks = image_stacks.copy()
 
-    def add_horizental_sheer(self, sheer_rate):
+    def add_horizental_shear(self, shear_rate):
 
         """
-        Add horizental sheer to simulate horizental sample draft during taking the image in STEM
-        sheer_rate = (sheer_mean,sheer_std) in guassian distribution
-        single image has a linear sheer, while in different images, sheer rates are different
+        Add horizental shear to simulate horizental sample draft during taking the image in STEM
+        shear_rate = (shear_mean,shear_std) in Gaussian distribution
+        single image has a linear shear, while in different images, shear rates are different
         """
         num_image, x, y, num_defects = np.shape(self.image_stacks)
         for i in range(num_image):
             temp_stack = self.image_stacks[i,:,:,:]
-            shear = _get_normal_distribution(sheer_rate)
+            shear = _get_normal_distribution(shear_rate)
             afine_tf = transform.AffineTransform(shear = shear)
             modified = transform.warp(temp_stack, inverse_map=afine_tf)
             self.image_stacks[i,:,:,:] = modified
@@ -86,18 +86,18 @@ class post_process():
 
 
 
-    def add_vertical_constrain(self, constrain_rate):
+    def add_vertical_contraction(self, contraction_rate):
         '''
-        Add vertical constrain to simulate vertical sample draft during taking the image in STEM
-        constrain_rate = (constrain_mean,constrain_std) in guassian distribution
-        single image has a constant constrain rate, while in different images, constrain rate are different
+        Add vertical contraction to simulate vertical sample draft during taking the image in STEM
+        contraction_rate = (contraction_mean,contraction_std) in Gaussian distribution
+        single image has a constant contraction rate, while in different images, contraction rate are different
         '''
 
         num_image, x, y, num_defects = np.shape(self.image_stacks)
         for i in range(num_image):
             temp_stack = self.image_stacks[i,:,:,:]
-            constrain = _get_normal_distribution(constrain_rate)+1
-            afine_tf = transform.AffineTransform(scale = (1,constrain))
+            contraction = _get_normal_distribution(contraction_rate)+1
+            afine_tf = transform.AffineTransform(scale = (1,contraction))
             modified = transform.warp(temp_stack, inverse_map=afine_tf)
             self.image_stacks[i,:,:,:] = modified
 
@@ -119,7 +119,7 @@ class post_process():
     def crop(self, target_x, target_y):
 
         '''
-        The raw images is a bit larger because the sheer and rotation will cause some blank in the image
+        The raw images is a bit larger because the shear and rotation will cause some blank in the image
         Crop the center image to shape(target_x, target_y) and avoid the blank
         '''
 
@@ -158,11 +158,9 @@ class post_process():
     def _generate_random_bkg(bkg_stack):
 
         num, x, y = np.shape(bkg_stack)
-        random_weight = np.random.rand(num)
-        random_weight = random_weight/np.sum(random_weight)
-        bkg_image = np.zeros((x,y))
-        for i in range(num):
-            bkg_image += random_weight[i]*bkg_stack[i,:,:]
+        i = np.random.randint(num)
+        bkg_image = bkg_stack[i,:,:]
+        bkg_image = np.rot90(bkg_image, np.random.randint(4))
         return bkg_image
 
 
@@ -211,6 +209,20 @@ class post_process():
         np.save(save_path+'images_files.npy',self.image_stacks[:,:,:,0])
         for i in range(len(self.defect_list)):
             np.save(save_path+defect_list[i]+'_files.npy',self.image_stacks[:,:,:,i+1])
+    
+    def experimentalize(self, bkg_file=None):
+        #Mypostprocess.add_horizental_shear((0.05,0.025))
+        #Mypostprocess.add_vertical_contraction((0.05,0.025))
+        self.crop(1024,1024)
+
+
+        self.image_stacks -= 7.5
+        self.image_stacks *= .0227/130 #TODO TUNE THIS PARAMETER (maybe make smaller)
+        self.image_stacks += 0.0
+        self.add_gaussian_noise(0,.0025) #TODO TUNWE THIS TOOO
+        if bkg_file:
+            bkg_stack = tifffile.imread(bkg_file)
+            self.add_bkg(bkg_stack)
 
 
 
