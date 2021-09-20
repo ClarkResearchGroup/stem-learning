@@ -1,21 +1,3 @@
-# Copyright 2019 The TensorFlow Authors. All Rights Reserved.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-# ==============================================================================
-"""Pix2pix.
-"""
-
-
 import tensorflow as tf
 
 class InstanceNormalization(tf.keras.layers.Layer):
@@ -45,47 +27,72 @@ class InstanceNormalization(tf.keras.layers.Layer):
     return self.scale * normalized + self.offset
 
 
+'''
+  2D Reflection Padding
+  Attributes:
+    - padding: (padding_width, padding_height) tuple
+'''
+class ReflectionPadding2D(tf.keras.layers.Layer):
+    def __init__(self, padding=(1, 1), **kwargs):
+        self.padding = tuple(padding)
+        super(ReflectionPadding2D, self).__init__(**kwargs)
 
+    def compute_output_shape(self, input_shape):
+        return (input_shape[0], input_shape[1] + 2 * self.padding[0], input_shape[2] + 2 * self.padding[1], input_shape[3])
+
+    def call(self, input_tensor, mask=None):
+        padding_width, padding_height = self.padding
+        return tf.pad(input_tensor, [[0,0], [padding_height, padding_height], [padding_width, padding_width], [0,0] ], 'REFLECT')
+
+
+def conv2d(dim, ks, s, padding="valid", activation=None):
+  initializer = tf.keras.initializers.TruncatedNormal(stddev=0.02)
+  return tf.keras.layers.Conv2D(dim, ks, s, padding=padding, activation=activation, kernel_initializer=initializer)
+
+def conv2dtranspose(dim, ks, s, padding="valid"):
+  initializer = tf.keras.initializers.TruncatedNormal(stddev=0.02)
+  return tf.keras.layers.Conv2DTranspose(dim, ks, s, padding=padding, kernel_initializer=initializer)
 
 def generator_resnet(gf_dim):
 
-    def residule_block(x, dim, ks=3, s=1):
-        p = int((ks - 1) / 2)
-        y = tf.pad(x, [[0, 0], [p, p], [p, p], [0, 0]], "REFLECT")
-        y = InstanceNormalization()(tf.keras.layers.Conv2D(dim, ks, s)(y))
-        y = tf.pad(tf.keras.layers.ReLU()(y), [[0, 0], [p, p], [p, p], [0, 0]], "REFLECT")
-        y = InstanceNormalization()(tf.keras.layers.Conv2D(dim, ks, s)(y))
-        return tf.keras.layers.Add()([x, y])
-    
-    image = tf.keras.layers.Input(shape=[None, None, 1])       
-    # Justin Johnson's model from https://github.com/jcjohnson/fast-neural-style/
-    # The network with 9 blocks consists of: c7s1-32, d64, d128, R128, R128, R128,
-    # R128, R128, R128, R128, R128, R128, u64, u32, c7s1-3
-    c0 = tf.pad(image, [[0, 0], [3, 3], [3, 3], [0, 0]], "REFLECT")
-    c1 = tf.keras.layers.ReLU()(InstanceNormalization()(tf.keras.layers.Conv2D(gf_dim  , 7, 1, padding='valid')(c0)))
-    c2 = tf.keras.layers.ReLU()(InstanceNormalization()(tf.keras.layers.Conv2D(gf_dim*2, 3, 2, padding='same')(c1)))
-    c3 = tf.keras.layers.ReLU()(InstanceNormalization()(tf.keras.layers.Conv2D(gf_dim*4, 3, 2, padding='same')(c2)))
-   
+  def residule_block(x, dim, ks=3, s=1):
+    p = int((ks - 1) / 2)
+    y = ReflectionPadding2D(padding=(p,p))(x)
+    y = InstanceNormalization()(conv2d(dim, ks, s, padding='valid')(y))
+    y = ReflectionPadding2D(padding=(p,p))(tf.keras.layers.ReLU()(y))
+    y = InstanceNormalization()(conv2d(dim, ks, s, padding='valid')(y))
+    return tf.keras.layers.Add()([x, y])
 
-    # define G network with 9 resnet blocks
-    r1 = residule_block(c3, gf_dim*4)
-    r2 = residule_block(r1, gf_dim*4)
-    r3 = residule_block(r2, gf_dim*4)
-    r4 = residule_block(r3, gf_dim*4)
-    r5 = residule_block(r4, gf_dim*4)
-    r6 = residule_block(r5, gf_dim*4)
-    r7 = residule_block(r6, gf_dim*4)
-    r8 = residule_block(r7, gf_dim*4)
-    r9 = residule_block(r8, gf_dim*4)
+  # Justin Johnson's model from https://github.com/jcjohnson/fast-neural-style/
+  # The network with 9 blocks consists of: c7s1-32, d64, d128, R128, R128, R128,
+  # R128, R128, R128, R128, R128, R128, u64, u32, c7s1-3
+  image = tf.keras.layers.Input(shape=[None, None, 1])       
 
-    d1 = tf.keras.layers.Conv2DTranspose(gf_dim*2, 3, 2, padding='same')(r9)
-    d1 = tf.keras.layers.ReLU()(InstanceNormalization()(d1))
-    d2 = tf.keras.layers.Conv2DTranspose(gf_dim, 3, 2, padding='same')(d1)
-    d2 = tf.keras.layers.ReLU()(InstanceNormalization()(d2))
-    d2 = tf.pad(d2, [[0, 0], [3, 3], [3, 3], [0, 0]], "REFLECT")
-    pred = tf.keras.layers.Conv2D(1, 7, 1, padding='valid', activation='tanh')(d2)
+  c0 = ReflectionPadding2D(padding=(3,3))(image)
+  c1 = tf.keras.layers.ReLU()(InstanceNormalization()(conv2d(gf_dim  , 7, 1, padding='valid')(c0)))
+  c2 = tf.keras.layers.ReLU()(InstanceNormalization()(conv2d(gf_dim*2, 3, 2, padding='same')(c1)))
+  c3 = tf.keras.layers.ReLU()(InstanceNormalization()(conv2d(gf_dim*4, 3, 2, padding='same')(c2)))
 
-    return tf.keras.Model(inputs=image, outputs=pred)
+
+  # define G network with 9 resnet blocks
+  r1 = residule_block(c3, gf_dim*4)
+  r2 = residule_block(r1, gf_dim*4)
+  r3 = residule_block(r2, gf_dim*4)
+  r4 = residule_block(r3, gf_dim*4)
+  r5 = residule_block(r4, gf_dim*4)
+  r6 = residule_block(r5, gf_dim*4)
+  r7 = residule_block(r6, gf_dim*4)
+  r8 = residule_block(r7, gf_dim*4)
+  r9 = residule_block(r8, gf_dim*4)
+
+  d1 = conv2dtranspose(gf_dim*2, 3, 2, padding='same')(r9)
+  d1 = tf.keras.layers.ReLU()(InstanceNormalization()(d1))
+  d2 = conv2dtranspose(gf_dim, 3, 2, padding='same')(d1)
+  d2 = tf.keras.layers.ReLU()(InstanceNormalization()(d2))
+  d2 = ReflectionPadding2D(padding=(3,3))(d2)
+  pred = conv2d(1, 7, 1, padding='valid', activation='tanh')(d2)
+
+  return tf.keras.Model(inputs=image, outputs=pred)
 
 
 def downsample(filters, size, norm_type='batchnorm', apply_norm=True):

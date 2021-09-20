@@ -102,3 +102,6 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+code/cycle_gan/checkpoints/
+code/cycle_gan/data/

@@ -62,6 +62,7 @@ def generate_images(model_x, model_y, test_input):
 
 def generate_losses(gen_exp_losses,   gen_sim_losses,\
                     cycle_exp_losses, cycle_sim_losses,\
+                    ident_exp_losses, ident_sim_losses,\
                     disc_sim_losses,  disc_exp_losses, epoch, \
                     last=None):
     ymin, ymax = 1e-2, 1e2
@@ -69,38 +70,23 @@ def generate_losses(gen_exp_losses,   gen_sim_losses,\
     N = len(x) if last is None or last > len(x) else last
     fig = plt.figure(figsize=(12,6))
    
-    plt.subplot(1,3,1)
+    plt.subplot(1,2,1)
     plt.semilogy(x[-N:], disc_sim_losses[-N:], label='disc sim')
     plt.semilogy(x[-N:], disc_exp_losses[-N:], label='disc exp')
     plt.xlabel("epoch")
     plt.ylabel("loss")
     plt.legend(loc='best')
-    #plt.ylim(ymin, ymax)
 
-    gen_sim = np.row_stack((cycle_sim_losses, cycle_exp_losses, gen_sim_losses))
-    gen_sim_stack = np.cumsum(gen_sim, axis=0)
-    gen_exp = np.row_stack((cycle_sim_losses, cycle_exp_losses, gen_exp_losses))
-    gen_exp_stack = np.cumsum(gen_exp, axis=0)
-
-    ymax = np.max([np.max(gen_sim_stack[2,:][-N:]), np.max(gen_exp_stack[2,:][-N:])])
-    
-    ax = plt.subplot(1,3,2)
-    ax.fill_between(x[-N:],                       0, gen_sim_stack[0,:][-N:],label='cycle_sim')
-    ax.fill_between(x[-N:], gen_sim_stack[0,:][-N:], gen_sim_stack[1,:][-N:],label='cycle_exp')
-    ax.fill_between(x[-N:], gen_sim_stack[1,:][-N:], gen_sim_stack[2,:][-N:],label='gen_sim')
-    plt.legend(loc='best')
-    plt.ylim(0, ymax*1.1)
-
-    ax = plt.subplot(1,3,3)
-
-
-    ax.fill_between(x[-N:],                       0, gen_exp_stack[0,:][-N:],label='cycle_sim')
-    ax.fill_between(x[-N:], gen_exp_stack[0,:][-N:], gen_exp_stack[1,:][-N:],label='cycle_exp')
-    ax.fill_between(x[-N:], gen_exp_stack[1,:][-N:], gen_exp_stack[2,:][-N:],label='gen_exp')
-    plt.legend(loc='best')
-    plt.ylim(0, ymax*1.1)
-
-
+    plt.subplot(1,2,2)
+    plt.semilogy(x[-N:], gen_exp_losses[-N:], label='gen_exp')
+    plt.semilogy(x[-N:], gen_sim_losses[-N:], label='gen_sim')
+    plt.semilogy(x[-N:], cycle_exp_losses[-N:], label='cycle_exp')
+    plt.semilogy(x[-N:], cycle_sim_losses[-N:], label='cycle_sim')
+    plt.semilogy(x[-N:], ident_exp_losses[-N:], label='ident_exp')
+    plt.semilogy(x[-N:], ident_sim_losses[-N:], label='ident_sim')
+    plt.xlabel("epoch")
+    plt.ylabel("loss")
+    plt.legend(loc="best")
 
     plt.show()
 
