@@ -105,3 +105,5 @@ venv.bak/
 
 code/cycle_gan/checkpoints/
 code/cycle_gan/data/
+data/
+cycle_gan_results/
