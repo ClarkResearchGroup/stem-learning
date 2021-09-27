@@ -1,16 +1,14 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def get_discriminator_acc(discriminator, real_img, fake_img, threshold=0.5):
+def get_discriminator_acc(discriminator, real_img, fake_img, threshold=0.5, with_logits=True):
     
-    logit_real = discriminator(real_img, training=False).numpy()
-    logit_fake = discriminator(fake_img, training=False).numpy()
+    p_real = discriminator(real_img, training=False).numpy()
+    p_fake = discriminator(fake_img, training=False).numpy()
 
-    p_real = 1/(1+np.exp(-logit_real))
-    p_fake = 1/(1+np.exp(-logit_fake))
-
-    vmin = -np.max([np.max(np.abs(p_real)), np.max(np.abs(p_fake))])
-    vmax = -vmin
+    if with_logits:
+      p_real = 1/(1+np.exp(-p_real))
+      p_fake = 1/(1+np.exp(-p_fake))
 
     plt.figure()
     plt.subplot(1,2,1)

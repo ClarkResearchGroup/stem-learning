@@ -9,9 +9,9 @@ def process_image(input_file):
        of pixel values
     """
     input_img = imread(input_file).astype(np.float32)
-
-    img_shape = len(input_img.shape)
-    assert  img_shape == 2, "improper image shape of " + str(img_shape)
+    if len(input_img.shape)==2:
+        lx, ly = input_img.shape
+        input_img = input_img.reshape((lx,ly,1))
     return input_img
 
 
@@ -30,54 +30,57 @@ def cut_data(data, fine_size, stride):
         print(lx, ly)
         exit()
 
-    return np.array([ data[i:i+lx, j:j+ly] for j in np.arange(0, ny - ly + 1, sy) \
+    return np.array([ data[i:i+lx,j:j+ly,:] for j in np.arange(0, ny - ly + 1, sy) \
             for i in np.arange(0, nx - lx + 1, sx)])
 
 
-def find_min_max_vals(image_dir):
+def find_min_max_vals(image_dir, num_channels=1):
     """
     returns the min and max pixel values of all images in a directory
     """
     fn_list = [x for x in os.listdir(image_dir) if ".tif" in x]
-    min_v, max_v = 999999, -999999
+    min_v, max_v = num_channels*[999999], num_channels*[-999999]
     for fn in fn_list:
-        img = imread(os.path.join(image_dir, fn))
-        upper, lower = np.max(img), np.min(img)
-        min_v = lower if lower < min_v else min_v
-        max_v = upper if upper > max_v else max_v
+        img = process_image(os.path.join(image_dir, fn))
+        for i in range(num_channels):
+            upper, lower = np.max(img[:,:,i]), np.min(img[:,:,i])
+            min_v[i] = lower if lower < min_v[i] else min_v[i]
+            max_v[i] = upper if upper > max_v[i] else max_v[i]
+
+    for i in range(num_channels):
+        if min_v[i] == max_v[i]:
+            min_v[i], max_v[i] = 0, 1
+
     return min_v, max_v
 
-
-def parse_and_save_image(fn, image_dir, min_v, max_v, save_dir="./save/", fine_size=256, stride=256):
+def parse_and_save_image(fn, image_dir, min_v, max_v, save_dir="./save/", fine_size=256, stride=256, num_channels=1):
     """
     takes a large image and creates subimages of it and stores it in a directory
     """
     input_file = image_dir + fn
     data = process_image(input_file)
+    for i in range(num_channels):
+        data[:,:,i] = 2*( (data[:,:,i] - min_v[i])/(max_v[i] - min_v[i]) - .5)
+
     arr = cut_data(data, fine_size, stride)
-
-    arr = 2*( (arr - min_v)/(max_v - min_v) - .5)
-    N = len(arr)
-
     os.makedirs(save_dir, exist_ok=True)
     for i, img in enumerate(arr):
-        imwrite("{}{}_{}.tiff".format(save_dir, fn[:-4], str(i).zfill(3)), img)
+        imwrite("{}{}_{}.tiff".format(save_dir, fn[:-5], str(i).zfill(3)), img)
     return
 
-def parse_and_save_dir(image_dir, save_dir="./save/", fine_size=256, stride=256):
+def parse_and_save_dir(image_dir, save_dir="./save/", fine_size=256, stride=256, num_channels=1):
     """
     takes images in a directory and cuts them into subimages
     """
     fn_list = [x for x in os.listdir(image_dir) if ".tif" in x]
-    min_v, max_v = find_min_max_vals(image_dir)
+    min_v, max_v = find_min_max_vals(image_dir, num_channels)
     for fn in fn_list:
-        parse_and_save_image(fn, image_dir, min_v, max_v, save_dir, fine_size, stride)
+        parse_and_save_image(fn, image_dir, min_v, max_v, save_dir, fine_size, stride, num_channels)
     return
 
-def load_train_data(fn):
-    arr = np.array(imread(fn)).astype(np.float32)
+def load_train_data(fn, num_channels):
+    arr = process_image(fn)
     if np.random.random() > 0.5:
         arr = np.fliplr(arr)
     arr = np.rot90(arr, np.random.randint(4))
-    (lx, ly) = arr.shape
-    return arr.reshape([lx,ly,1])
+    return arr[:,:,:num_channels]

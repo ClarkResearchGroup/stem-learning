@@ -53,7 +53,7 @@ def conv2dtranspose(dim, ks, s, padding="valid"):
   initializer = tf.keras.initializers.TruncatedNormal(stddev=0.02)
   return tf.keras.layers.Conv2DTranspose(dim, ks, s, padding=padding, kernel_initializer=initializer)
 
-def generator_resnet(gf_dim):
+def generator_resnet(gf_dim, ic=1, oc=1):
 
   def residule_block(x, dim, ks=3, s=1):
     p = int((ks - 1) / 2)
@@ -66,7 +66,7 @@ def generator_resnet(gf_dim):
   # Justin Johnson's model from https://github.com/jcjohnson/fast-neural-style/
   # The network with 9 blocks consists of: c7s1-32, d64, d128, R128, R128, R128,
   # R128, R128, R128, R128, R128, R128, u64, u32, c7s1-3
-  image = tf.keras.layers.Input(shape=[None, None, 1])       
+  image = tf.keras.layers.Input(shape=[None, None, ic])       
 
   c0 = ReflectionPadding2D(padding=(3,3))(image)
   c1 = tf.keras.layers.ReLU()(InstanceNormalization()(conv2d(gf_dim  , 7, 1, padding='valid')(c0)))
@@ -90,7 +90,7 @@ def generator_resnet(gf_dim):
   d2 = conv2dtranspose(gf_dim, 3, 2, padding='same')(d1)
   d2 = tf.keras.layers.ReLU()(InstanceNormalization()(d2))
   d2 = ReflectionPadding2D(padding=(3,3))(d2)
-  pred = conv2d(1, 7, 1, padding='valid', activation='tanh')(d2)
+  pred = conv2d(oc, 7, 1, padding='valid', activation='tanh')(d2)
 
   return tf.keras.Model(inputs=image, outputs=pred)
 
@@ -164,7 +164,7 @@ def upsample(filters, size, norm_type='batchnorm', apply_dropout=False):
   return result
 
 
-def unet_generator(output_channels, norm_type='batchnorm'):
+def unet_generator(input_channels, output_channels, norm_type='batchnorm'):
   """Modified u-net generator model (https://arxiv.org/abs/1611.07004).
 
   Args:
@@ -204,7 +204,7 @@ def unet_generator(output_channels, norm_type='batchnorm'):
 
   concat = tf.keras.layers.Concatenate()
 
-  inputs = tf.keras.layers.Input(shape=[None, None, 1])
+  inputs = tf.keras.layers.Input(shape=[None, None, input_channels])
   x = inputs
 
   # Downsampling through the model
@@ -225,7 +225,7 @@ def unet_generator(output_channels, norm_type='batchnorm'):
   return tf.keras.Model(inputs=inputs, outputs=x)
 
 
-def discriminator(norm_type='batchnorm', target=True):
+def discriminator(norm_type='batchnorm', ic=1):
   """PatchGan discriminator model (https://arxiv.org/abs/1611.07004).
 
   Args:
@@ -238,12 +238,8 @@ def discriminator(norm_type='batchnorm', target=True):
 
   initializer = tf.random_normal_initializer(0., 0.02)
 
-  inp = tf.keras.layers.Input(shape=[None, None, 1], name='input_image')
+  inp = tf.keras.layers.Input(shape=[None, None, ic], name='input_image')
   x = inp
-
-  if target:
-    tar = tf.keras.layers.Input(shape=[None, None, 1], name='target_image')
-    x = tf.keras.layers.concatenate([inp, tar])  # (bs, 256, 256, channels*2)
 
   down1 = downsample(64, 4, norm_type, False)(x)  # (bs, 128, 128, 64)
   down2 = downsample(128, 4, norm_type)(down1)  # (bs, 64, 64, 128)
@@ -267,7 +263,4 @@ def discriminator(norm_type='batchnorm', target=True):
       1, 4, strides=1,
       kernel_initializer=initializer)(zero_pad2)  # (bs, 30, 30, 1)
 
-  if target:
-    return tf.keras.Model(inputs=[inp, tar], outputs=last)
-  else:
-    return tf.keras.Model(inputs=inp, outputs=last)
+  return tf.keras.Model(inputs=inp, outputs=last)
