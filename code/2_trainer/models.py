@@ -4,7 +4,7 @@ from tensorflow.keras.layers import Conv2D, Conv2DTranspose
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import BatchNormalization
 from tensorflow.keras.initializers import glorot_uniform
-from keras.layers import LeakyReLU
+from tensorflow.keras.layers import LeakyReLU
 
 def model_lattice(input_img, N, k_fac, nb_classes):
     '''
@@ -219,7 +219,7 @@ def discriminator(n_filters=64, input_channels=1):
 
   inp = Input(shape=[None, None, input_channels], name='input_image')
 
-  
+
   x = Conv2D(1*n_filters, 4, strides=2, padding='same')(inp) # (bs, n_filters, 128, 128)
   x = BatchNormalization()(x)
 

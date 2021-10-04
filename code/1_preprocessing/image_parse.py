@@ -25,7 +25,7 @@ def process_image(input_file, standardize=False):
        of pixel values
     """
 
-    input_img = imread(input_file).astype(np.float64)
+    input_img = imread(input_file).astype(np.float32)
 
     if len(input_img.shape) == 3:
         input_img = flatten_channels(input_img)
@@ -74,7 +74,7 @@ def process_label(label_file_list, tol=1.e-5):
     return label_data
 
 
-def cut_data(data, lx, ly, stride=(1, 1)):
+def cut_data(data, lx, ly, stride=(1, 1), standardize=False):
     """
     cuts up the data into pieces with dimension lx-by-ly
     data = 2-dimensional array with integer elements ranging from 0 to num_classes-1
@@ -88,8 +88,15 @@ def cut_data(data, lx, ly, stride=(1, 1)):
         print(lx, ly)
         exit()
 
-    return np.array([ data[i:i+lx, j:j+ly] for j in np.arange(0, ny - ly + 1, sy) \
-            for i in np.arange(0, nx - lx + 1, sx)])
+    cut_data = [data[i:i+lx, j:j+ly] for j in np.arange(0, ny - ly + 1, sy) \
+                                     for i in np.arange(0, nx - lx + 1, sx)]
+
+    if standardize:
+        cut_data = [(x - np.mean(x))/np.std(x) for x in cut_data]
+
+    return np.array(cut_data)
+
+
 
 def diff_images(label_input_fn, input_fn, save_fn, tol=1e-5):
     '''

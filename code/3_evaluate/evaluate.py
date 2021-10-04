@@ -18,7 +18,8 @@ def model_load(model_fn, model_weights_fn):
 
 
 def predict(model, images):
-    return model.predict_on_batch(images)
+    return model(images)
+    #return model.predict_on_batch(images)
 
 
 def stitch(size_x, size_y, sx, sy, images):
@@ -76,7 +77,7 @@ def evaluate(model_fn, model_weights_fn, input_file, l_shape, stride=None, avg=F
     ''' evauates an input image given the model'''
 
     print("processing data")
-    input_img = process_image(input_file, standardize=True)
+    input_img = process_image(input_file)
     (size_x, size_y) = input_img.shape
 
     print("loading model")
@@ -85,7 +86,7 @@ def evaluate(model_fn, model_weights_fn, input_file, l_shape, stride=None, avg=F
     (sx, sy) = stride if stride != None else (get_s(size_x, lx), get_s(size_y, ly))
     print("strides: ({}, {})".format(sx, sy))
 
-    input_cuts = cut_data(input_img, lx, ly, (sx, sy))
+    input_cuts = cut_data(input_img, lx, ly, (sx, sy), standardize=True)
     input_cuts = np.reshape(input_cuts, [-1, lx, ly, 1])
     num_cuts = len(input_cuts)
 
@@ -108,6 +109,43 @@ def evaluate(model_fn, model_weights_fn, input_file, l_shape, stride=None, avg=F
         imsave(save_dir + fname, a)
 
     return a
+
+def generate_image(model, input_file, l_shape, stride=None, avg=False, \
+        plot=False, save_data=False, save_dir='./',fname='generated_input.tiff'):
+    ''' evauates an input image given the model'''
+
+    print("processing data")
+    input_img = process_image(input_file)
+    (size_x, size_y) = input_img.shape
+
+    print("loading model")
+    (lx, ly) = l_shape
+    (sx, sy) = stride if stride != None else (get_s(size_x, lx), get_s(size_y, ly))
+    print("strides: ({}, {})".format(sx, sy))
+
+    input_cuts = cut_data(input_img, lx, ly, (sx, sy), standardize=True)
+    input_cuts = np.reshape(input_cuts, [-1, lx, ly, 1])
+    num_cuts = len(input_cuts)
+
+    print("predicting data")
+    predictions = np.array([get_avg_pred(model,cut) for cut in input_cuts] if avg else predict(model,input_cuts))
+    predictions = np.reshape(np.array(predictions), [num_cuts, lx, ly, -1])
+
+    print("stitching data")
+    a = stitch(size_x, size_y, sx, sy, predictions)[:,:,0]
+    
+    if plot:
+        plt.figure(figsize=(10,10))
+        plt.imshow(a, cmap='gray')
+        plt.axis('off')
+        plt.show()
+
+    if save_data:
+        print("saving data")
+        imsave(save_dir + fname, a.astype(np.float32))
+
+    return a
+
 
 def calc_accuracy(evals_img, label_file_list, tol=0, nconvs=1, r=2, TN=0,
         plot=False, save_data=False, save_dir="./", prefix="", verbose=True):
@@ -174,13 +212,15 @@ def get_diagnostic_data(defect_dir_list, verbose=False):
         lines = [line.split() for line in d]
         vals = lines[0]
         data = []
-        for line in lines:
+        for line in lines[1:]:
             try:
                 if len(line) == len(vals):
                     x = np.array(line).astype(float)
                     x[x<0] = 0
                     data.append(x)
-            except:
+            except Exception as e:
+                if verbose:
+                    print(e)
                 continue
         if verbose:
             print("values: {}".format(vals))

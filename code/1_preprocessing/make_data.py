@@ -18,11 +18,11 @@ def create_augments(input_dir, data_dirs, ftype):
 
 def get_image_arr(input_file, label_files, tol, lx, ly, stride, ones_pcent):
 
-    input_img = process_image(input_file, standardize=True)
+    input_img = process_image(input_file, standardize=False)
     label_img = process_label(label_files, tol=tol)
 
-    input_cuts = cut_data(input_img, lx, ly, stride=stride)
-    label_cuts = cut_data(label_img, lx, ly, stride=stride)
+    input_cuts = cut_data(input_img, lx, ly, stride=stride, standardize=True)
+    label_cuts = cut_data(label_img, lx, ly, stride=stride, standardize=True)
 
     # only allow labels that have more than a certain proportion of ones
     if ones_pcent >0:
@@ -32,13 +32,14 @@ def get_image_arr(input_file, label_files, tol, lx, ly, stride, ones_pcent):
 
 
 def make_data(input_dir, data_dirs, label_list, l_shape, stride, ftype, parsed_dir_name="parsed", prefix="train",\
-        AUG=True, tol=1e-5, ones_pcent=0, one_save=True, fsize=1000):
+        AUG=True, tol=1e-5, ones_pcent=0, one_save=True, fsize=1000, ret_only=False):
 
     (lx, ly) = l_shape
 
     parsed_dir = input_dir + parsed_dir_name + "/"
     if not os.path.isdir(parsed_dir):
-        os.mkdir(parsed_dir)
+        if not ret_only:
+            os.mkdir(parsed_dir)
 
     data, i = [], 0
 
@@ -69,8 +70,10 @@ def make_data(input_dir, data_dirs, label_list, l_shape, stride, ftype, parsed_d
 
 
     shuffle(data)
-    print("saving file {} with {} examples".format(i, len(data)))
-    save_data(data, parsed_dir + prefix + "_" +  str(i).zfill(5) + ".p")
+    if one_save and not ret_only:
+        print("saving file {} with {} examples".format(i, len(data)))
+        save_data(data, parsed_dir + prefix + "_" +  str(i).zfill(5) + ".p")
+    return data
 
 
 def check_data(parsed_fn, idx=-1, l_shape=(128,128)):
