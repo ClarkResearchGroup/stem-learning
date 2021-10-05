@@ -36,7 +36,7 @@ def setup_diagnostics(diagnostics_fn):
     return step
 
 def calc_accuracy(model, x_test, y_true, N, nb_classes, plots):
-    predictions = np.reshape(np.array(model.predict_on_batch(x_test)), [-1, N, N, nb_classes])
+    predictions = np.reshape(np.array(model.predict(x_test, batch_size=32)), [-1, N, N, nb_classes])
     y_evals = np.argmax(predictions, axis=3)
     y_trues = np.argmax(np.reshape(np.array(y_true), [-1, N, N, nb_classes]), axis=3)
 
