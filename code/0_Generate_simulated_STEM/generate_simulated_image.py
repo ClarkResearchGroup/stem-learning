@@ -36,7 +36,8 @@ def create_simulated_image(incostem_dir, save_path="./sim_image/", experimentali
     [os.remove(f) for f in os.listdir() if ".tif" in f]
     if bkg_file:
         os.rename("tmp", bkg_file)
-
+    
+    print("Done generating simulated images!")
     os.chdir(cur_dir)
 
 
