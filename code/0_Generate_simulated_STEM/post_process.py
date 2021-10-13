@@ -116,7 +116,7 @@ class post_process():
                  self.image_stacks[i,:,:,j] = transform.rotate(self.image_stacks[i,:,:,j],degree)
         pass
 
-    def crop(self, target_x, target_y, shift):
+    def crop(self, target_x, target_y, rnd_shift):
 
         '''
         The raw images is a bit larger because the shear and rotation will cause some blank in the image
@@ -126,7 +126,7 @@ class post_process():
 
         num_image, x, y, num_defects = np.shape(self.image_stacks)
         angle = 2*np.pi*np.random.rand()
-        shift_vec = shift*np.array([np.cos(angle),np.sin(angle)])
+        shift_vec = rnd_shift*np.array([np.cos(angle),np.sin(angle)])
         cropped_x = abs(x-target_x)//2 + int(shift_vec[0])
         cropped_y = abs(y-target_y)//2 + int(shift_vec[1])
         self.image_stacks = self.image_stacks[:,cropped_x:cropped_x+target_x,cropped_y:cropped_y+target_y,:]
@@ -182,11 +182,18 @@ class post_process():
             self.image_stacks[i,:,:,1:] += bkg_strength * np.mean(bkg_image[:x,:y]) #Keep the image and lables with the same intensity range
         pass
     
-    def add_jitter(self, jitter):
-        ###TODO###
-        #Add jittering
+    def add_jitter(self, jitter_std):
         
+        '''
+        Add Gaussian distributed jittering to add streak-like feature to the STEM images
+        '''
+        _,x,y,_ = np.shape(self.image_stacks)
+        for i in range(self.file_num):
+            jitter_arr = np.int8(np.random.normal(0, jitter_std, size=(x)))
+            for line_num in range(x):
+                self.image_stacks[i,line_num,:,:] = np.roll(self.image_stacks[i,line_num,:,:], jitter_arr[line_num], axis = 0)
         pass
+    
     def save_as_image(self, save_path):
         '''
         Save images stacks as image
@@ -229,17 +236,18 @@ class post_process():
     def experimentalize(self, bkg_file=None):
         self.add_horizental_shear((0.01,0.01))
         self.add_vertical_contraction((0.01,0.01))
-        self.crop(512, 512, shift=10)
-
-
+        self.rotate(-90)
+        self.add_jitter(1)
+        self.crop(1024, 1024, rnd_shift=10)
+        
         self.image_stacks -= self.image_stacks.min()
         self.image_stacks *= 0.0174/115 #Get these numbers from noise-free images
         self.image_stacks += 0.0034
-        self.add_gaussian_noise(0,.0020)
+        self.add_gaussian_noise(0,.0030)
         if bkg_file:
             bkg_stack = tifffile.imread(bkg_file)
-            self.add_bkg(bkg_stack, 0)
-        #self.image_stacks *= 65535 #Get these numbers from noise-free images
+            self.add_bkg(bkg_stack, 1)
+        self.image_stacks *= 65535 #Get these numbers from noise-free images
 
 
 

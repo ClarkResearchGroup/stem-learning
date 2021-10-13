@@ -6,7 +6,7 @@ file_name                                      = "WSe"
 pixel_size                                     = 0.2074
 
 #image size of the image (#pixel)
-image_size                                     = 1024
+image_size                                     = 1130
 
 #metal site atom number
 metal_atom                                     = 74
@@ -67,7 +67,7 @@ probe_current_param_mean  = 30        #mean of probe current(#pA)
 probe_current_param_std   = 1         #std of probe current(#pA)
 dwell_time                = 20        #dwell time(#us)
 if_incostem_cmd           = True      #Determine the command prefix in bat file
-
+randomize_std             = 0.01      #Randomize the atom position for each unit cell, set to 0 to turn this off
 
 ################################ DO NOT MODIFY ########################################################
 import numpy as np
@@ -251,6 +251,22 @@ def generate_files(sample_param_dic,EM_param_dic,file_num):
         for i in range(rep_x):
             for j in range(rep_y):
                 for k in range(rep_z):
+                    # Reset atom positions
+                    atom1=np.array([atomZ1, 0.000000, 0.000000, 1.797500, 1, 0.08])
+                    atom2=np.array([atomZ2, a/2, b/6, 0.000000, 1, 0.08])
+                    atom3=np.array([atomZ2, a/2, b/6, 3.595000, 1, 0.08])
+                    atom4=np.array([atomZ1, a/2, b/2, 1.797500, 1, 0.08])
+                    atom5=np.array([atomZ2, a, b*2/3, 0.000000, 1, 0.08])
+                    atom6=np.array([atomZ2, a, b*2/3, 3.595000, 1, 0.08])
+                    
+                    if randomize_std>0:
+                        atom1 += a*np.array([0,np.random.normal(0,randomize_std),np.random.normal(0,randomize_std),0,0,0])
+                        atom2 += a*np.array([0,np.random.normal(0,randomize_std),np.random.normal(0,randomize_std),0,0,0])
+                        atom3 += a*np.array([0,np.random.normal(0,randomize_std),np.random.normal(0,randomize_std),0,0,0])
+                        atom4 += a*np.array([0,np.random.normal(0,randomize_std),np.random.normal(0,randomize_std),0,0,0])
+                        atom5 += a*np.array([0,np.random.normal(0,randomize_std),np.random.normal(0,randomize_std),0,0,0])
+                        atom6 += a*np.array([0,np.random.normal(0,randomize_std),np.random.normal(0,randomize_std),0,0,0])
+                    
                     prob_metal1 = np.random.rand()
                     metal_vacancy1 = False
                     if prob_metal1<metal_doped_prob:
