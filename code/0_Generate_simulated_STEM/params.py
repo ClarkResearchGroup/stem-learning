@@ -6,7 +6,7 @@ file_name                                      = "WSe"
 pixel_size                                     = 0.2074
 
 #image size of the image (#pixel)
-image_size                                     = 1024
+image_size                                     = 1130
 
 #metal site atom number
 metal_atom                                     = 74
@@ -21,10 +21,10 @@ lattice_constant_a                             = 3.3
 doped_metal_atom                               = 34
 
 #If there is subsitution on metal site, input the concentration(0-1) or input zero
-metal_atom_concentration                       = 0.001
+metal_atom_concentration                       = 0.0005
 
 #If there is vacancy on metal site, input the concentration(0-1) or input zero
-metal_atom_vacancy_concentration               = 0.001
+metal_atom_vacancy_concentration               = 0.0005
 
 #If there is subsitution on chalcogen site, input the doped atom number or input zero
 doped_chalcogen_atom                           = 74
@@ -48,26 +48,26 @@ Cs3_param_std             = 0.0005    #the std of Cs3(#mm)
 Cs5_param_mean            = 0         #mean of Cs5(#mm)
 Cs5_param_std             = 0         #std of Cs5(#mm)
 df_param_mean             = 0         #mean of df(#Ang)
-df_param_std              = 25        #the std of df (#Ang)
+df_param_std              = 10        #the std of df (#Ang)
 aperture                  = 25.2      #aperture(#mrad)
 ADF_angle_min             = 63        #ADF angle min(#mrad)
 ADF_angle_max             = 200       #ADF angle max(#mrad)
 A1_param_mean             = 1*10**-6  #mean of C12 (#mm)
 A1_param_std              = 1*10**-6  #std of C12 (#mm)
-B2_param_mean             = 20*10**-6 #mean of 1/3*C21 (#mm)
+B2_param_mean             = 10*10**-6 #mean of 1/3*C21 (#mm)
 B2_param_std              = 20*10**-6 #std of 1/3*C21 (#mm)
-A2_param_mean             = 40*10**-6 #mean of C23 (#mm)
-A2_param_std              = 100*10**-6 #std of C23 (#mm)
-Source_size_param_mean    = 1.05      #mean of Source size(#Ang)
-Source_size_param_std     = 0.1       #std of Source size(#Ang)
+A2_param_mean             = 25*10**-6 #mean of C23 (#mm)
+A2_param_std              = 50*10**-6 #std of C23 (#mm)
+Source_size_param_mean    = 1.00      #mean of Source size(#Ang)
+Source_size_param_std     = 0.05       #std of Source size(#Ang)
 defocus_spread_param_mean = 0         #mean of defocus spread(#Ang)
 defocus_spread_param_std  = 0         #std of defocus spread(#Ang)
 counting_noise            = 'y'       #Add electron counting noise 'y' or 'n'
-probe_current_param_mean  = 30        #mean of probe current(#A)
-probe_current_param_std   = 2         #std of probe current(#A)
+probe_current_param_mean  = 30        #mean of probe current(#pA)
+probe_current_param_std   = 1         #std of probe current(#pA)
 dwell_time                = 20        #dwell time(#us)
 if_incostem_cmd           = True      #Determine the command prefix in bat file
-
+randomize_std             = 0.01      #Randomize the atom position for each unit cell, set to 0 to turn this off
 
 ################################ DO NOT MODIFY ########################################################
 import numpy as np
@@ -183,7 +183,7 @@ def generate_files(sample_param_dic,EM_param_dic,file_num):
         #Label files, depends on how many defects you want
         filename_metal_Doped = xtalnm+'_metal_Doped'+filesuffix+str(rep_x)+'_'+str(rep_y)+'_'+str(rep_z)+'_'+str(N)
         fid_metal_Doped = open(filename_metal_Doped+'.xyz', 'w+')
-        filename_metal_vacancy = xtalnm+'_cmetal_vacancy'+filesuffix+str(rep_x)+'_'+str(rep_y)+'_'+str(rep_z)+'_'+str(N)
+        filename_metal_vacancy = xtalnm+'_metal_vacancy'+filesuffix+str(rep_x)+'_'+str(rep_y)+'_'+str(rep_z)+'_'+str(N)
         fid_metal_vacancy = open(filename_metal_vacancy+'.xyz', 'w+')
         filename_2Doped = xtalnm+'_2Doped'+filesuffix+str(rep_x)+'_'+str(rep_y)+'_'+str(rep_z)+'_'+str(N)
         fid_2Doped = open(filename_2Doped+'.xyz', 'w+')
@@ -251,6 +251,22 @@ def generate_files(sample_param_dic,EM_param_dic,file_num):
         for i in range(rep_x):
             for j in range(rep_y):
                 for k in range(rep_z):
+                    # Reset atom positions
+                    atom1=np.array([atomZ1, 0.000000, 0.000000, 1.797500, 1, 0.08])
+                    atom2=np.array([atomZ2, a/2, b/6, 0.000000, 1, 0.08])
+                    atom3=np.array([atomZ2, a/2, b/6, 3.595000, 1, 0.08])
+                    atom4=np.array([atomZ1, a/2, b/2, 1.797500, 1, 0.08])
+                    atom5=np.array([atomZ2, a, b*2/3, 0.000000, 1, 0.08])
+                    atom6=np.array([atomZ2, a, b*2/3, 3.595000, 1, 0.08])
+                    
+                    if randomize_std>0:
+                        atom1 += a*np.array([0,np.random.normal(0,randomize_std),np.random.normal(0,randomize_std),0,0,0])
+                        atom2 += a*np.array([0,np.random.normal(0,randomize_std),np.random.normal(0,randomize_std),0,0,0])
+                        atom3 += a*np.array([0,np.random.normal(0,randomize_std),np.random.normal(0,randomize_std),0,0,0])
+                        atom4 += a*np.array([0,np.random.normal(0,randomize_std),np.random.normal(0,randomize_std),0,0,0])
+                        atom5 += a*np.array([0,np.random.normal(0,randomize_std),np.random.normal(0,randomize_std),0,0,0])
+                        atom6 += a*np.array([0,np.random.normal(0,randomize_std),np.random.normal(0,randomize_std),0,0,0])
+                    
                     prob_metal1 = np.random.rand()
                     metal_vacancy1 = False
                     if prob_metal1<metal_doped_prob:

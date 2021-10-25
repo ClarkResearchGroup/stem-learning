@@ -39,10 +39,3 @@ def create_simulated_image(incostem_dir, save_path="./sim_image/", experimentali
     
     print("Done generating simulated images!")
     os.chdir(cur_dir)
-
-
-
-
-
-
-
