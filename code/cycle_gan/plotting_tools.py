@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def get_discriminator_acc(discriminator, real_img, fake_img, threshold=0.5, with_logits=True):
+def get_discriminator_acc(discriminator, real_img, fake_img, threshold=0.5, with_logits=False):
     
     p_real = discriminator(real_img, training=False).numpy()
     p_fake = discriminator(fake_img, training=False).numpy()

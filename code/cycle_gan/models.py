@@ -261,6 +261,6 @@ def discriminator(norm_type='batchnorm', ic=1):
 
   last = tf.keras.layers.Conv2D(
       1, 4, strides=1,
-      kernel_initializer=initializer)(zero_pad2)  # (bs, 30, 30, 1)
+      kernel_initializer=initializer, activation='sigmoid')(zero_pad2)  # (bs, 30, 30, 1)
 
   return tf.keras.Model(inputs=inp, outputs=last)

@@ -65,7 +65,7 @@ def parse_and_save_image(fn, image_dir, min_v, max_v, save_dir="./save/", fine_s
     arr = cut_data(data, fine_size, stride)
     os.makedirs(save_dir, exist_ok=True)
     for i, img in enumerate(arr):
-        imwrite("{}{}_{}.tiff".format(save_dir, fn[:-5], str(i).zfill(3)), img)
+        imwrite("{}{}_{}.tiff".format(save_dir, fn[:fn.find('.')], str(i).zfill(3)), img)
     return
 
 def parse_and_save_dir(image_dir, save_dir="./save/", fine_size=256, stride=256, num_channels=1):
