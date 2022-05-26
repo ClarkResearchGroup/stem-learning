@@ -2,10 +2,13 @@ from __future__ import division
 import numpy as np
 from imageio import imread, imwrite
 
+"""
 try:
     import cPickle as pickle
 except ModuleNotFoundError:
     import pickle
+"""
+import pickle
 
 
 def flatten_channels(img):
@@ -67,7 +70,7 @@ def process_label(label_file_list, tol=1.e-5):
 
     for i, label_file in enumerate(label_file_list):
         img   = process_image(label_file, standardize=False)
-        img   = (img - np.min(img))/np.ptp(img)
+        img   = (img - np.min(img))/np.ptp(img) if np.ptp(img) != 0 else img
         label_data[:,:,i+1] = ((img > tol).astype(int))
 
     label_data[:,:,0] = (np.sum(label_data[:,:,1:], axis=2) == 0).astype(int)
@@ -98,6 +101,7 @@ def cut_data(data, lx, ly, stride=(1, 1), standardize=False):
 
 
 
+"""
 def diff_images(label_input_fn, input_fn, save_fn, tol=1e-5):
     '''
     Given an image, and a copy of it with labels overlayed on top, this function
@@ -112,6 +116,7 @@ def diff_images(label_input_fn, input_fn, save_fn, tol=1e-5):
     label_img = (label_img > tol).astype(int)
     imwrite(save_fn, label_img)
     return label_img
+"""
 
 def sift_cuts(input_cuts, label_cuts, ones_percent):
     '''

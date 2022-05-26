@@ -53,7 +53,7 @@ def find_min_max_vals(image_dir, num_channels=1):
 
     return min_v, max_v
 
-def parse_and_save_image(fn, image_dir, min_v, max_v, save_dir="./save/", fine_size=256, stride=256, num_channels=1):
+def parse_and_save_image(fn, image_dir, min_v, max_v, save_dir="./save/", fine_size=256, stride=256, num_channels=1, gaussian=0):
     """
     takes a large image and creates subimages of it and stores it in a directory
     """
@@ -61,6 +61,9 @@ def parse_and_save_image(fn, image_dir, min_v, max_v, save_dir="./save/", fine_s
     data = process_image(input_file)
     for i in range(num_channels):
         data[:,:,i] = 2*( (data[:,:,i] - min_v[i])/(max_v[i] - min_v[i]) - .5)
+        if gaussian != 0:
+            lx, ly = data[:,:,i].shape
+            data[:,:,i] += np.random.normal(0, gaussian, size=(lx, ly))
 
     arr = cut_data(data, fine_size, stride)
     os.makedirs(save_dir, exist_ok=True)
@@ -68,14 +71,14 @@ def parse_and_save_image(fn, image_dir, min_v, max_v, save_dir="./save/", fine_s
         imwrite("{}{}_{}.tiff".format(save_dir, fn[:fn.find('.')], str(i).zfill(3)), img)
     return
 
-def parse_and_save_dir(image_dir, save_dir="./save/", fine_size=256, stride=256, num_channels=1):
+def parse_and_save_dir(image_dir, save_dir="./save/", fine_size=256, stride=256, num_channels=1, gaussian=0):
     """
     takes images in a directory and cuts them into subimages
     """
     fn_list = [x for x in os.listdir(image_dir) if ".tif" in x]
     min_v, max_v = find_min_max_vals(image_dir, num_channels)
     for fn in fn_list:
-        parse_and_save_image(fn, image_dir, min_v, max_v, save_dir, fine_size, stride, num_channels)
+        parse_and_save_image(fn, image_dir, min_v, max_v, save_dir, fine_size, stride, num_channels, gaussian)
     return
 
 def load_train_data(fn, num_channels):

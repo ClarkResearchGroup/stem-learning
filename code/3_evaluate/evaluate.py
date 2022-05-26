@@ -147,7 +147,7 @@ def generate_image(model, input_file, l_shape, stride=None, avg=False, \
     return a
 
 
-def calc_accuracy(evals_img, label_file_list, tol=0, nconvs=1, r=2, TN=0,
+def calc_accuracy(evals_img, label_file_list, tol=0, nconvs=1, r=2, TN=0, bdy=0,
         plot=False, save_data=False, save_dir="./", prefix="", verbose=True):
 
     label_img = np.argmax(process_label(label_file_list, tol=tol), axis=2)
@@ -158,7 +158,14 @@ def calc_accuracy(evals_img, label_file_list, tol=0, nconvs=1, r=2, TN=0,
     conv_label_cen = get_center_list(conv_label_img, r)
     conv_evals_cen = get_center_list(conv_evals_img, r)
 
-    match_list, label_list, evals_list = detect_diff(conv_label_cen, conv_evals_cen)
+    match_list_all, label_list_all, evals_list_all = detect_diff(conv_label_cen, conv_evals_cen)
+
+    #remove coordinates around the edge bdy
+    lx, ly = np.shape(label_img)
+    match_list = [x for x in match_list_all if (x[0] - bdy >= 0 and x[0] + bdy < lx and x[1] - bdy >= 0 and x[1] + bdy < ly)]
+    label_list = [x for x in label_list_all if (x[0] - bdy >= 0 and x[0] + bdy < lx and x[1] - bdy >= 0 and x[1] + bdy < ly)]
+    evals_list = [x for x in evals_list_all if (x[0] - bdy >= 0 and x[0] + bdy < lx and x[1] - bdy >= 0 and x[1] + bdy < ly)]
+
 
 
     fig = plt.figure(figsize=(10,10))

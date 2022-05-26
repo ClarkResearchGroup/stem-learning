@@ -1,4 +1,5 @@
 import tensorflow as tf
+CW = 0.02
 
 class InstanceNormalization(tf.keras.layers.Layer):
   """Instance Normalization Layer (https://arxiv.org/abs/1607.08022)."""
@@ -11,7 +12,7 @@ class InstanceNormalization(tf.keras.layers.Layer):
     self.scale = self.add_weight(
         name='scale',
         shape=input_shape[-1:],
-        initializer=tf.random_normal_initializer(1., 0.02),
+        initializer=tf.random_normal_initializer(1.,0.02),
         trainable=True)
 
     self.offset = self.add_weight(
@@ -46,11 +47,11 @@ class ReflectionPadding2D(tf.keras.layers.Layer):
 
 
 def conv2d(dim, ks, s, padding="valid", activation=None):
-  initializer = tf.keras.initializers.TruncatedNormal(stddev=0.02)
+  initializer = tf.keras.initializers.TruncatedNormal(stddev=CW)
   return tf.keras.layers.Conv2D(dim, ks, s, padding=padding, activation=activation, kernel_initializer=initializer)
 
 def conv2dtranspose(dim, ks, s, padding="valid"):
-  initializer = tf.keras.initializers.TruncatedNormal(stddev=0.02)
+  initializer = tf.keras.initializers.TruncatedNormal(stddev=CW)
   return tf.keras.layers.Conv2DTranspose(dim, ks, s, padding=padding, kernel_initializer=initializer)
 
 def generator_resnet(gf_dim, ic=1, oc=1):
@@ -109,7 +110,7 @@ def downsample(filters, size, norm_type='batchnorm', apply_norm=True):
   Returns:
     Downsample Sequential Model
   """
-  initializer = tf.random_normal_initializer(0., 0.02)
+  initializer = tf.random_normal_initializer(0.,CW)
 
   result = tf.keras.Sequential()
   result.add(
@@ -142,7 +143,7 @@ def upsample(filters, size, norm_type='batchnorm', apply_dropout=False):
     Upsample Sequential Model
   """
 
-  initializer = tf.random_normal_initializer(0., 0.02)
+  initializer = tf.random_normal_initializer(0., CW)
 
   result = tf.keras.Sequential()
   result.add(
@@ -196,7 +197,7 @@ def unet_generator(input_channels, output_channels, norm_type='batchnorm'):
       upsample(64, 4, norm_type),  # (bs, 128, 128, 128)
   ]
 
-  initializer = tf.random_normal_initializer(0., 0.02)
+  initializer = tf.random_normal_initializer(0., CW)
   last = tf.keras.layers.Conv2DTranspose(
       output_channels, 4, strides=2,
       padding='same', kernel_initializer=initializer,
@@ -236,7 +237,7 @@ def discriminator(norm_type='batchnorm', ic=1):
     Discriminator model
   """
 
-  initializer = tf.random_normal_initializer(0., 0.02)
+  initializer = tf.random_normal_initializer(0., CW)
 
   inp = tf.keras.layers.Input(shape=[None, None, ic], name='input_image')
   x = inp

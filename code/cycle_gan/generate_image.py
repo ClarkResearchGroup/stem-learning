@@ -2,6 +2,7 @@ import numpy as np
 from make_dataset import cut_data, process_image
 from tifffile import imwrite
 import matplotlib.pyplot as plt
+import os
 
 def stitch(size_x, size_y, sx, sy, images):
     '''
@@ -57,7 +58,6 @@ def generate_image(model, input_file, fine_size, stride=None, avg=False, \
 
     print("processing data")
     input_img = process_image(input_file)
-    input_img = 2*(input_img/255 - 0.5)
     (size_x, size_y, _) = input_img.shape
 
     print("loading model")
@@ -86,3 +86,10 @@ def generate_image(model, input_file, fine_size, stride=None, avg=False, \
         imwrite(save_dir + fname, a.astype(np.float32))
 
     return a
+
+def GAN_image_folder(model, input_dir, save_dir, fine_size, stride=None, avg=False):
+    """given a model, and input_directory of images, creates a new folder that GANs each image"""
+    os.makedirs(save_dir, exist_ok=True)
+    for input_file in os.listdir(input_dir):
+        generate_image(model, os.path.join(input_dir, input_file), fine_size, stride, \
+            avg, plot=False, save_data=True, save_dir=save_dir,fname=input_file)

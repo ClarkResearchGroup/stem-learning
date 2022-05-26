@@ -22,7 +22,7 @@ def get_image_arr(input_file, label_files, tol, lx, ly, stride, ones_pcent):
     label_img = process_label(label_files, tol=tol)
 
     input_cuts = cut_data(input_img, lx, ly, stride=stride, standardize=True)
-    label_cuts = cut_data(label_img, lx, ly, stride=stride, standardize=True)
+    label_cuts = cut_data(label_img, lx, ly, stride=stride, standardize=False)
 
     # only allow labels that have more than a certain proportion of ones
     if ones_pcent >0:
@@ -91,11 +91,11 @@ def check_data(parsed_fn, idx=-1, l_shape=(128,128)):
     lbl = np.reshape(lbl, [l_shape[0], l_shape[1], nb_classes])
 
     plt.figure()
-    plt.imshow(img)
+    plt.imshow(img, cmap='gray')
     for c in range(nb_classes):
         plt.figure()
-        plt.imshow(img)
-        plt.imshow(lbl[:,:,c], alpha=0.5)
+        plt.imshow(img, cmap='gray')
+        plt.imshow(lbl[:,:,c], alpha=0.5, cmap='gray')
     plt.show()
 
 
