@@ -1,7 +1,7 @@
 from make_data import *
 import os
 parent_dir = "/mnt/d/stem-learning/"
-fn = "20220525_unet_dist_gen_fft_10_pristine_gaussian_0.1"
+fn = "sim_pristine_0.1_noised"
 input_dir = parent_dir + "data/WSe/data_for_gan/generated/GANNED_DATA_FOLDER/data_folder_{}/".format(fn)
 #input_dir = parent_dir + "data/WSe/manual_simulation_211222/"
 all_dirs = os.listdir(input_dir)

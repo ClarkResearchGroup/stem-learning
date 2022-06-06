@@ -103,9 +103,10 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-code/cycle_gan/checkpoints/
-code/cycle_gan/data/
 data/
 cycle_gan_results/
 results*/
 .vscode/
+code/3_evaluate/3_evaluate_copy.ipynb
+code/cycle_gan/generator copy_STO.ipynb
+code/1_preprocessing/sandbox.py
