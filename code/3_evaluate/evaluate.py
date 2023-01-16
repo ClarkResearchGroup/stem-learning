@@ -7,6 +7,7 @@ from accuracy import *
 from tensorflow.keras.models import model_from_json
 import matplotlib.pyplot as plt
 from tifffile import imsave
+from PIL import Image
 
 
 
@@ -106,7 +107,9 @@ def evaluate(model_fn, model_weights_fn, input_file, l_shape, stride=None, avg=F
 
     if save_data:
         print("saving data")
-        imsave(save_dir + fname, a)
+        im = Image.fromarray((a * 255).astype(np.uint8))
+        im.save(save_dir + fname)
+        #imsave(save_dir + fname, a)
 
     return a
 
@@ -168,23 +171,26 @@ def calc_accuracy(evals_img, label_file_list, tol=0, nconvs=1, r=2, TN=0, bdy=0,
 
 
 
-    fig = plt.figure(figsize=(10,10))
+    fig = plt.figure(figsize=(20,20))
     m_xy      = [[],[]] if len(match_list)     == 0 else list(zip(*match_list))
     l_xy      = [[],[]] if len(label_list)     == 0 else list(zip(*label_list))
     e_xy      = [[],[]] if len(evals_list)     == 0 else list(zip(*evals_list))
 
+    
+    plt.scatter(list(l_xy[1]), list(l_xy[0]), c='r', label='FN')
+    plt.scatter(list(e_xy[1]), list(e_xy[0]), c='k', label='FP')
+    plt.scatter(list(m_xy[1]), list(m_xy[0]), c='b', label='TP')
+    plt.legend(loc='best')
+    plt.xlim(0, len(evals_img[0]))
+    plt.ylim(0, len(evals_img))
+    plt.gca().invert_yaxis()
+    plt.axis('off')
     if plot:
-        plt.scatter(list(l_xy[1]), list(l_xy[0]), c='r', label='FN')
-        plt.scatter(list(e_xy[1]), list(e_xy[0]), c='k', label='FP')
-        plt.scatter(list(m_xy[1]), list(m_xy[0]), c='b', label='TP')
-        plt.legend(loc='best')
-        plt.xlim(0, len(evals_img[0]))
-        plt.ylim(0, len(evals_img))
-        plt.gca().invert_yaxis()
         plt.show()
 
     if save_data:
-        fig.savefig("{}{}accuracy_plot.png".format(save_dir, prefix))
+        fig.savefig("{}{}_accuracy_plot.png".format(save_dir, prefix))
+    plt.close()
 
     TP = len(match_list)
     FP = len(evals_list)

@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import tensorflow as tf
 
 def get_discriminator_acc(discriminator, real_img, fake_img, threshold=0.5, with_logits=False):
     
@@ -42,27 +43,40 @@ def get_discriminator_acc(discriminator, real_img, fake_img, threshold=0.5, with
     acc = float(TP + TN)/float(TP + TN + FP + FN)
     return acc
 
+def get_logf2(img_arr):
+  fine_size = img_arr.shape[1]
+  fft_list = tf.signal.fftshift(tf.signal.fft2d(tf.cast(tf.reshape(img_arr, [-1, fine_size, fine_size]), tf.complex64)))
+  re_list, im_list = tf.math.real(fft_list), tf.math.imag(fft_list)
+  f2_list = tf.math.multiply(re_list, re_list) + tf.math.multiply(im_list, im_list)
+  return tf.reshape(tf.math.log(tf.clip_by_value(f2_list, 1e-36, 1e36))/tf.math.log(10.), [-1, fine_size, fine_size, 1])
+
 def generate_images(model_x, model_y, test_input):
-  prediction = model_x(test_input)
-  same       = model_y(prediction)
+  prediction = model_x(test_input, training=True)
+  same       = model_y(prediction, training=True)
     
   plt.figure(figsize=(12, 18))
 
   display_list = [test_input[0], prediction[0], same[0]]
+  display_list_fft = [get_logf2(x)[0] for x in display_list]
   title = ['Input Image', 'Predicted Image', 'Cycle Image']
 
   for i in range(3):
-    plt.subplot(1, 3, i+1)
+    plt.subplot(2, 3, i+1)
     plt.title(title[i])
     plt.imshow(display_list[i][:,:,0], cmap='gray')
     plt.axis('off')
+
+    plt.subplot(2, 3, i+4)
+    plt.imshow(display_list_fft[i][:,:,0], cmap='gray')
+    plt.axis('off')
   plt.show()
 
-def generate_losses(gen_exp_losses,   gen_sim_losses,\
+def generate_losses(gen_exp_losses,   gen_sim_losses,  \
                     cycle_exp_losses, cycle_sim_losses,\
                     ident_exp_losses, ident_sim_losses,\
-                    disc_sim_losses,  disc_exp_losses, epoch, \
-                    last=None):
+                    disc_sim_losses,  disc_exp_losses, \
+                    disc_sim_fft_losses,  disc_exp_fft_losses, \
+                    epoch, last=None):
     ymin, ymax = 1e-2, 1e2
     x = list(range(epoch))
     N = len(x) if last is None or last > len(x) else last
@@ -71,6 +85,8 @@ def generate_losses(gen_exp_losses,   gen_sim_losses,\
     plt.subplot(1,2,1)
     plt.semilogy(x[-N:], disc_sim_losses[-N:], label='disc sim')
     plt.semilogy(x[-N:], disc_exp_losses[-N:], label='disc exp')
+    plt.semilogy(x[-N:], disc_sim_fft_losses[-N:], label='disc sim_fft')
+    plt.semilogy(x[-N:], disc_exp_fft_losses[-N:], label='disc exp_fft')
     plt.xlabel("epoch")
     plt.ylabel("loss")
     plt.legend(loc='best')

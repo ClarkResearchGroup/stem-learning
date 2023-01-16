@@ -1,0 +1,543 @@
+Resetting modules to system default. Reseting $MODULEPATH back to system default. All extra directories will be removed from $MODULEPATH.
+
+Currently Loaded Modules:
+  1) cue-login-env/1.0   4) openmpi/4.1.2   7) default
+  2) gcc/11.2.0          5) cuda/11.6.1     8) anaconda3/2021.05
+  3) ucx/1.11.2          6) modtree/gpu
+
+ 
+
+job is starting on cn002.delta.internal.ncsa.edu
+creating augments in sim_stack_065
+inverting
+rotating
+magnifying
+creating augments in sim_stack_057
+inverting
+rotating
+magnifying
+creating augments in sim_stack_067
+inverting
+rotating
+magnifying
+creating augments in sim_stack_004
+inverting
+rotating
+magnifying
+creating augments in sim_stack_020
+inverting
+rotating
+magnifying
+creating augments in sim_stack_056
+inverting
+rotating
+magnifying
+creating augments in sim_stack_000
+inverting
+rotating
+magnifying
+creating augments in sim_stack_103
+inverting
+rotating
+magnifying
+creating augments in sim_stack_097
+inverting
+rotating
+magnifying
+creating augments in sim_stack_028
+inverting
+rotating
+magnifying
+creating augments in sim_stack_079
+inverting
+rotating
+magnifying
+creating augments in sim_stack_002
+inverting
+rotating
+magnifying
+creating augments in sim_stack_064
+inverting
+rotating
+magnifying
+creating augments in sim_stack_101
+inverting
+rotating
+magnifying
+creating augments in sim_stack_001
+inverting
+rotating
+magnifying
+creating augments in sim_stack_080
+inverting
+rotating
+magnifying
+creating augments in sim_stack_059
+inverting
+rotating
+magnifying
+creating augments in sim_stack_040
+inverting
+rotating
+magnifying
+creating augments in sim_stack_054
+inverting
+rotating
+magnifying
+creating augments in sim_stack_066
+inverting
+rotating
+magnifying
+creating augments in sim_stack_010
+inverting
+rotating
+magnifying
+creating augments in sim_stack_094
+inverting
+rotating
+magnifying
+creating augments in sim_stack_018
+inverting
+rotating
+magnifying
+creating augments in sim_stack_081
+inverting
+rotating
+magnifying
+creating augments in sim_stack_100
+inverting
+rotating
+magnifying
+creating augments in sim_stack_039
+inverting
+rotating
+magnifying
+creating augments in sim_stack_089
+inverting
+rotating
+magnifying
+creating augments in sim_stack_044
+inverting
+rotating
+magnifying
+creating augments in sim_stack_084
+inverting
+rotating
+magnifying
+creating augments in sim_stack_085
+inverting
+rotating
+magnifying
+creating augments in sim_stack_098
+inverting
+rotating
+magnifying
+creating augments in sim_stack_060
+inverting
+rotating
+magnifying
+creating augments in sim_stack_046
+inverting
+rotating
+magnifying
+creating augments in sim_stack_013
+inverting
+rotating
+magnifying
+creating augments in sim_stack_011
+inverting
+rotating
+magnifying
+creating augments in sim_stack_037
+inverting
+rotating
+magnifying
+creating augments in sim_stack_070
+inverting
+rotating
+magnifying
+creating augments in sim_stack_007
+inverting
+rotating
+magnifying
+creating augments in sim_stack_063
+inverting
+rotating
+magnifying
+creating augments in sim_stack_055
+inverting
+rotating
+magnifying
+creating augments in sim_stack_035
+inverting
+rotating
+magnifying
+creating augments in sim_stack_045
+inverting
+rotating
+magnifying
+creating augments in sim_stack_092
+inverting
+rotating
+magnifying
+creating augments in sim_stack_031
+inverting
+rotating
+magnifying
+creating augments in sim_stack_043
+inverting
+rotating
+magnifying
+creating augments in sim_stack_021
+inverting
+rotating
+magnifying
+creating augments in sim_stack_042
+inverting
+rotating
+magnifying
+creating augments in sim_stack_073
+inverting
+rotating
+magnifying
+creating augments in sim_stack_075
+inverting
+rotating
+magnifying
+creating augments in sim_stack_104
+inverting
+rotating
+magnifying
+creating augments in sim_stack_050
+inverting
+rotating
+magnifying
+creating augments in sim_stack_076
+inverting
+rotating
+magnifying
+creating augments in sim_stack_038
+inverting
+rotating
+magnifying
+creating augments in sim_stack_083
+inverting
+rotating
+magnifying
+creating augments in sim_stack_095
+inverting
+rotating
+magnifying
+creating augments in sim_stack_005
+inverting
+rotating
+magnifying
+creating augments in sim_stack_036
+inverting
+rotating
+magnifying
+creating augments in sim_stack_072
+inverting
+rotating
+magnifying
+creating augments in sim_stack_041
+inverting
+rotating
+magnifying
+creating augments in sim_stack_052
+inverting
+rotating
+magnifying
+creating augments in sim_stack_019
+inverting
+rotating
+magnifying
+creating augments in sim_stack_074
+inverting
+rotating
+magnifying
+creating augments in sim_stack_012
+inverting
+rotating
+magnifying
+creating augments in sim_stack_093
+inverting
+rotating
+magnifying
+creating augments in sim_stack_034
+inverting
+rotating
+magnifying
+creating augments in sim_stack_106
+inverting
+rotating
+magnifying
+creating augments in sim_stack_022
+inverting
+rotating
+magnifying
+creating augments in sim_stack_069
+inverting
+rotating
+magnifying
+creating augments in sim_stack_003
+inverting
+rotating
+magnifying
+creating augments in sim_stack_047
+inverting
+rotating
+magnifying
+creating augments in sim_stack_029
+inverting
+rotating
+magnifying
+creating augments in sim_stack_058
+inverting
+rotating
+magnifying
+creating augments in sim_stack_068
+inverting
+rotating
+magnifying
+creating augments in sim_stack_049
+inverting
+rotating
+magnifying
+creating augments in sim_stack_053
+inverting
+rotating
+magnifying
+creating augments in sim_stack_025
+inverting
+rotating
+magnifying
+creating augments in sim_stack_062
+inverting
+rotating
+magnifying
+creating augments in sim_stack_088
+inverting
+rotating
+magnifying
+creating augments in sim_stack_071
+inverting
+rotating
+magnifying
+creating augments in sim_stack_051
+inverting
+rotating
+magnifying
+creating augments in sim_stack_087
+inverting
+rotating
+magnifying
+creating augments in sim_stack_006
+inverting
+rotating
+magnifying
+creating augments in sim_stack_014
+inverting
+rotating
+magnifying
+creating augments in sim_stack_086
+inverting
+rotating
+magnifying
+creating augments in sim_stack_023
+inverting
+rotating
+magnifying
+creating augments in sim_stack_008
+inverting
+rotating
+magnifying
+creating augments in sim_stack_061
+inverting
+rotating
+magnifying
+creating augments in sim_stack_033
+inverting
+rotating
+magnifying
+creating augments in sim_stack_102
+inverting
+rotating
+magnifying
+creating augments in sim_stack_082
+inverting
+rotating
+magnifying
+creating augments in sim_stack_078
+inverting
+rotating
+magnifying
+creating augments in sim_stack_091
+inverting
+rotating
+magnifying
+creating augments in sim_stack_026
+inverting
+rotating
+magnifying
+creating augments in sim_stack_024
+inverting
+rotating
+magnifying
+creating augments in sim_stack_099
+inverting
+rotating
+magnifying
+creating augments in sim_stack_096
+inverting
+rotating
+magnifying
+creating augments in sim_stack_048
+inverting
+rotating
+magnifying
+parsing directory  sim_stack_065
+parsing directory  sim_stack_057
+parsing directory  sim_stack_067
+saving file 0
+parsing directory  sim_stack_004
+parsing directory  sim_stack_020
+parsing directory  sim_stack_056
+saving file 1
+parsing directory  sim_stack_000
+parsing directory  sim_stack_103
+saving file 2
+parsing directory  sim_stack_097
+parsing directory  sim_stack_028
+parsing directory  sim_stack_079
+saving file 3
+parsing directory  sim_stack_002
+parsing directory  sim_stack_064
+parsing directory  sim_stack_101
+saving file 4
+parsing directory  sim_stack_001
+parsing directory  sim_stack_080
+saving file 5
+parsing directory  sim_stack_059
+parsing directory  sim_stack_040
+parsing directory  sim_stack_054
+saving file 6
+parsing directory  sim_stack_066
+parsing directory  sim_stack_010
+saving file 7
+parsing directory  sim_stack_094
+parsing directory  sim_stack_018
+parsing directory  sim_stack_081
+saving file 8
+parsing directory  sim_stack_100
+parsing directory  sim_stack_039
+parsing directory  sim_stack_089
+saving file 9
+parsing directory  sim_stack_044
+parsing directory  sim_stack_084
+saving file 10
+parsing directory  sim_stack_085
+parsing directory  sim_stack_098
+parsing directory  sim_stack_060
+saving file 11
+parsing directory  sim_stack_046
+parsing directory  sim_stack_013
+saving file 12
+parsing directory  sim_stack_011
+parsing directory  sim_stack_037
+parsing directory  sim_stack_070
+saving file 13
+parsing directory  sim_stack_007
+parsing directory  sim_stack_063
+parsing directory  sim_stack_055
+saving file 14
+parsing directory  sim_stack_035
+parsing directory  sim_stack_045
+saving file 15
+parsing directory  sim_stack_092
+parsing directory  sim_stack_031
+parsing directory  sim_stack_043
+saving file 16
+parsing directory  sim_stack_021
+parsing directory  sim_stack_042
+saving file 17
+parsing directory  sim_stack_073
+parsing directory  sim_stack_075
+parsing directory  sim_stack_104
+saving file 18
+parsing directory  sim_stack_050
+parsing directory  sim_stack_076
+parsing directory  sim_stack_038
+saving file 19
+parsing directory  sim_stack_083
+parsing directory  sim_stack_095
+saving file 20
+parsing directory  sim_stack_005
+parsing directory  sim_stack_036
+parsing directory  sim_stack_072
+saving file 21
+parsing directory  sim_stack_041
+parsing directory  sim_stack_052
+saving file 22
+parsing directory  sim_stack_019
+parsing directory  sim_stack_074
+parsing directory  sim_stack_012
+saving file 23
+parsing directory  sim_stack_093
+parsing directory  sim_stack_034
+parsing directory  sim_stack_106
+saving file 24
+parsing directory  sim_stack_022
+parsing directory  sim_stack_069
+saving file 25
+parsing directory  sim_stack_003
+parsing directory  sim_stack_047
+parsing directory  sim_stack_029
+saving file 26
+parsing directory  sim_stack_058
+parsing directory  sim_stack_068
+saving file 27
+parsing directory  sim_stack_049
+parsing directory  sim_stack_053
+parsing directory  sim_stack_025
+saving file 28
+parsing directory  sim_stack_062
+parsing directory  sim_stack_088
+parsing directory  sim_stack_071
+saving file 29
+parsing directory  sim_stack_051
+parsing directory  sim_stack_087
+saving file 30
+parsing directory  sim_stack_006
+parsing directory  sim_stack_014
+parsing directory  sim_stack_086
+saving file 31
+parsing directory  sim_stack_023
+parsing directory  sim_stack_008
+saving file 32
+parsing directory  sim_stack_061
+parsing directory  sim_stack_033
+parsing directory  sim_stack_102
+saving file 33
+parsing directory  sim_stack_082
+parsing directory  sim_stack_078
+parsing directory  sim_stack_091
+saving file 34
+parsing directory  sim_stack_026
+parsing directory  sim_stack_024
+saving file 35
+parsing directory  sim_stack_099
+parsing directory  sim_stack_096
+parsing directory  sim_stack_048
+saving file 36
+parsing directory  sim_stack_077
+parsing directory  sim_stack_017
+parsing directory  sim_stack_015
+parsing directory  sim_stack_090
+parsing directory  sim_stack_027
+parsing directory  sim_stack_105
+parsing directory  sim_stack_030
+parsing directory  sim_stack_009
+parsing directory  sim_stack_016
+parsing directory  sim_stack_032
+saving file 0 with 160 examples

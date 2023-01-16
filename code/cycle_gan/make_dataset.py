@@ -60,10 +60,14 @@ def parse_and_save_image(fn, image_dir, min_v, max_v, save_dir="./save/", fine_s
     input_file = image_dir + fn
     data = process_image(input_file)
     for i in range(num_channels):
-        data[:,:,i] = 2*( (data[:,:,i] - min_v[i])/(max_v[i] - min_v[i]) - .5)
-        if gaussian != 0:
+        x = data[:,:,i]
+        if gaussian == 0:
+            data[:,:,i] = 2*( (x - min_v[i])/(max_v[i] - min_v[i]) - .5)
+        else:
             lx, ly = data[:,:,i].shape
+            data[:,:,i] = 2*( (x - np.min(x))/(np.max(x) - np.min(x)) - .5)
             data[:,:,i] += np.random.normal(0, gaussian, size=(lx, ly))
+            data[:,:,i] = 2*( (x - np.min(x))/(np.max(x) - np.min(x)) - .5)
 
     arr = cut_data(data, fine_size, stride)
     os.makedirs(save_dir, exist_ok=True)

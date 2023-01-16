@@ -1,0 +1,4514 @@
+
+Currently Loaded Modules:
+  1) gcc/11.2.0   2) anaconda3/2021.05   3) cuda/11.6.1   4) cudnn/8.4.1.50
+
+ 
+
+job is starting on gpub009.delta.internal.ncsa.edu
+2022-06-09 16:32:32.342194: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-06-09 16:32:38.526170: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1525] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 43472 MB memory:  -> device: 0, name: NVIDIA A40, pci bus id: 0000:c7:00.0, compute capability: 8.6
+2022-06-09 16:32:49.007875: I tensorflow/stream_executor/cuda/cuda_dnn.cc:368] Loaded cuDNN version 8401
+creating new session
+training step: 0	training file: train_00034.p
+	grabbing data
+	done
+32/32 - 25s - loss: 0.6255 - accuracy: 0.6831 - val_loss: 0.3412 - val_accuracy: 0.9791 - 25s/epoch - 796ms/step
+	calculating accuracy
+0.01225452423095703
+	done
+TP = 0, FP = 0, FN = 1525, TN = 47115
+recall = 0.0, precision = -1, F1 = -1, bal_acc = 0.5
+training step: 1	training file: train_00014.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.2871 - accuracy: 0.9885 - val_loss: 1.1710 - val_accuracy: 0.6225 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.3751396179199219
+	done
+TP = -1, FP = -1, FN = -1, TN = -1
+recall = -1, precision = -1, F1 = -1, bal_acc = -1
+training step: 2	training file: train_00034.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.2101 - accuracy: 0.9904 - val_loss: 0.2679 - val_accuracy: 0.9902 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.0011992454528808594
+	done
+TP = 5, FP = 124, FN = 1520, TN = 46991
+recall = 0.003278688524590164, precision = 0.03875968992248062, F1 = 0.006045949214026603, bal_acc = 0.5003234151526698
+training step: 3	training file: train_00022.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.1595 - accuracy: 0.9909 - val_loss: 0.2269 - val_accuracy: 0.9909 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.00017461776733398437
+	done
+TP = 2, FP = 11, FN = 1523, TN = 47104
+recall = 0.0013114754098360656, precision = 0.15384615384615385, F1 = 0.002600780234070221, bal_acc = 0.5005390020580964
+training step: 4	training file: train_00002.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.1275 - accuracy: 0.9896 - val_loss: 0.1091 - val_accuracy: 0.9910 - 5s/epoch - 171ms/step
+	calculating accuracy
+1.4781951904296875e-05
+	done
+TP = 0, FP = 0, FN = 1525, TN = 47115
+recall = 0.0, precision = -1, F1 = -1, bal_acc = 0.5
+training step: 5	training file: train_00021.p
+	grabbing data
+	done
+32/32 - 7s - loss: 0.1010 - accuracy: 0.9937 - val_loss: 0.0779 - val_accuracy: 0.9910 - 7s/epoch - 208ms/step
+	calculating accuracy
+1.811981201171875e-06
+	done
+TP = 0, FP = 0, FN = 1525, TN = 47115
+recall = 0.0, precision = -1, F1 = -1, bal_acc = 0.5
+training step: 6	training file: train_00025.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0817 - accuracy: 0.9956 - val_loss: 0.0665 - val_accuracy: 0.9910 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.0
+	done
+TP = 0, FP = 0, FN = 1525, TN = 47115
+recall = 0.0, precision = -1, F1 = -1, bal_acc = 0.5
+training step: 7	training file: train_00016.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0680 - accuracy: 0.9958 - val_loss: 0.0533 - val_accuracy: 0.9932 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.002242565155029297
+	done
+TP = 845, FP = 6, FN = 680, TN = 47109
+recall = 0.5540983606557377, precision = 0.9929494712103408, F1 = 0.7112794612794613, bal_acc = 0.7769855063386935
+training step: 8	training file: train_00015.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0570 - accuracy: 0.9961 - val_loss: 0.0446 - val_accuracy: 0.9952 - 6s/epoch - 176ms/step
+	calculating accuracy
+0.004268264770507813
+	done
+TP = 1381, FP = 12, FN = 144, TN = 47103
+recall = 0.9055737704918033, precision = 0.9913854989231874, F1 = 0.9465387251542152, bal_acc = 0.9526595372675508
+training step: 9	training file: train_00028.p
+	grabbing data
+	done
+32/32 - 11s - loss: 0.0486 - accuracy: 0.9959 - val_loss: 0.0409 - val_accuracy: 0.9954 - 11s/epoch - 340ms/step
+	calculating accuracy
+0.004549503326416016
+	done
+TP = 1388, FP = 13, FN = 137, TN = 47102
+recall = 0.9101639344262296, precision = 0.9907209136331192, F1 = 0.9487354750512645, bal_acc = 0.9549440069032347
+training step: 10	training file: train_00034.p
+	grabbing data
+	done
+32/32 - 7s - loss: 0.0432 - accuracy: 0.9959 - val_loss: 0.0348 - val_accuracy: 0.9972 - 7s/epoch - 215ms/step
+	calculating accuracy
+0.007242965698242188
+	done
+TP = 1424, FP = 12, FN = 101, TN = 47103
+recall = 0.9337704918032786, precision = 0.9916434540389972, F1 = 0.961837217156366, bal_acc = 0.9667578979232885
+training step: 11	training file: train_00029.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0367 - accuracy: 0.9961 - val_loss: 0.0361 - val_accuracy: 0.9970 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.00658712387084961
+	done
+TP = 1413, FP = 12, FN = 112, TN = 47103
+recall = 0.9265573770491803, precision = 0.991578947368421, F1 = 0.9579661016949153, bal_acc = 0.9631513405462393
+training step: 12	training file: train_00015.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0319 - accuracy: 0.9965 - val_loss: 0.0338 - val_accuracy: 0.9955 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.004638862609863281
+	done
+TP = 1385, FP = 12, FN = 140, TN = 47103
+recall = 0.9081967213114754, precision = 0.9914101646385111, F1 = 0.94798083504449, bal_acc = 0.9539710126773868
+training step: 13	training file: train_00027.p
+	grabbing data
+	done
+32/32 - 8s - loss: 0.0286 - accuracy: 0.9965 - val_loss: 0.0299 - val_accuracy: 0.9970 - 8s/epoch - 248ms/step
+	calculating accuracy
+0.006305122375488281
+	done
+TP = 1412, FP = 13, FN = 113, TN = 47102
+recall = 0.9259016393442623, precision = 0.9908771929824561, F1 = 0.9572881355932202, bal_acc = 0.9628128593622511
+training step: 14	training file: train_00012.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0282 - accuracy: 0.9956 - val_loss: 0.0259 - val_accuracy: 0.9970 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.006264972686767578
+	done
+TP = 1418, FP = 13, FN = 107, TN = 47102
+recall = 0.9298360655737705, precision = 0.9909154437456325, F1 = 0.9594046008119079, bal_acc = 0.9647800724770053
+training step: 15	training file: train_00018.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0235 - accuracy: 0.9967 - val_loss: 0.0235 - val_accuracy: 0.9974 - 6s/epoch - 175ms/step
+	calculating accuracy
+0.0068757057189941405
+	done
+TP = 1423, FP = 12, FN = 102, TN = 47103
+recall = 0.9331147540983606, precision = 0.9916376306620209, F1 = 0.9614864864864865, bal_acc = 0.9664300290708294
+training step: 16	training file: train_00012.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0241 - accuracy: 0.9957 - val_loss: 0.0217 - val_accuracy: 0.9974 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.007106971740722656
+	done
+TP = 1430, FP = 12, FN = 95, TN = 47103
+recall = 0.9377049180327869, precision = 0.9916782246879334, F1 = 0.9639366363329963, bal_acc = 0.9687251110380426
+training step: 17	training file: train_00028.p
+	grabbing data
+	done
+32/32 - 8s - loss: 0.0212 - accuracy: 0.9963 - val_loss: 0.0190 - val_accuracy: 0.9974 - 8s/epoch - 250ms/step
+	calculating accuracy
+0.0068610191345214845
+	done
+TP = 1429, FP = 12, FN = 96, TN = 47103
+recall = 0.9370491803278689, precision = 0.9916724496877168, F1 = 0.9635873229939312, bal_acc = 0.9683972421855835
+training step: 18	training file: train_00005.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0184 - accuracy: 0.9970 - val_loss: 0.0184 - val_accuracy: 0.9972 - 6s/epoch - 174ms/step
+	calculating accuracy
+0.006411361694335938
+	done
+TP = 1429, FP = 12, FN = 96, TN = 47103
+recall = 0.9370491803278689, precision = 0.9916724496877168, F1 = 0.9635873229939312, bal_acc = 0.9683972421855835
+training step: 19	training file: train_00031.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0178 - accuracy: 0.9968 - val_loss: 0.0165 - val_accuracy: 0.9980 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008745670318603516
+	done
+TP = 1444, FP = 35, FN = 81, TN = 47080
+recall = 0.9468852459016394, precision = 0.9763353617308993, F1 = 0.9613848202396804, bal_acc = 0.9730711913472964
+training step: 20	training file: train_00007.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0170 - accuracy: 0.9967 - val_loss: 0.0155 - val_accuracy: 0.9981 - 6s/epoch - 180ms/step
+	calculating accuracy
+0.008995342254638671
+	done
+TP = 1444, FP = 11, FN = 81, TN = 47104
+recall = 0.9468852459016394, precision = 0.9924398625429554, F1 = 0.9691275167785234, bal_acc = 0.973325887303998
+training step: 21	training file: train_00004.p
+	grabbing data
+	done
+32/32 - 9s - loss: 0.0151 - accuracy: 0.9973 - val_loss: 0.0138 - val_accuracy: 0.9981 - 9s/epoch - 282ms/step
+	calculating accuracy
+0.00871591567993164
+	done
+TP = 1446, FP = 10, FN = 79, TN = 47105
+recall = 0.9481967213114754, precision = 0.9931318681318682, F1 = 0.9701442468970145, bal_acc = 0.9739922373404453
+training step: 22	training file: train_00029.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0151 - accuracy: 0.9969 - val_loss: 0.0127 - val_accuracy: 0.9981 - 6s/epoch - 187ms/step
+	calculating accuracy
+0.008786392211914063
+	done
+TP = 1446, FP = 1, FN = 79, TN = 47114
+recall = 0.9481967213114754, precision = 0.9993089149965446, F1 = 0.9730820995962315, bal_acc = 0.9740877483242085
+training step: 23	training file: train_00036.p
+	grabbing data
+	done
+32/32 - 11s - loss: 0.0150 - accuracy: 0.9967 - val_loss: 0.0129 - val_accuracy: 0.9979 - 11s/epoch - 337ms/step
+	calculating accuracy
+0.009118270874023438
+	done
+TP = 1446, FP = 6, FN = 79, TN = 47109
+recall = 0.9481967213114754, precision = 0.9958677685950413, F1 = 0.9714477662075915, bal_acc = 0.9740346866665623
+training step: 24	training file: train_00011.p
+	grabbing data
+	done
+32/32 - 7s - loss: 0.0135 - accuracy: 0.9971 - val_loss: 0.0122 - val_accuracy: 0.9980 - 7s/epoch - 203ms/step
+	calculating accuracy
+0.008623695373535157
+	done
+TP = 1446, FP = 8, FN = 79, TN = 47107
+recall = 0.9481967213114754, precision = 0.9944979367262724, F1 = 0.9707955689828801, bal_acc = 0.9740134620035038
+training step: 25	training file: train_00029.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0131 - accuracy: 0.9970 - val_loss: 0.0115 - val_accuracy: 0.9980 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.009461116790771485
+	done
+TP = 1447, FP = 3, FN = 78, TN = 47112
+recall = 0.9488524590163935, precision = 0.9979310344827587, F1 = 0.9727731092436975, bal_acc = 0.974394392513609
+training step: 26	training file: train_00028.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0136 - accuracy: 0.9967 - val_loss: 0.0116 - val_accuracy: 0.9978 - 6s/epoch - 174ms/step
+	calculating accuracy
+0.007296562194824219
+	done
+TP = 1446, FP = 0, FN = 79, TN = 47115
+recall = 0.9481967213114754, precision = 1.0, F1 = 0.9734096263884214, bal_acc = 0.9740983606557376
+training step: 27	training file: train_00003.p
+	grabbing data
+	done
+32/32 - 10s - loss: 0.0126 - accuracy: 0.9969 - val_loss: 0.0112 - val_accuracy: 0.9977 - 10s/epoch - 305ms/step
+	calculating accuracy
+0.01023244857788086
+	done
+TP = 1453, FP = 5, FN = 72, TN = 47110
+recall = 0.9527868852459016, precision = 0.9965706447187929, F1 = 0.9741870600067046, bal_acc = 0.9763403809653046
+training step: 28	training file: train_00015.p
+	grabbing data
+	done
+32/32 - 14s - loss: 0.0113 - accuracy: 0.9974 - val_loss: 0.0097 - val_accuracy: 0.9982 - 14s/epoch - 447ms/step
+	calculating accuracy
+0.008592700958251953
+	done
+TP = 1449, FP = 3, FN = 76, TN = 47112
+recall = 0.9501639344262295, precision = 0.9979338842975206, F1 = 0.9734632180047027, bal_acc = 0.975050130218527
+training step: 29	training file: train_00030.p
+	grabbing data
+	done
+32/32 - 9s - loss: 0.0128 - accuracy: 0.9966 - val_loss: 0.0127 - val_accuracy: 0.9966 - 9s/epoch - 273ms/step
+	calculating accuracy
+0.01172933578491211
+	done
+TP = 1455, FP = 30, FN = 70, TN = 47085
+recall = 0.9540983606557377, precision = 0.9797979797979798, F1 = 0.9667774086378738, bal_acc = 0.9767308103819918
+training step: 30	training file: train_00021.p
+	grabbing data
+	done
+32/32 - 13s - loss: 0.0110 - accuracy: 0.9972 - val_loss: 0.0096 - val_accuracy: 0.9979 - 13s/epoch - 401ms/step
+	calculating accuracy
+0.009383678436279297
+	done
+TP = 1449, FP = 8, FN = 76, TN = 47107
+recall = 0.9501639344262295, precision = 0.9945092656142759, F1 = 0.971830985915493, bal_acc = 0.9749970685608809
+training step: 31	training file: train_00034.p
+	grabbing data
+	done
+32/32 - 15s - loss: 0.0102 - accuracy: 0.9975 - val_loss: 0.0089 - val_accuracy: 0.9981 - 15s/epoch - 483ms/step
+	calculating accuracy
+0.009188365936279298
+	done
+TP = 1449, FP = 3, FN = 76, TN = 47112
+recall = 0.9501639344262295, precision = 0.9979338842975206, F1 = 0.9734632180047027, bal_acc = 0.975050130218527
+training step: 32	training file: train_00024.p
+	grabbing data
+	done
+32/32 - 8s - loss: 0.0114 - accuracy: 0.9969 - val_loss: 0.0084 - val_accuracy: 0.9982 - 8s/epoch - 245ms/step
+	calculating accuracy
+0.008809280395507813
+	done
+TP = 1450, FP = 3, FN = 75, TN = 47112
+recall = 0.9508196721311475, precision = 0.9979353062629044, F1 = 0.9738079247817326, bal_acc = 0.9753779990709861
+training step: 33	training file: train_00014.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0098 - accuracy: 0.9974 - val_loss: 0.0086 - val_accuracy: 0.9981 - 6s/epoch - 181ms/step
+	calculating accuracy
+0.009475135803222656
+	done
+TP = 1450, FP = 3, FN = 75, TN = 47112
+recall = 0.9508196721311475, precision = 0.9979353062629044, F1 = 0.9738079247817326, bal_acc = 0.9753779990709861
+training step: 34	training file: train_00010.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0090 - accuracy: 0.9977 - val_loss: 0.0080 - val_accuracy: 0.9983 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.008726787567138673
+	done
+TP = 1451, FP = 3, FN = 74, TN = 47112
+recall = 0.9514754098360656, precision = 0.9979367262723521, F1 = 0.9741524001342733, bal_acc = 0.9757058679234452
+training step: 35	training file: train_00029.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0098 - accuracy: 0.9972 - val_loss: 0.0082 - val_accuracy: 0.9979 - 6s/epoch - 175ms/step
+	calculating accuracy
+0.009972095489501953
+	done
+TP = 1453, FP = 3, FN = 72, TN = 47112
+recall = 0.9527868852459016, precision = 0.9979395604395604, F1 = 0.974840657497484, bal_acc = 0.976361605628363
+training step: 36	training file: train_00036.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0100 - accuracy: 0.9971 - val_loss: 0.0078 - val_accuracy: 0.9981 - 6s/epoch - 176ms/step
+	calculating accuracy
+0.00890522003173828
+	done
+TP = 1451, FP = 1, FN = 74, TN = 47114
+recall = 0.9514754098360656, precision = 0.9993112947658402, F1 = 0.9748068525361102, bal_acc = 0.9757270925865036
+training step: 37	training file: train_00025.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0089 - accuracy: 0.9975 - val_loss: 0.0076 - val_accuracy: 0.9981 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008221054077148437
+	done
+TP = 1451, FP = 2, FN = 74, TN = 47113
+recall = 0.9514754098360656, precision = 0.9986235375086029, F1 = 0.974479516453996, bal_acc = 0.9757164802549743
+training step: 38	training file: train_00022.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0089 - accuracy: 0.9974 - val_loss: 0.0071 - val_accuracy: 0.9982 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.0091522216796875
+	done
+TP = 1461, FP = 12, FN = 64, TN = 47103
+recall = 0.9580327868852458, precision = 0.9918533604887984, F1 = 0.9746497665110072, bal_acc = 0.978889045464272
+training step: 39	training file: train_00017.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0085 - accuracy: 0.9975 - val_loss: 0.0069 - val_accuracy: 0.9982 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.008065509796142577
+	done
+TP = 1452, FP = 0, FN = 73, TN = 47115
+recall = 0.9521311475409836, precision = 1.0, F1 = 0.975478669801814, bal_acc = 0.9760655737704917
+training step: 40	training file: train_00036.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0094 - accuracy: 0.9971 - val_loss: 0.0071 - val_accuracy: 0.9981 - 6s/epoch - 198ms/step
+	calculating accuracy
+0.008339405059814453
+	done
+TP = 1451, FP = 0, FN = 74, TN = 47115
+recall = 0.9514754098360656, precision = 1.0, F1 = 0.9751344086021505, bal_acc = 0.9757377049180328
+training step: 41	training file: train_00035.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0082 - accuracy: 0.9976 - val_loss: 0.0066 - val_accuracy: 0.9982 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.00856637954711914
+	done
+TP = 1455, FP = 2, FN = 70, TN = 47113
+recall = 0.9540983606557377, precision = 0.9986273164035689, F1 = 0.9758551307847082, bal_acc = 0.9770279556648104
+training step: 42	training file: train_00026.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0079 - accuracy: 0.9977 - val_loss: 0.0070 - val_accuracy: 0.9979 - 6s/epoch - 191ms/step
+	calculating accuracy
+0.009891796112060546
+	done
+TP = 1462, FP = 17, FN = 63, TN = 47098
+recall = 0.958688524590164, precision = 0.9885057471264368, F1 = 0.9733688415446071, bal_acc = 0.9791638526590849
+training step: 43	training file: train_00014.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0078 - accuracy: 0.9977 - val_loss: 0.0067 - val_accuracy: 0.9980 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009775066375732422
+	done
+TP = 1461, FP = 8, FN = 64, TN = 47107
+recall = 0.9580327868852458, precision = 0.9945541184479237, F1 = 0.9759519038076153, bal_acc = 0.9789314947903891
+training step: 44	training file: train_00017.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0075 - accuracy: 0.9977 - val_loss: 0.0062 - val_accuracy: 0.9983 - 6s/epoch - 190ms/step
+	calculating accuracy
+0.008135128021240234
+	done
+TP = 1454, FP = 3, FN = 71, TN = 47112
+recall = 0.9534426229508197, precision = 0.9979409746053535, F1 = 0.9751844399731724, bal_acc = 0.9766894744808221
+training step: 45	training file: train_00005.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0070 - accuracy: 0.9979 - val_loss: 0.0059 - val_accuracy: 0.9984 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008447265625
+	done
+TP = 1454, FP = 3, FN = 71, TN = 47112
+recall = 0.9534426229508197, precision = 0.9979409746053535, F1 = 0.9751844399731724, bal_acc = 0.9766894744808221
+training step: 46	training file: train_00004.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0071 - accuracy: 0.9979 - val_loss: 0.0068 - val_accuracy: 0.9979 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.010100078582763673
+	done
+TP = 1465, FP = 20, FN = 60, TN = 47095
+recall = 0.9606557377049181, precision = 0.9865319865319865, F1 = 0.9734219269102989, bal_acc = 0.9801156222218743
+training step: 47	training file: train_00036.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0083 - accuracy: 0.9973 - val_loss: 0.0064 - val_accuracy: 0.9980 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.009518146514892578
+	done
+TP = 1466, FP = 5, FN = 59, TN = 47110
+recall = 0.9613114754098361, precision = 0.9966009517335146, F1 = 0.9786381842456608, bal_acc = 0.9806026760472719
+training step: 48	training file: train_00000.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0068 - accuracy: 0.9979 - val_loss: 0.0054 - val_accuracy: 0.9984 - 6s/epoch - 184ms/step
+	calculating accuracy
+0.008695316314697266
+	done
+TP = 1458, FP = 4, FN = 67, TN = 47111
+recall = 0.9560655737704918, precision = 0.9972640218878249, F1 = 0.9762303314362237, bal_acc = 0.977990337559129
+training step: 49	training file: train_00033.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0074 - accuracy: 0.9977 - val_loss: 0.0056 - val_accuracy: 0.9983 - 6s/epoch - 173ms/step
+	calculating accuracy
+0.008619022369384766
+	done
+TP = 1460, FP = 4, FN = 65, TN = 47111
+recall = 0.9573770491803278, precision = 0.9972677595628415, F1 = 0.976915356306457, bal_acc = 0.9786460752640469
+training step: 50	training file: train_00030.p
+	grabbing data
+	done
+32/32 - 8s - loss: 0.0089 - accuracy: 0.9970 - val_loss: 0.0076 - val_accuracy: 0.9973 - 8s/epoch - 265ms/step
+	calculating accuracy
+0.010977554321289062
+	done
+TP = 1478, FP = 44, FN = 47, TN = 47071
+recall = 0.9691803278688524, precision = 0.9710906701708278, F1 = 0.9701345585822121, bal_acc = 0.9841232213471398
+training step: 51	training file: train_00004.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0067 - accuracy: 0.9979 - val_loss: 0.0055 - val_accuracy: 0.9982 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009479904174804687
+	done
+TP = 1465, FP = 11, FN = 60, TN = 47104
+recall = 0.9606557377049181, precision = 0.9925474254742548, F1 = 0.9763412195934689, bal_acc = 0.9802111332056374
+training step: 52	training file: train_00033.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0070 - accuracy: 0.9978 - val_loss: 0.0054 - val_accuracy: 0.9983 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.009075641632080078
+	done
+TP = 1458, FP = 6, FN = 67, TN = 47109
+recall = 0.9560655737704918, precision = 0.9959016393442623, F1 = 0.9755771160923387, bal_acc = 0.9779691128960706
+training step: 53	training file: train_00011.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0071 - accuracy: 0.9977 - val_loss: 0.0055 - val_accuracy: 0.9982 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.008813285827636718
+	done
+TP = 1466, FP = 4, FN = 59, TN = 47111
+recall = 0.9613114754098361, precision = 0.9972789115646259, F1 = 0.9789649415692823, bal_acc = 0.980613288378801
+training step: 54	training file: train_00000.p
+	grabbing data
+	done
+32/32 - 7s - loss: 0.0061 - accuracy: 0.9981 - val_loss: 0.0053 - val_accuracy: 0.9983 - 7s/epoch - 209ms/step
+	calculating accuracy
+0.009276199340820312
+	done
+TP = 1463, FP = 3, FN = 62, TN = 47112
+recall = 0.959344262295082, precision = 0.9979536152796725, F1 = 0.978268137746573, bal_acc = 0.9796402941529533
+training step: 55	training file: train_00006.p
+	grabbing data
+	done
+32/32 - 12s - loss: 0.0063 - accuracy: 0.9980 - val_loss: 0.0052 - val_accuracy: 0.9984 - 12s/epoch - 366ms/step
+	calculating accuracy
+0.008273601531982422
+	done
+TP = 1464, FP = 3, FN = 61, TN = 47112
+recall = 0.96, precision = 0.9979550102249489, F1 = 0.9786096256684492, bal_acc = 0.9799681630054122
+training step: 56	training file: train_00011.p
+	grabbing data
+	done
+32/32 - 8s - loss: 0.0068 - accuracy: 0.9977 - val_loss: 0.0055 - val_accuracy: 0.9982 - 8s/epoch - 255ms/step
+	calculating accuracy
+0.009235763549804687
+	done
+TP = 1469, FP = 3, FN = 56, TN = 47112
+recall = 0.9632786885245902, precision = 0.9979619565217391, F1 = 0.9803136469803136, bal_acc = 0.9816075072677074
+training step: 57	training file: train_00005.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0058 - accuracy: 0.9981 - val_loss: 0.0049 - val_accuracy: 0.9985 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.008724212646484375
+	done
+TP = 1469, FP = 6, FN = 56, TN = 47109
+recall = 0.9632786885245902, precision = 0.9959322033898305, F1 = 0.9793333333333334, bal_acc = 0.9815756702731198
+training step: 58	training file: train_00019.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0067 - accuracy: 0.9978 - val_loss: 0.0051 - val_accuracy: 0.9983 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.00889902114868164
+	done
+TP = 1462, FP = 1, FN = 63, TN = 47114
+recall = 0.958688524590164, precision = 0.9993164730006835, F1 = 0.9785809906291834, bal_acc = 0.9793336499635528
+training step: 59	training file: train_00023.p
+	grabbing data
+	done
+32/32 - 8s - loss: 0.0065 - accuracy: 0.9978 - val_loss: 0.0051 - val_accuracy: 0.9983 - 8s/epoch - 241ms/step
+	calculating accuracy
+0.009210872650146484
+	done
+TP = 1463, FP = 1, FN = 62, TN = 47114
+recall = 0.959344262295082, precision = 0.9993169398907104, F1 = 0.9789227166276346, bal_acc = 0.9796615188160118
+training step: 60	training file: train_00032.p
+	grabbing data
+	done
+32/32 - 14s - loss: 0.0057 - accuracy: 0.9982 - val_loss: 0.0050 - val_accuracy: 0.9983 - 14s/epoch - 430ms/step
+	calculating accuracy
+0.009309864044189453
+	done
+TP = 1471, FP = 5, FN = 54, TN = 47110
+recall = 0.9645901639344262, precision = 0.9966124661246613, F1 = 0.9803398867044318, bal_acc = 0.982242020309567
+training step: 61	training file: train_00013.p
+	grabbing data
+	done
+32/32 - 12s - loss: 0.0067 - accuracy: 0.9977 - val_loss: 0.0048 - val_accuracy: 0.9984 - 12s/epoch - 370ms/step
+	calculating accuracy
+0.008578109741210937
+	done
+TP = 1472, FP = 12, FN = 53, TN = 47103
+recall = 0.9652459016393443, precision = 0.9919137466307277, F1 = 0.9783981389165836, bal_acc = 0.9824956028413213
+training step: 62	training file: train_00000.p
+	grabbing data
+	done
+32/32 - 15s - loss: 0.0055 - accuracy: 0.9982 - val_loss: 0.0048 - val_accuracy: 0.9985 - 15s/epoch - 465ms/step
+	calculating accuracy
+0.009046840667724609
+	done
+TP = 1465, FP = 1, FN = 60, TN = 47114
+recall = 0.9606557377049181, precision = 0.9993178717598908, F1 = 0.9796054831160147, bal_acc = 0.9803172565209298
+training step: 63	training file: train_00000.p
+	grabbing data
+	done
+32/32 - 9s - loss: 0.0053 - accuracy: 0.9983 - val_loss: 0.0048 - val_accuracy: 0.9985 - 9s/epoch - 281ms/step
+	calculating accuracy
+0.008780479431152344
+	done
+TP = 1464, FP = 0, FN = 61, TN = 47115
+recall = 0.96, precision = 1.0, F1 = 0.9795918367346939, bal_acc = 0.98
+training step: 64	training file: train_00028.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0082 - accuracy: 0.9971 - val_loss: 0.0052 - val_accuracy: 0.9982 - 6s/epoch - 184ms/step
+	calculating accuracy
+0.008675479888916015
+	done
+TP = 1457, FP = 5, FN = 68, TN = 47110
+recall = 0.9554098360655737, precision = 0.9965800273597811, F1 = 0.9755607633076665, bal_acc = 0.9776518563751406
+training step: 65	training file: train_00013.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0066 - accuracy: 0.9977 - val_loss: 0.0047 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.00881814956665039
+	done
+TP = 1472, FP = 9, FN = 53, TN = 47106
+recall = 0.9652459016393443, precision = 0.9939230249831195, F1 = 0.9793745841650033, bal_acc = 0.982527439835909
+training step: 66	training file: train_00010.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0056 - accuracy: 0.9981 - val_loss: 0.0048 - val_accuracy: 0.9984 - 6s/epoch - 173ms/step
+	calculating accuracy
+0.008295917510986328
+	done
+TP = 1468, FP = 1, FN = 57, TN = 47114
+recall = 0.9626229508196721, precision = 0.9993192648059904, F1 = 0.9806279225116901, bal_acc = 0.9813008630783069
+training step: 67	training file: train_00011.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0063 - accuracy: 0.9978 - val_loss: 0.0053 - val_accuracy: 0.9981 - 6s/epoch - 174ms/step
+	calculating accuracy
+0.00935049057006836
+	done
+TP = 1478, FP = 12, FN = 47, TN = 47103
+recall = 0.9691803278688524, precision = 0.9919463087248322, F1 = 0.9804311774461029, bal_acc = 0.9844628159560753
+training step: 68	training file: train_00012.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0085 - accuracy: 0.9968 - val_loss: 0.0049 - val_accuracy: 0.9982 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.00965738296508789
+	done
+TP = 1476, FP = 8, FN = 49, TN = 47107
+recall = 0.9678688524590164, precision = 0.9946091644204852, F1 = 0.9810568295114656, bal_acc = 0.9838495275772743
+training step: 69	training file: train_00001.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0062 - accuracy: 0.9979 - val_loss: 0.0044 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008683490753173827
+	done
+TP = 1474, FP = 1, FN = 51, TN = 47114
+recall = 0.9665573770491803, precision = 0.9993220338983051, F1 = 0.9826666666666666, bal_acc = 0.983268076193061
+training step: 70	training file: train_00028.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0078 - accuracy: 0.9972 - val_loss: 0.0052 - val_accuracy: 0.9981 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.007796478271484375
+	done
+TP = 1461, FP = 0, FN = 64, TN = 47115
+recall = 0.9580327868852458, precision = 1.0, F1 = 0.9785666443402545, bal_acc = 0.9790163934426229
+training step: 71	training file: train_00021.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0063 - accuracy: 0.9977 - val_loss: 0.0050 - val_accuracy: 0.9983 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008376598358154297
+	done
+TP = 1465, FP = 0, FN = 60, TN = 47115
+recall = 0.9606557377049181, precision = 1.0, F1 = 0.979933110367893, bal_acc = 0.980327868852459
+training step: 72	training file: train_00004.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0058 - accuracy: 0.9980 - val_loss: 0.0049 - val_accuracy: 0.9981 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.00982818603515625
+	done
+TP = 1480, FP = 12, FN = 45, TN = 47103
+recall = 0.9704918032786886, precision = 0.9919571045576407, F1 = 0.9811070599933709, bal_acc = 0.9851185536609934
+training step: 73	training file: train_00032.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0052 - accuracy: 0.9982 - val_loss: 0.0046 - val_accuracy: 0.9983 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009460926055908203
+	done
+TP = 1479, FP = 9, FN = 46, TN = 47106
+recall = 0.9698360655737704, precision = 0.9939516129032258, F1 = 0.9817457683372053, bal_acc = 0.9848225218031221
+training step: 74	training file: train_00024.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0073 - accuracy: 0.9974 - val_loss: 0.0049 - val_accuracy: 0.9982 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009371089935302734
+	done
+TP = 1481, FP = 14, FN = 44, TN = 47101
+recall = 0.9711475409836066, precision = 0.9906354515050168, F1 = 0.980794701986755, bal_acc = 0.985425197850394
+training step: 75	training file: train_00020.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0059 - accuracy: 0.9979 - val_loss: 0.0044 - val_accuracy: 0.9985 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.008894824981689453
+	done
+TP = 1470, FP = 1, FN = 55, TN = 47114
+recall = 0.9639344262295082, precision = 0.9993201903467029, F1 = 0.9813084112149533, bal_acc = 0.9819566007832249
+training step: 76	training file: train_00032.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0050 - accuracy: 0.9983 - val_loss: 0.0044 - val_accuracy: 0.9984 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009156608581542968
+	done
+TP = 1478, FP = 2, FN = 47, TN = 47113
+recall = 0.9691803278688524, precision = 0.9986486486486487, F1 = 0.98369384359401, bal_acc = 0.9845689392713677
+training step: 77	training file: train_00011.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0059 - accuracy: 0.9979 - val_loss: 0.0047 - val_accuracy: 0.9983 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.009201526641845703
+	done
+TP = 1484, FP = 5, FN = 41, TN = 47110
+recall = 0.9731147540983607, precision = 0.9966420416386836, F1 = 0.984737889847379, bal_acc = 0.9865043153915342
+training step: 78	training file: train_00018.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0064 - accuracy: 0.9977 - val_loss: 0.0046 - val_accuracy: 0.9983 - 6s/epoch - 176ms/step
+	calculating accuracy
+0.009271907806396484
+	done
+TP = 1477, FP = 7, FN = 48, TN = 47108
+recall = 0.9685245901639344, precision = 0.9952830188679245, F1 = 0.9817215021601862, bal_acc = 0.9841880087612626
+training step: 79	training file: train_00017.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0054 - accuracy: 0.9981 - val_loss: 0.0043 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008968830108642578
+	done
+TP = 1477, FP = 3, FN = 48, TN = 47112
+recall = 0.9685245901639344, precision = 0.9979729729729729, F1 = 0.983028286189684, bal_acc = 0.9842304580873795
+training step: 80	training file: train_00012.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0083 - accuracy: 0.9969 - val_loss: 0.0055 - val_accuracy: 0.9978 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.010120105743408204
+	done
+TP = 1477, FP = 12, FN = 48, TN = 47103
+recall = 0.9685245901639344, precision = 0.9919408999328408, F1 = 0.980092899800929, bal_acc = 0.9841349471036164
+training step: 81	training file: train_00032.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0051 - accuracy: 0.9983 - val_loss: 0.0043 - val_accuracy: 0.9984 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.009430980682373047
+	done
+TP = 1477, FP = 2, FN = 48, TN = 47113
+recall = 0.9685245901639344, precision = 0.9986477349560514, F1 = 0.9833555259653796, bal_acc = 0.9842410704189087
+training step: 82	training file: train_00023.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0056 - accuracy: 0.9980 - val_loss: 0.0044 - val_accuracy: 0.9984 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009139537811279297
+	done
+TP = 1474, FP = 0, FN = 51, TN = 47115
+recall = 0.9665573770491803, precision = 1.0, F1 = 0.9829943314438147, bal_acc = 0.9832786885245901
+training step: 83	training file: train_00025.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0051 - accuracy: 0.9982 - val_loss: 0.0053 - val_accuracy: 0.9981 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.008817577362060547
+	done
+TP = 1479, FP = 2, FN = 46, TN = 47113
+recall = 0.9698360655737704, precision = 0.9986495611073599, F1 = 0.9840319361277445, bal_acc = 0.9848968081238267
+training step: 84	training file: train_00022.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0055 - accuracy: 0.9979 - val_loss: 0.0047 - val_accuracy: 0.9982 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009467697143554688
+	done
+TP = 1481, FP = 16, FN = 44, TN = 47099
+recall = 0.9711475409836066, precision = 0.9893119572478289, F1 = 0.9801455989410985, bal_acc = 0.9854039731873354
+training step: 85	training file: train_00002.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0054 - accuracy: 0.9981 - val_loss: 0.0043 - val_accuracy: 0.9984 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009175395965576172
+	done
+TP = 1471, FP = 0, FN = 54, TN = 47115
+recall = 0.9645901639344262, precision = 1.0, F1 = 0.9819759679572763, bal_acc = 0.9822950819672132
+training step: 86	training file: train_00036.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0066 - accuracy: 0.9975 - val_loss: 0.0046 - val_accuracy: 0.9983 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.00926799774169922
+	done
+TP = 1478, FP = 1, FN = 47, TN = 47114
+recall = 0.9691803278688524, precision = 0.9993238674780257, F1 = 0.9840213049267643, bal_acc = 0.984579551602897
+training step: 87	training file: train_00028.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0076 - accuracy: 0.9972 - val_loss: 0.0046 - val_accuracy: 0.9983 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.008409595489501953
+	done
+TP = 1472, FP = 1, FN = 53, TN = 47114
+recall = 0.9652459016393443, precision = 0.9993211133740665, F1 = 0.9819879919946632, bal_acc = 0.9826123384881429
+training step: 88	training file: train_00014.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0055 - accuracy: 0.9980 - val_loss: 0.0042 - val_accuracy: 0.9985 - 6s/epoch - 186ms/step
+	calculating accuracy
+0.009002971649169921
+	done
+TP = 1478, FP = 1, FN = 47, TN = 47114
+recall = 0.9691803278688524, precision = 0.9993238674780257, F1 = 0.9840213049267643, bal_acc = 0.984579551602897
+training step: 89	training file: train_00014.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0050 - accuracy: 0.9982 - val_loss: 0.0042 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009029388427734375
+	done
+TP = 1484, FP = 2, FN = 41, TN = 47113
+recall = 0.9731147540983607, precision = 0.9986541049798116, F1 = 0.9857190302225175, bal_acc = 0.9865361523861218
+training step: 90	training file: train_00022.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0054 - accuracy: 0.9979 - val_loss: 0.0044 - val_accuracy: 0.9984 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009219646453857422
+	done
+TP = 1481, FP = 3, FN = 44, TN = 47112
+recall = 0.9711475409836066, precision = 0.9979784366576819, F1 = 0.9843801927550682, bal_acc = 0.9855419334972155
+training step: 91	training file: train_00012.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0078 - accuracy: 0.9970 - val_loss: 0.0051 - val_accuracy: 0.9980 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.009433650970458984
+	done
+TP = 1480, FP = 10, FN = 45, TN = 47105
+recall = 0.9704918032786886, precision = 0.9932885906040269, F1 = 0.9817578772802653, bal_acc = 0.9851397783240519
+training step: 92	training file: train_00031.p
+	grabbing data
+	done
+32/32 - 7s - loss: 0.0058 - accuracy: 0.9979 - val_loss: 0.0040 - val_accuracy: 0.9985 - 7s/epoch - 208ms/step
+	calculating accuracy
+0.00892782211303711
+	done
+TP = 1480, FP = 1, FN = 45, TN = 47114
+recall = 0.9704918032786886, precision = 0.9993247805536799, F1 = 0.9846972721224218, bal_acc = 0.9852352893078151
+training step: 93	training file: train_00010.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0048 - accuracy: 0.9982 - val_loss: 0.0040 - val_accuracy: 0.9985 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.008946514129638672
+	done
+TP = 1489, FP = 0, FN = 36, TN = 47115
+recall = 0.9763934426229508, precision = 1.0, F1 = 0.9880557398805574, bal_acc = 0.9881967213114754
+training step: 94	training file: train_00025.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0049 - accuracy: 0.9982 - val_loss: 0.0054 - val_accuracy: 0.9980 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008848476409912109
+	done
+TP = 1472, FP = 0, FN = 53, TN = 47115
+recall = 0.9652459016393443, precision = 1.0, F1 = 0.9823156489823156, bal_acc = 0.9826229508196722
+training step: 95	training file: train_00002.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0054 - accuracy: 0.9980 - val_loss: 0.0046 - val_accuracy: 0.9982 - 6s/epoch - 191ms/step
+	calculating accuracy
+0.009657859802246094
+	done
+TP = 1481, FP = 1, FN = 44, TN = 47114
+recall = 0.9711475409836066, precision = 0.9993252361673415, F1 = 0.9850349185234454, bal_acc = 0.9855631581602741
+training step: 96	training file: train_00017.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0050 - accuracy: 0.9982 - val_loss: 0.0042 - val_accuracy: 0.9984 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008681964874267579
+	done
+TP = 1474, FP = 1, FN = 51, TN = 47114
+recall = 0.9665573770491803, precision = 0.9993220338983051, F1 = 0.9826666666666666, bal_acc = 0.983268076193061
+training step: 97	training file: train_00004.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0049 - accuracy: 0.9982 - val_loss: 0.0044 - val_accuracy: 0.9983 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.009583187103271485
+	done
+TP = 1479, FP = 1, FN = 46, TN = 47114
+recall = 0.9698360655737704, precision = 0.9993243243243243, F1 = 0.9843594009983361, bal_acc = 0.9849074204553561
+training step: 98	training file: train_00030.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0071 - accuracy: 0.9973 - val_loss: 0.0053 - val_accuracy: 0.9978 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.010370349884033203
+	done
+TP = 1479, FP = 1, FN = 46, TN = 47114
+recall = 0.9698360655737704, precision = 0.9993243243243243, F1 = 0.9843594009983361, bal_acc = 0.9849074204553561
+training step: 99	training file: train_00035.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0059 - accuracy: 0.9978 - val_loss: 0.0046 - val_accuracy: 0.9983 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.008292198181152344
+	done
+TP = 1474, FP = 0, FN = 51, TN = 47115
+recall = 0.9665573770491803, precision = 1.0, F1 = 0.9829943314438147, bal_acc = 0.9832786885245901
+training step: 100	training file: train_00012.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0079 - accuracy: 0.9969 - val_loss: 0.0043 - val_accuracy: 0.9983 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.00924530029296875
+	done
+TP = 1470, FP = 0, FN = 55, TN = 47115
+recall = 0.9639344262295082, precision = 1.0, F1 = 0.9816360601001669, bal_acc = 0.9819672131147541
+training step: 101	training file: train_00028.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0070 - accuracy: 0.9973 - val_loss: 0.0045 - val_accuracy: 0.9982 - 6s/epoch - 191ms/step
+	calculating accuracy
+0.008783054351806641
+	done
+TP = 1477, FP = 4, FN = 48, TN = 47111
+recall = 0.9685245901639344, precision = 0.9972991222147198, F1 = 0.9827012641383899, bal_acc = 0.9842198457558502
+training step: 102	training file: train_00024.p
+	grabbing data
+	done
+32/32 - 8s - loss: 0.0066 - accuracy: 0.9975 - val_loss: 0.0039 - val_accuracy: 0.9985 - 8s/epoch - 241ms/step
+	calculating accuracy
+0.00870046615600586
+	done
+TP = 1476, FP = 0, FN = 49, TN = 47115
+recall = 0.9678688524590164, precision = 1.0, F1 = 0.9836721092969011, bal_acc = 0.9839344262295082
+training step: 103	training file: train_00020.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0053 - accuracy: 0.9980 - val_loss: 0.0040 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008608531951904298
+	done
+TP = 1477, FP = 0, FN = 48, TN = 47115
+recall = 0.9685245901639344, precision = 1.0, F1 = 0.9840106595602931, bal_acc = 0.9842622950819673
+training step: 104	training file: train_00008.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0052 - accuracy: 0.9981 - val_loss: 0.0044 - val_accuracy: 0.9984 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008201503753662109
+	done
+TP = 1485, FP = 1, FN = 40, TN = 47114
+recall = 0.9737704918032787, precision = 0.9993270524899058, F1 = 0.9863832613749586, bal_acc = 0.9868746335701102
+training step: 105	training file: train_00007.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0061 - accuracy: 0.9977 - val_loss: 0.0044 - val_accuracy: 0.9982 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.009804248809814453
+	done
+TP = 1488, FP = 0, FN = 37, TN = 47115
+recall = 0.9757377049180328, precision = 1.0, F1 = 0.9877198805177564, bal_acc = 0.9878688524590165
+training step: 106	training file: train_00016.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0057 - accuracy: 0.9979 - val_loss: 0.0040 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008876705169677734
+	done
+TP = 1499, FP = 5, FN = 26, TN = 47110
+recall = 0.9829508196721312, precision = 0.9966755319148937, F1 = 0.9897655992076592, bal_acc = 0.9914223481784195
+training step: 107	training file: train_00031.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0054 - accuracy: 0.9980 - val_loss: 0.0039 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008850574493408203
+	done
+TP = 1495, FP = 5, FN = 30, TN = 47110
+recall = 0.980327868852459, precision = 0.9966666666666667, F1 = 0.9884297520661156, bal_acc = 0.9901108727685833
+training step: 108	training file: train_00021.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0054 - accuracy: 0.9979 - val_loss: 0.0042 - val_accuracy: 0.9984 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.00872955322265625
+	done
+TP = 1476, FP = 0, FN = 49, TN = 47115
+recall = 0.9678688524590164, precision = 1.0, F1 = 0.9836721092969011, bal_acc = 0.9839344262295082
+training step: 109	training file: train_00000.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0047 - accuracy: 0.9983 - val_loss: 0.0040 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009121894836425781
+	done
+TP = 1490, FP = 3, FN = 35, TN = 47112
+recall = 0.9770491803278688, precision = 0.9979906229068989, F1 = 0.9874088800530152, bal_acc = 0.9884927531693467
+training step: 110	training file: train_00036.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0062 - accuracy: 0.9976 - val_loss: 0.0043 - val_accuracy: 0.9983 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.00945425033569336
+	done
+TP = 1492, FP = 0, FN = 33, TN = 47115
+recall = 0.9783606557377049, precision = 1.0, F1 = 0.9890619821014253, bal_acc = 0.9891803278688525
+training step: 111	training file: train_00027.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0055 - accuracy: 0.9979 - val_loss: 0.0041 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.00887603759765625
+	done
+TP = 1490, FP = 2, FN = 35, TN = 47113
+recall = 0.9770491803278688, precision = 0.9986595174262735, F1 = 0.9877361617500828, bal_acc = 0.9885033655008759
+training step: 112	training file: train_00028.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0072 - accuracy: 0.9973 - val_loss: 0.0044 - val_accuracy: 0.9983 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008507633209228515
+	done
+TP = 1473, FP = 0, FN = 52, TN = 47115
+recall = 0.9659016393442623, precision = 1.0, F1 = 0.9826551034022681, bal_acc = 0.9829508196721312
+training step: 113	training file: train_00009.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0052 - accuracy: 0.9981 - val_loss: 0.0042 - val_accuracy: 0.9984 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008047771453857423
+	done
+TP = 1473, FP = 0, FN = 52, TN = 47115
+recall = 0.9659016393442623, precision = 1.0, F1 = 0.9826551034022681, bal_acc = 0.9829508196721312
+training step: 114	training file: train_00005.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9983 - val_loss: 0.0042 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008265018463134766
+	done
+TP = 1498, FP = 9, FN = 27, TN = 47106
+recall = 0.9822950819672132, precision = 0.9940278699402787, F1 = 0.9881266490765171, bal_acc = 0.9910520299998434
+training step: 115	training file: train_00036.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0062 - accuracy: 0.9976 - val_loss: 0.0044 - val_accuracy: 0.9983 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009295272827148437
+	done
+TP = 1483, FP = 1, FN = 42, TN = 47114
+recall = 0.9724590163934427, precision = 0.9993261455525606, F1 = 0.985709538052509, bal_acc = 0.9862188958651921
+training step: 116	training file: train_00007.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0058 - accuracy: 0.9978 - val_loss: 0.0042 - val_accuracy: 0.9983 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.009623527526855469
+	done
+TP = 1482, FP = 0, FN = 43, TN = 47115
+recall = 0.9718032786885246, precision = 1.0, F1 = 0.9857000332557365, bal_acc = 0.9859016393442623
+training step: 117	training file: train_00033.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0054 - accuracy: 0.9980 - val_loss: 0.0040 - val_accuracy: 0.9985 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.009149551391601562
+	done
+TP = 1490, FP = 2, FN = 35, TN = 47113
+recall = 0.9770491803278688, precision = 0.9986595174262735, F1 = 0.9877361617500828, bal_acc = 0.9885033655008759
+training step: 118	training file: train_00028.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0070 - accuracy: 0.9973 - val_loss: 0.0048 - val_accuracy: 0.9981 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009085273742675782
+	done
+TP = 1485, FP = 5, FN = 40, TN = 47110
+recall = 0.9737704918032787, precision = 0.9966442953020134, F1 = 0.9850746268656717, bal_acc = 0.9868321842439931
+training step: 119	training file: train_00005.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9983 - val_loss: 0.0041 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008222484588623047
+	done
+TP = 1484, FP = 0, FN = 41, TN = 47115
+recall = 0.9731147540983607, precision = 1.0, F1 = 0.9863742107012297, bal_acc = 0.9865573770491803
+training step: 120	training file: train_00006.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0048 - accuracy: 0.9983 - val_loss: 0.0041 - val_accuracy: 0.9985 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.00878763198852539
+	done
+TP = 1479, FP = 1, FN = 46, TN = 47114
+recall = 0.9698360655737704, precision = 0.9993243243243243, F1 = 0.9843594009983361, bal_acc = 0.9849074204553561
+training step: 121	training file: train_00029.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0063 - accuracy: 0.9976 - val_loss: 0.0040 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008655929565429687
+	done
+TP = 1465, FP = 0, FN = 60, TN = 47115
+recall = 0.9606557377049181, precision = 1.0, F1 = 0.979933110367893, bal_acc = 0.980327868852459
+training step: 122	training file: train_00011.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0054 - accuracy: 0.9979 - val_loss: 0.0046 - val_accuracy: 0.9982 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008938217163085937
+	done
+TP = 1484, FP = 0, FN = 41, TN = 47115
+recall = 0.9731147540983607, precision = 1.0, F1 = 0.9863742107012297, bal_acc = 0.9865573770491803
+training step: 123	training file: train_00016.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0055 - accuracy: 0.9979 - val_loss: 0.0038 - val_accuracy: 0.9985 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.008770561218261719
+	done
+TP = 1487, FP = 1, FN = 38, TN = 47114
+recall = 0.9750819672131148, precision = 0.9993279569892473, F1 = 0.9870560902754729, bal_acc = 0.9875303712750282
+training step: 124	training file: train_00003.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0059 - accuracy: 0.9978 - val_loss: 0.0040 - val_accuracy: 0.9984 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.009457111358642578
+	done
+TP = 1490, FP = 3, FN = 35, TN = 47112
+recall = 0.9770491803278688, precision = 0.9979906229068989, F1 = 0.9874088800530152, bal_acc = 0.9884927531693467
+training step: 125	training file: train_00000.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9984 - val_loss: 0.0040 - val_accuracy: 0.9985 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.008724498748779296
+	done
+TP = 1492, FP = 0, FN = 33, TN = 47115
+recall = 0.9783606557377049, precision = 1.0, F1 = 0.9890619821014253, bal_acc = 0.9891803278688525
+training step: 126	training file: train_00018.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0057 - accuracy: 0.9979 - val_loss: 0.0041 - val_accuracy: 0.9984 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009281730651855469
+	done
+TP = 1477, FP = 0, FN = 48, TN = 47115
+recall = 0.9685245901639344, precision = 1.0, F1 = 0.9840106595602931, bal_acc = 0.9842622950819673
+training step: 127	training file: train_00017.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0048 - accuracy: 0.9982 - val_loss: 0.0040 - val_accuracy: 0.9985 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.00835123062133789
+	done
+TP = 1475, FP = 0, FN = 50, TN = 47115
+recall = 0.9672131147540983, precision = 1.0, F1 = 0.9833333333333333, bal_acc = 0.9836065573770492
+training step: 128	training file: train_00022.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0050 - accuracy: 0.9980 - val_loss: 0.0040 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008878993988037109
+	done
+TP = 1474, FP = 0, FN = 51, TN = 47115
+recall = 0.9665573770491803, precision = 1.0, F1 = 0.9829943314438147, bal_acc = 0.9832786885245901
+training step: 129	training file: train_00006.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9983 - val_loss: 0.0041 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008400249481201171
+	done
+TP = 1487, FP = 0, FN = 38, TN = 47115
+recall = 0.9750819672131148, precision = 1.0, F1 = 0.9873837981407703, bal_acc = 0.9875409836065574
+training step: 130	training file: train_00034.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9983 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.008805561065673827
+	done
+TP = 1493, FP = 0, FN = 32, TN = 47115
+recall = 0.9790163934426229, precision = 1.0, F1 = 0.9893969516235918, bal_acc = 0.9895081967213115
+training step: 131	training file: train_00029.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0060 - accuracy: 0.9977 - val_loss: 0.0039 - val_accuracy: 0.9985 - 6s/epoch - 173ms/step
+	calculating accuracy
+0.008763694763183593
+	done
+TP = 1477, FP = 0, FN = 48, TN = 47115
+recall = 0.9685245901639344, precision = 1.0, F1 = 0.9840106595602931, bal_acc = 0.9842622950819673
+training step: 132	training file: train_00003.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0057 - accuracy: 0.9978 - val_loss: 0.0041 - val_accuracy: 0.9983 - 6s/epoch - 173ms/step
+	calculating accuracy
+0.00968780517578125
+	done
+TP = 1495, FP = 1, FN = 30, TN = 47114
+recall = 0.980327868852459, precision = 0.9993315508021391, F1 = 0.9897384971863622, bal_acc = 0.9901533220947003
+training step: 133	training file: train_00006.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9984 - val_loss: 0.0040 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008515548706054688
+	done
+TP = 1497, FP = 0, FN = 28, TN = 47115
+recall = 0.981639344262295, precision = 1.0, F1 = 0.9907346128391793, bal_acc = 0.9908196721311475
+training step: 134	training file: train_00033.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0053 - accuracy: 0.9980 - val_loss: 0.0041 - val_accuracy: 0.9984 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009071063995361329
+	done
+TP = 1499, FP = 0, FN = 26, TN = 47115
+recall = 0.9829508196721312, precision = 1.0, F1 = 0.9914021164021164, bal_acc = 0.9914754098360656
+training step: 135	training file: train_00035.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0054 - accuracy: 0.9980 - val_loss: 0.0040 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008622837066650391
+	done
+TP = 1490, FP = 0, FN = 35, TN = 47115
+recall = 0.9770491803278688, precision = 1.0, F1 = 0.988391376451078, bal_acc = 0.9885245901639343
+training step: 136	training file: train_00020.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0049 - accuracy: 0.9981 - val_loss: 0.0045 - val_accuracy: 0.9983 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008247089385986329
+	done
+TP = 1471, FP = 0, FN = 54, TN = 47115
+recall = 0.9645901639344262, precision = 1.0, F1 = 0.9819759679572763, bal_acc = 0.9822950819672132
+training step: 137	training file: train_00018.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0057 - accuracy: 0.9978 - val_loss: 0.0039 - val_accuracy: 0.9984 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.009202194213867188
+	done
+TP = 1474, FP = 0, FN = 51, TN = 47115
+recall = 0.9665573770491803, precision = 1.0, F1 = 0.9829943314438147, bal_acc = 0.9832786885245901
+training step: 138	training file: train_00018.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0054 - accuracy: 0.9979 - val_loss: 0.0042 - val_accuracy: 0.9983 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009401226043701172
+	done
+TP = 1484, FP = 0, FN = 41, TN = 47115
+recall = 0.9731147540983607, precision = 1.0, F1 = 0.9863742107012297, bal_acc = 0.9865573770491803
+training step: 139	training file: train_00025.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9982 - val_loss: 0.0049 - val_accuracy: 0.9981 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008737564086914062
+	done
+TP = 1486, FP = 0, FN = 39, TN = 47115
+recall = 0.9744262295081967, precision = 1.0, F1 = 0.9870474925273995, bal_acc = 0.9872131147540983
+training step: 140	training file: train_00011.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0056 - accuracy: 0.9978 - val_loss: 0.0044 - val_accuracy: 0.9983 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.009230709075927735
+	done
+TP = 1491, FP = 1, FN = 34, TN = 47114
+recall = 0.9777049180327869, precision = 0.9993297587131368, F1 = 0.988399071925754, bal_acc = 0.9888418466848643
+training step: 141	training file: train_00023.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0052 - accuracy: 0.9981 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008935260772705077
+	done
+TP = 1482, FP = 0, FN = 43, TN = 47115
+recall = 0.9718032786885246, precision = 1.0, F1 = 0.9857000332557365, bal_acc = 0.9859016393442623
+training step: 142	training file: train_00021.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0055 - accuracy: 0.9979 - val_loss: 0.0039 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008851337432861327
+	done
+TP = 1489, FP = 0, FN = 36, TN = 47115
+recall = 0.9763934426229508, precision = 1.0, F1 = 0.9880557398805574, bal_acc = 0.9881967213114754
+training step: 143	training file: train_00027.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0052 - accuracy: 0.9980 - val_loss: 0.0039 - val_accuracy: 0.9985 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.00914306640625
+	done
+TP = 1498, FP = 0, FN = 27, TN = 47115
+recall = 0.9822950819672132, precision = 1.0, F1 = 0.9910684750248098, bal_acc = 0.9911475409836066
+training step: 144	training file: train_00006.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9984 - val_loss: 0.0042 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008403491973876954
+	done
+TP = 1499, FP = 1, FN = 26, TN = 47114
+recall = 0.9829508196721312, precision = 0.9993333333333333, F1 = 0.9910743801652893, bal_acc = 0.9914647975045363
+training step: 145	training file: train_00001.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0049 - accuracy: 0.9982 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.009068965911865234
+	done
+TP = 1504, FP = 4, FN = 21, TN = 47111
+recall = 0.9862295081967213, precision = 0.9973474801061007, F1 = 0.9917573359709858, bal_acc = 0.9930723047722436
+training step: 146	training file: train_00017.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0047 - accuracy: 0.9982 - val_loss: 0.0041 - val_accuracy: 0.9985 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.008423042297363282
+	done
+TP = 1483, FP = 0, FN = 42, TN = 47115
+recall = 0.9724590163934427, precision = 1.0, F1 = 0.9860372340425532, bal_acc = 0.9862295081967214
+training step: 147	training file: train_00017.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9983 - val_loss: 0.0039 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008567142486572265
+	done
+TP = 1495, FP = 1, FN = 30, TN = 47114
+recall = 0.980327868852459, precision = 0.9993315508021391, F1 = 0.9897384971863622, bal_acc = 0.9901533220947003
+training step: 148	training file: train_00008.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0049 - accuracy: 0.9981 - val_loss: 0.0045 - val_accuracy: 0.9983 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.00834512710571289
+	done
+TP = 1505, FP = 6, FN = 20, TN = 47109
+recall = 0.9868852459016394, precision = 0.9960291197882197, F1 = 0.9914361001317523, bal_acc = 0.9933789489616442
+training step: 149	training file: train_00019.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0051 - accuracy: 0.9981 - val_loss: 0.0039 - val_accuracy: 0.9985 - 6s/epoch - 173ms/step
+	calculating accuracy
+0.008602333068847657
+	done
+TP = 1493, FP = 0, FN = 32, TN = 47115
+recall = 0.9790163934426229, precision = 1.0, F1 = 0.9893969516235918, bal_acc = 0.9895081967213115
+training step: 150	training file: train_00019.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0048 - accuracy: 0.9981 - val_loss: 0.0038 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008765983581542968
+	done
+TP = 1499, FP = 0, FN = 26, TN = 47115
+recall = 0.9829508196721312, precision = 1.0, F1 = 0.9914021164021164, bal_acc = 0.9914754098360656
+training step: 151	training file: train_00009.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0048 - accuracy: 0.9982 - val_loss: 0.0039 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008563232421875
+	done
+TP = 1490, FP = 0, FN = 35, TN = 47115
+recall = 0.9770491803278688, precision = 1.0, F1 = 0.988391376451078, bal_acc = 0.9885245901639343
+training step: 152	training file: train_00013.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0053 - accuracy: 0.9979 - val_loss: 0.0040 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008434009552001954
+	done
+TP = 1497, FP = 0, FN = 28, TN = 47115
+recall = 0.981639344262295, precision = 1.0, F1 = 0.9907346128391793, bal_acc = 0.9908196721311475
+training step: 153	training file: train_00024.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0064 - accuracy: 0.9976 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.008864116668701173
+	done
+TP = 1491, FP = 1, FN = 34, TN = 47114
+recall = 0.9777049180327869, precision = 0.9993297587131368, F1 = 0.988399071925754, bal_acc = 0.9888418466848643
+training step: 154	training file: train_00023.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0051 - accuracy: 0.9981 - val_loss: 0.0038 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.00896921157836914
+	done
+TP = 1501, FP = 3, FN = 24, TN = 47112
+recall = 0.9842622950819672, precision = 0.9980053191489362, F1 = 0.9910861670518323, bal_acc = 0.9920993105463959
+training step: 155	training file: train_00011.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0053 - accuracy: 0.9979 - val_loss: 0.0041 - val_accuracy: 0.9984 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009046268463134766
+	done
+TP = 1500, FP = 0, FN = 25, TN = 47115
+recall = 0.9836065573770492, precision = 1.0, F1 = 0.9917355371900827, bal_acc = 0.9918032786885246
+training step: 156	training file: train_00000.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0042 - accuracy: 0.9984 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008790874481201172
+	done
+TP = 1498, FP = 1, FN = 27, TN = 47114
+recall = 0.9822950819672132, precision = 0.9993328885923949, F1 = 0.9907407407407407, bal_acc = 0.9911369286520774
+training step: 157	training file: train_00012.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0076 - accuracy: 0.9970 - val_loss: 0.0046 - val_accuracy: 0.9981 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009610843658447266
+	done
+TP = 1484, FP = 1, FN = 41, TN = 47114
+recall = 0.9731147540983607, precision = 0.9993265993265993, F1 = 0.986046511627907, bal_acc = 0.9865467647176511
+training step: 158	training file: train_00026.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0048 - accuracy: 0.9982 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009091854095458984
+	done
+TP = 1488, FP = 2, FN = 37, TN = 47113
+recall = 0.9757377049180328, precision = 0.9986577181208054, F1 = 0.9870646766169154, bal_acc = 0.9878476277959579
+training step: 159	training file: train_00030.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0067 - accuracy: 0.9974 - val_loss: 0.0051 - val_accuracy: 0.9978 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.01048421859741211
+	done
+TP = 1504, FP = 4, FN = 21, TN = 47111
+recall = 0.9862295081967213, precision = 0.9973474801061007, F1 = 0.9917573359709858, bal_acc = 0.9930723047722436
+training step: 160	training file: train_00022.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0050 - accuracy: 0.9980 - val_loss: 0.0038 - val_accuracy: 0.9985 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.008928012847900391
+	done
+TP = 1494, FP = 1, FN = 31, TN = 47114
+recall = 0.979672131147541, precision = 0.9993311036789297, F1 = 0.9894039735099338, bal_acc = 0.9898254532422412
+training step: 161	training file: train_00029.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0058 - accuracy: 0.9977 - val_loss: 0.0038 - val_accuracy: 0.9985 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.009313201904296875
+	done
+TP = 1502, FP = 2, FN = 23, TN = 47113
+recall = 0.9849180327868853, precision = 0.9986702127659575, F1 = 0.9917464509739189, bal_acc = 0.9924377917303842
+training step: 162	training file: train_00009.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0047 - accuracy: 0.9982 - val_loss: 0.0039 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008530807495117188
+	done
+TP = 1478, FP = 0, FN = 47, TN = 47115
+recall = 0.9691803278688524, precision = 1.0, F1 = 0.9843489843489843, bal_acc = 0.9845901639344262
+training step: 163	training file: train_00033.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0050 - accuracy: 0.9981 - val_loss: 0.0038 - val_accuracy: 0.9985 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.009280204772949219
+	done
+TP = 1496, FP = 0, FN = 29, TN = 47115
+recall = 0.980983606557377, precision = 1.0, F1 = 0.9904005296259517, bal_acc = 0.9904918032786885
+training step: 164	training file: train_00005.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0043 - accuracy: 0.9984 - val_loss: 0.0040 - val_accuracy: 0.9986 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.008731746673583984
+	done
+TP = 1504, FP = 21, FN = 21, TN = 47094
+recall = 0.9862295081967213, precision = 0.9862295081967213, F1 = 0.9862295081967213, bal_acc = 0.9928918951362466
+training step: 165	training file: train_00021.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0052 - accuracy: 0.9980 - val_loss: 0.0051 - val_accuracy: 0.9981 - 6s/epoch - 173ms/step
+	calculating accuracy
+0.008300685882568359
+	done
+TP = 1483, FP = 0, FN = 42, TN = 47115
+recall = 0.9724590163934427, precision = 1.0, F1 = 0.9860372340425532, bal_acc = 0.9862295081967214
+training step: 166	training file: train_00031.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0054 - accuracy: 0.9979 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008864784240722656
+	done
+TP = 1498, FP = 0, FN = 27, TN = 47115
+recall = 0.9822950819672132, precision = 1.0, F1 = 0.9910684750248098, bal_acc = 0.9911475409836066
+training step: 167	training file: train_00004.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9984 - val_loss: 0.0041 - val_accuracy: 0.9984 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.00961008071899414
+	done
+TP = 1512, FP = 2, FN = 13, TN = 47113
+recall = 0.9914754098360655, precision = 0.9986789960369881, F1 = 0.9950641658440276, bal_acc = 0.9957164802549743
+training step: 168	training file: train_00009.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9982 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008837032318115234
+	done
+TP = 1480, FP = 0, FN = 45, TN = 47115
+recall = 0.9704918032786886, precision = 1.0, F1 = 0.9850249584026624, bal_acc = 0.9852459016393442
+training step: 169	training file: train_00025.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0045 - accuracy: 0.9983 - val_loss: 0.0046 - val_accuracy: 0.9982 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008773899078369141
+	done
+TP = 1487, FP = 0, FN = 38, TN = 47115
+recall = 0.9750819672131148, precision = 1.0, F1 = 0.9873837981407703, bal_acc = 0.9875409836065574
+training step: 170	training file: train_00013.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0055 - accuracy: 0.9978 - val_loss: 0.0043 - val_accuracy: 0.9984 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.008788967132568359
+	done
+TP = 1510, FP = 36, FN = 15, TN = 47079
+recall = 0.9901639344262295, precision = 0.9767141009055628, F1 = 0.9833930315858027, bal_acc = 0.9946999232780622
+training step: 171	training file: train_00015.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0047 - accuracy: 0.9982 - val_loss: 0.0039 - val_accuracy: 0.9985 - 5s/epoch - 168ms/step
+	calculating accuracy
+0.009173870086669922
+	done
+TP = 1512, FP = 5, FN = 13, TN = 47110
+recall = 0.9914754098360655, precision = 0.996704021094265, F1 = 0.9940828402366862, bal_acc = 0.9956846432603865
+training step: 172	training file: train_00034.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0043 - accuracy: 0.9983 - val_loss: 0.0038 - val_accuracy: 0.9986 - 6s/epoch - 173ms/step
+	calculating accuracy
+0.008887195587158203
+	done
+TP = 1509, FP = 1, FN = 16, TN = 47114
+recall = 0.9895081967213115, precision = 0.9993377483443708, F1 = 0.9943986820428337, bal_acc = 0.9947434860291265
+training step: 173	training file: train_00020.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0047 - accuracy: 0.9982 - val_loss: 0.0039 - val_accuracy: 0.9986 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.00854034423828125
+	done
+TP = 1486, FP = 0, FN = 39, TN = 47115
+recall = 0.9744262295081967, precision = 1.0, F1 = 0.9870474925273995, bal_acc = 0.9872131147540983
+training step: 174	training file: train_00029.p
+	grabbing data
+	done
+32/32 - 7s - loss: 0.0058 - accuracy: 0.9977 - val_loss: 0.0039 - val_accuracy: 0.9985 - 7s/epoch - 212ms/step
+	calculating accuracy
+0.00884695053100586
+	done
+TP = 1486, FP = 0, FN = 39, TN = 47115
+recall = 0.9744262295081967, precision = 1.0, F1 = 0.9870474925273995, bal_acc = 0.9872131147540983
+training step: 175	training file: train_00035.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0050 - accuracy: 0.9981 - val_loss: 0.0043 - val_accuracy: 0.9983 - 6s/epoch - 173ms/step
+	calculating accuracy
+0.008441352844238281
+	done
+TP = 1489, FP = 0, FN = 36, TN = 47115
+recall = 0.9763934426229508, precision = 1.0, F1 = 0.9880557398805574, bal_acc = 0.9881967213114754
+training step: 176	training file: train_00006.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0043 - accuracy: 0.9984 - val_loss: 0.0039 - val_accuracy: 0.9986 - 6s/epoch - 173ms/step
+	calculating accuracy
+0.008638572692871094
+	done
+TP = 1502, FP = 0, FN = 23, TN = 47115
+recall = 0.9849180327868853, precision = 1.0, F1 = 0.9924017178724811, bal_acc = 0.9924590163934426
+training step: 177	training file: train_00013.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0051 - accuracy: 0.9980 - val_loss: 0.0038 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008577632904052734
+	done
+TP = 1507, FP = 2, FN = 18, TN = 47113
+recall = 0.9881967213114754, precision = 0.998674618952949, F1 = 0.9934080421885298, bal_acc = 0.9940771359926792
+training step: 178	training file: train_00002.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0047 - accuracy: 0.9982 - val_loss: 0.0040 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009484577178955077
+	done
+TP = 1510, FP = 2, FN = 15, TN = 47113
+recall = 0.9901639344262295, precision = 0.9986772486772487, F1 = 0.9944023707606191, bal_acc = 0.9950607425500563
+training step: 179	training file: train_00028.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0071 - accuracy: 0.9974 - val_loss: 0.0043 - val_accuracy: 0.9982 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009161758422851562
+	done
+TP = 1481, FP = 0, FN = 44, TN = 47115
+recall = 0.9711475409836066, precision = 1.0, F1 = 0.9853626081170991, bal_acc = 0.9855737704918033
+training step: 180	training file: train_00016.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0054 - accuracy: 0.9979 - val_loss: 0.0042 - val_accuracy: 0.9983 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008024883270263673
+	done
+TP = 1488, FP = 0, FN = 37, TN = 47115
+recall = 0.9757377049180328, precision = 1.0, F1 = 0.9877198805177564, bal_acc = 0.9878688524590165
+training step: 181	training file: train_00025.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0045 - accuracy: 0.9982 - val_loss: 0.0043 - val_accuracy: 0.9983 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.0084075927734375
+	done
+TP = 1478, FP = 0, FN = 47, TN = 47115
+recall = 0.9691803278688524, precision = 1.0, F1 = 0.9843489843489843, bal_acc = 0.9845901639344262
+training step: 182	training file: train_00001.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0051 - accuracy: 0.9981 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008669662475585937
+	done
+TP = 1496, FP = 0, FN = 29, TN = 47115
+recall = 0.980983606557377, precision = 1.0, F1 = 0.9904005296259517, bal_acc = 0.9904918032786885
+training step: 183	training file: train_00035.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0048 - accuracy: 0.9982 - val_loss: 0.0040 - val_accuracy: 0.9985 - 5s/epoch - 168ms/step
+	calculating accuracy
+0.008599281311035156
+	done
+TP = 1494, FP = 0, FN = 31, TN = 47115
+recall = 0.979672131147541, precision = 1.0, F1 = 0.9897316992381583, bal_acc = 0.9898360655737706
+training step: 184	training file: train_00031.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0051 - accuracy: 0.9980 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008744621276855468
+	done
+TP = 1497, FP = 0, FN = 28, TN = 47115
+recall = 0.981639344262295, precision = 1.0, F1 = 0.9907346128391793, bal_acc = 0.9908196721311475
+training step: 185	training file: train_00007.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0056 - accuracy: 0.9978 - val_loss: 0.0041 - val_accuracy: 0.9983 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009491252899169921
+	done
+TP = 1469, FP = 0, FN = 56, TN = 47115
+recall = 0.9632786885245902, precision = 1.0, F1 = 0.9812959251837008, bal_acc = 0.981639344262295
+training step: 186	training file: train_00002.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9982 - val_loss: 0.0039 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009277534484863282
+	done
+TP = 1494, FP = 0, FN = 31, TN = 47115
+recall = 0.979672131147541, precision = 1.0, F1 = 0.9897316992381583, bal_acc = 0.9898360655737706
+training step: 187	training file: train_00017.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9983 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.008667373657226562
+	done
+TP = 1492, FP = 0, FN = 33, TN = 47115
+recall = 0.9783606557377049, precision = 1.0, F1 = 0.9890619821014253, bal_acc = 0.9891803278688525
+training step: 188	training file: train_00003.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0056 - accuracy: 0.9979 - val_loss: 0.0039 - val_accuracy: 0.9984 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009548473358154296
+	done
+TP = 1490, FP = 0, FN = 35, TN = 47115
+recall = 0.9770491803278688, precision = 1.0, F1 = 0.988391376451078, bal_acc = 0.9885245901639343
+training step: 189	training file: train_00004.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9983 - val_loss: 0.0038 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009386825561523437
+	done
+TP = 1492, FP = 0, FN = 33, TN = 47115
+recall = 0.9783606557377049, precision = 1.0, F1 = 0.9890619821014253, bal_acc = 0.9891803278688525
+training step: 190	training file: train_00012.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0073 - accuracy: 0.9971 - val_loss: 0.0047 - val_accuracy: 0.9980 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.009724235534667969
+	done
+TP = 1483, FP = 0, FN = 42, TN = 47115
+recall = 0.9724590163934427, precision = 1.0, F1 = 0.9860372340425532, bal_acc = 0.9862295081967214
+training step: 191	training file: train_00018.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0055 - accuracy: 0.9979 - val_loss: 0.0039 - val_accuracy: 0.9984 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.009288311004638672
+	done
+TP = 1493, FP = 0, FN = 32, TN = 47115
+recall = 0.9790163934426229, precision = 1.0, F1 = 0.9893969516235918, bal_acc = 0.9895081967213115
+training step: 192	training file: train_00031.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0051 - accuracy: 0.9980 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.008799171447753907
+	done
+TP = 1488, FP = 0, FN = 37, TN = 47115
+recall = 0.9757377049180328, precision = 1.0, F1 = 0.9877198805177564, bal_acc = 0.9878688524590165
+training step: 193	training file: train_00026.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9983 - val_loss: 0.0039 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.00931720733642578
+	done
+TP = 1506, FP = 0, FN = 19, TN = 47115
+recall = 0.9875409836065574, precision = 1.0, F1 = 0.9937314417683932, bal_acc = 0.9937704918032787
+training step: 194	training file: train_00025.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0043 - accuracy: 0.9983 - val_loss: 0.0045 - val_accuracy: 0.9982 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008868885040283204
+	done
+TP = 1499, FP = 1, FN = 26, TN = 47114
+recall = 0.9829508196721312, precision = 0.9993333333333333, F1 = 0.9910743801652893, bal_acc = 0.9914647975045363
+training step: 195	training file: train_00014.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0048 - accuracy: 0.9981 - val_loss: 0.0038 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009142017364501953
+	done
+TP = 1496, FP = 1, FN = 29, TN = 47114
+recall = 0.980983606557377, precision = 0.9993319973279893, F1 = 0.9900727994705494, bal_acc = 0.9904811909471594
+training step: 196	training file: train_00034.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0042 - accuracy: 0.9984 - val_loss: 0.0039 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008763694763183593
+	done
+TP = 1498, FP = 0, FN = 27, TN = 47115
+recall = 0.9822950819672132, precision = 1.0, F1 = 0.9910684750248098, bal_acc = 0.9911475409836066
+training step: 197	training file: train_00029.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0058 - accuracy: 0.9977 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009208393096923829
+	done
+TP = 1503, FP = 2, FN = 22, TN = 47113
+recall = 0.9855737704918033, precision = 0.998671096345515, F1 = 0.9920792079207921, bal_acc = 0.9927656605828432
+training step: 198	training file: train_00022.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0048 - accuracy: 0.9981 - val_loss: 0.0038 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.00897808074951172
+	done
+TP = 1494, FP = 2, FN = 31, TN = 47113
+recall = 0.979672131147541, precision = 0.9986631016042781, F1 = 0.9890764647467726, bal_acc = 0.989814840910712
+training step: 199	training file: train_00003.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0055 - accuracy: 0.9979 - val_loss: 0.0040 - val_accuracy: 0.9983 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009653091430664062
+	done
+TP = 1501, FP = 0, FN = 24, TN = 47115
+recall = 0.9842622950819672, precision = 1.0, F1 = 0.9920687376074026, bal_acc = 0.9921311475409835
+training step: 200	training file: train_00014.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9983 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009106159210205078
+	done
+TP = 1505, FP = 2, FN = 20, TN = 47113
+recall = 0.9868852459016394, precision = 0.9986728599867286, F1 = 0.9927440633245384, bal_acc = 0.9934213982877612
+training step: 201	training file: train_00035.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0048 - accuracy: 0.9981 - val_loss: 0.0045 - val_accuracy: 0.9983 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008300495147705079
+	done
+TP = 1489, FP = 0, FN = 36, TN = 47115
+recall = 0.9763934426229508, precision = 1.0, F1 = 0.9880557398805574, bal_acc = 0.9881967213114754
+training step: 202	training file: train_00001.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0048 - accuracy: 0.9982 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.009156322479248047
+	done
+TP = 1499, FP = 1, FN = 26, TN = 47114
+recall = 0.9829508196721312, precision = 0.9993333333333333, F1 = 0.9910743801652893, bal_acc = 0.9914647975045363
+training step: 203	training file: train_00023.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0050 - accuracy: 0.9981 - val_loss: 0.0039 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009072589874267577
+	done
+TP = 1486, FP = 0, FN = 39, TN = 47115
+recall = 0.9744262295081967, precision = 1.0, F1 = 0.9870474925273995, bal_acc = 0.9872131147540983
+training step: 204	training file: train_00021.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0054 - accuracy: 0.9979 - val_loss: 0.0042 - val_accuracy: 0.9984 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008339500427246094
+	done
+TP = 1487, FP = 0, FN = 38, TN = 47115
+recall = 0.9750819672131148, precision = 1.0, F1 = 0.9873837981407703, bal_acc = 0.9875409836065574
+training step: 205	training file: train_00018.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0058 - accuracy: 0.9978 - val_loss: 0.0038 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009295654296875
+	done
+TP = 1496, FP = 0, FN = 29, TN = 47115
+recall = 0.980983606557377, precision = 1.0, F1 = 0.9904005296259517, bal_acc = 0.9904918032786885
+training step: 206	training file: train_00001.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0047 - accuracy: 0.9983 - val_loss: 0.0036 - val_accuracy: 0.9986 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.008806228637695312
+	done
+TP = 1496, FP = 0, FN = 29, TN = 47115
+recall = 0.980983606557377, precision = 1.0, F1 = 0.9904005296259517, bal_acc = 0.9904918032786885
+training step: 207	training file: train_00035.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0047 - accuracy: 0.9982 - val_loss: 0.0041 - val_accuracy: 0.9984 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.008560466766357421
+	done
+TP = 1494, FP = 0, FN = 31, TN = 47115
+recall = 0.979672131147541, precision = 1.0, F1 = 0.9897316992381583, bal_acc = 0.9898360655737706
+training step: 208	training file: train_00033.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0053 - accuracy: 0.9980 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008877277374267578
+	done
+TP = 1494, FP = 0, FN = 31, TN = 47115
+recall = 0.979672131147541, precision = 1.0, F1 = 0.9897316992381583, bal_acc = 0.9898360655737706
+training step: 209	training file: train_00012.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0072 - accuracy: 0.9971 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.009235191345214843
+	done
+TP = 1485, FP = 0, FN = 40, TN = 47115
+recall = 0.9737704918032787, precision = 1.0, F1 = 0.9867109634551495, bal_acc = 0.9868852459016393
+training step: 210	training file: train_00006.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9983 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008749675750732423
+	done
+TP = 1506, FP = 2, FN = 19, TN = 47113
+recall = 0.9875409836065574, precision = 0.9986737400530504, F1 = 0.9930761622156281, bal_acc = 0.9937492671402202
+training step: 211	training file: train_00018.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0054 - accuracy: 0.9979 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.009086513519287109
+	done
+TP = 1500, FP = 0, FN = 25, TN = 47115
+recall = 0.9836065573770492, precision = 1.0, F1 = 0.9917355371900827, bal_acc = 0.9918032786885246
+training step: 212	training file: train_00031.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0050 - accuracy: 0.9981 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008944225311279298
+	done
+TP = 1504, FP = 1, FN = 21, TN = 47114
+recall = 0.9862295081967213, precision = 0.9993355481727575, F1 = 0.9927392739273928, bal_acc = 0.9931041417668314
+training step: 213	training file: train_00014.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0043 - accuracy: 0.9984 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009060382843017578
+	done
+TP = 1511, FP = 2, FN = 14, TN = 47113
+recall = 0.9908196721311475, precision = 0.998678122934567, F1 = 0.9947333772218564, bal_acc = 0.9953886114025152
+training step: 214	training file: train_00029.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0058 - accuracy: 0.9977 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009164524078369141
+	done
+TP = 1501, FP = 4, FN = 24, TN = 47111
+recall = 0.9842622950819672, precision = 0.9973421926910299, F1 = 0.9907590759075907, bal_acc = 0.9920886982148667
+training step: 215	training file: train_00027.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0050 - accuracy: 0.9981 - val_loss: 0.0038 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009317588806152344
+	done
+TP = 1509, FP = 1, FN = 16, TN = 47114
+recall = 0.9895081967213115, precision = 0.9993377483443708, F1 = 0.9943986820428337, bal_acc = 0.9947434860291265
+training step: 216	training file: train_00036.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0058 - accuracy: 0.9977 - val_loss: 0.0043 - val_accuracy: 0.9983 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009055614471435547
+	done
+TP = 1497, FP = 1, FN = 28, TN = 47114
+recall = 0.981639344262295, precision = 0.9993324432576769, F1 = 0.9904068805822032, bal_acc = 0.9908090597996183
+training step: 217	training file: train_00033.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0054 - accuracy: 0.9979 - val_loss: 0.0038 - val_accuracy: 0.9985 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.009107017517089843
+	done
+TP = 1500, FP = 0, FN = 25, TN = 47115
+recall = 0.9836065573770492, precision = 1.0, F1 = 0.9917355371900827, bal_acc = 0.9918032786885246
+training step: 218	training file: train_00000.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0042 - accuracy: 0.9984 - val_loss: 0.0037 - val_accuracy: 0.9986 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.008733749389648438
+	done
+TP = 1502, FP = 2, FN = 23, TN = 47113
+recall = 0.9849180327868853, precision = 0.9986702127659575, F1 = 0.9917464509739189, bal_acc = 0.9924377917303842
+training step: 219	training file: train_00028.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0070 - accuracy: 0.9974 - val_loss: 0.0038 - val_accuracy: 0.9985 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.008852672576904298
+	done
+TP = 1492, FP = 1, FN = 33, TN = 47114
+recall = 0.9783606557377049, precision = 0.999330207635633, F1 = 0.9887342611000662, bal_acc = 0.9891697155373232
+training step: 220	training file: train_00012.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0072 - accuracy: 0.9971 - val_loss: 0.0041 - val_accuracy: 0.9983 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.0091522216796875
+	done
+TP = 1491, FP = 2, FN = 34, TN = 47113
+recall = 0.9777049180327869, precision = 0.9986604152712659, F1 = 0.9880715705765408, bal_acc = 0.988831234353335
+training step: 221	training file: train_00029.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0056 - accuracy: 0.9977 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.00909252166748047
+	done
+TP = 1503, FP = 2, FN = 22, TN = 47113
+recall = 0.9855737704918033, precision = 0.998671096345515, F1 = 0.9920792079207921, bal_acc = 0.9927656605828432
+training step: 222	training file: train_00024.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0061 - accuracy: 0.9976 - val_loss: 0.0039 - val_accuracy: 0.9984 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008914947509765625
+	done
+TP = 1504, FP = 0, FN = 21, TN = 47115
+recall = 0.9862295081967213, precision = 1.0, F1 = 0.9930670188180917, bal_acc = 0.9931147540983607
+training step: 223	training file: train_00016.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0051 - accuracy: 0.9980 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008800601959228516
+	done
+TP = 1506, FP = 1, FN = 19, TN = 47114
+recall = 0.9875409836065574, precision = 0.9993364299933643, F1 = 0.9934036939313985, bal_acc = 0.9937598794717495
+training step: 224	training file: train_00006.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0042 - accuracy: 0.9985 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008685302734375
+	done
+TP = 1514, FP = 6, FN = 11, TN = 47109
+recall = 0.9927868852459016, precision = 0.9960526315789474, F1 = 0.9944170771756978, bal_acc = 0.9963297686337754
+training step: 225	training file: train_00025.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0045 - accuracy: 0.9982 - val_loss: 0.0039 - val_accuracy: 0.9984 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008835601806640624
+	done
+TP = 1502, FP = 4, FN = 23, TN = 47111
+recall = 0.9849180327868853, precision = 0.99734395750332, F1 = 0.9910920488287694, bal_acc = 0.9924165670673257
+training step: 226	training file: train_00007.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0058 - accuracy: 0.9977 - val_loss: 0.0041 - val_accuracy: 0.9983 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.00968790054321289
+	done
+TP = 1490, FP = 0, FN = 35, TN = 47115
+recall = 0.9770491803278688, precision = 1.0, F1 = 0.988391376451078, bal_acc = 0.9885245901639343
+training step: 227	training file: train_00028.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0068 - accuracy: 0.9974 - val_loss: 0.0039 - val_accuracy: 0.9985 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.008930301666259766
+	done
+TP = 1494, FP = 5, FN = 31, TN = 47110
+recall = 0.979672131147541, precision = 0.9966644429619747, F1 = 0.988095238095238, bal_acc = 0.9897830039161244
+training step: 228	training file: train_00010.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0045 - accuracy: 0.9983 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009103870391845703
+	done
+TP = 1507, FP = 3, FN = 18, TN = 47112
+recall = 0.9881967213114754, precision = 0.9980132450331126, F1 = 0.9930807248764415, bal_acc = 0.99406652366115
+training step: 229	training file: train_00011.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0051 - accuracy: 0.9980 - val_loss: 0.0041 - val_accuracy: 0.9984 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.00910778045654297
+	done
+TP = 1503, FP = 1, FN = 22, TN = 47114
+recall = 0.9855737704918033, precision = 0.9993351063829787, F1 = 0.9924067348960053, bal_acc = 0.9927762729143724
+training step: 230	training file: train_00006.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0042 - accuracy: 0.9984 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008720684051513671
+	done
+TP = 1507, FP = 3, FN = 18, TN = 47112
+recall = 0.9881967213114754, precision = 0.9980132450331126, F1 = 0.9930807248764415, bal_acc = 0.99406652366115
+training step: 231	training file: train_00015.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9982 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009057712554931641
+	done
+TP = 1505, FP = 2, FN = 20, TN = 47113
+recall = 0.9868852459016394, precision = 0.9986728599867286, F1 = 0.9927440633245384, bal_acc = 0.9934213982877612
+training step: 232	training file: train_00005.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0040 - accuracy: 0.9985 - val_loss: 0.0039 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008546161651611327
+	done
+TP = 1509, FP = 5, FN = 16, TN = 47110
+recall = 0.9895081967213115, precision = 0.9966974900924703, F1 = 0.9930898321816388, bal_acc = 0.9947010367030096
+training step: 233	training file: train_00002.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9983 - val_loss: 0.0040 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009379005432128907
+	done
+TP = 1509, FP = 3, FN = 16, TN = 47112
+recall = 0.9895081967213115, precision = 0.998015873015873, F1 = 0.9937438261442213, bal_acc = 0.994722261366068
+training step: 234	training file: train_00008.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0047 - accuracy: 0.9982 - val_loss: 0.0041 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008273506164550781
+	done
+TP = 1500, FP = 2, FN = 25, TN = 47113
+recall = 0.9836065573770492, precision = 0.9986684420772304, F1 = 0.9910802775024776, bal_acc = 0.991782054025466
+training step: 235	training file: train_00026.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0045 - accuracy: 0.9983 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.008898353576660157
+	done
+TP = 1509, FP = 2, FN = 16, TN = 47113
+recall = 0.9895081967213115, precision = 0.99867637326274, F1 = 0.9940711462450593, bal_acc = 0.9947328736975973
+training step: 236	training file: train_00004.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0043 - accuracy: 0.9983 - val_loss: 0.0040 - val_accuracy: 0.9984 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.009500694274902344
+	done
+TP = 1506, FP = 2, FN = 19, TN = 47113
+recall = 0.9875409836065574, precision = 0.9986737400530504, F1 = 0.9930761622156281, bal_acc = 0.9937492671402202
+training step: 237	training file: train_00000.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0040 - accuracy: 0.9985 - val_loss: 0.0038 - val_accuracy: 0.9986 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.008870792388916016
+	done
+TP = 1504, FP = 0, FN = 21, TN = 47115
+recall = 0.9862295081967213, precision = 1.0, F1 = 0.9930670188180917, bal_acc = 0.9931147540983607
+training step: 238	training file: train_00003.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0055 - accuracy: 0.9979 - val_loss: 0.0036 - val_accuracy: 0.9985 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.009244918823242188
+	done
+TP = 1504, FP = 1, FN = 21, TN = 47114
+recall = 0.9862295081967213, precision = 0.9993355481727575, F1 = 0.9927392739273928, bal_acc = 0.9931041417668314
+training step: 239	training file: train_00018.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0053 - accuracy: 0.9979 - val_loss: 0.0038 - val_accuracy: 0.9984 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009189796447753907
+	done
+TP = 1503, FP = 1, FN = 22, TN = 47114
+recall = 0.9855737704918033, precision = 0.9993351063829787, F1 = 0.9924067348960053, bal_acc = 0.9927762729143724
+training step: 240	training file: train_00003.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0052 - accuracy: 0.9979 - val_loss: 0.0037 - val_accuracy: 0.9985 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.009406566619873047
+	done
+TP = 1496, FP = 0, FN = 29, TN = 47115
+recall = 0.980983606557377, precision = 1.0, F1 = 0.9904005296259517, bal_acc = 0.9904918032786885
+training step: 241	training file: train_00008.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0047 - accuracy: 0.9982 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.008440685272216798
+	done
+TP = 1502, FP = 4, FN = 23, TN = 47111
+recall = 0.9849180327868853, precision = 0.99734395750332, F1 = 0.9910920488287694, bal_acc = 0.9924165670673257
+training step: 242	training file: train_00013.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0052 - accuracy: 0.9979 - val_loss: 0.0038 - val_accuracy: 0.9985 - 6s/epoch - 174ms/step
+	calculating accuracy
+0.008410263061523437
+	done
+TP = 1507, FP = 1, FN = 18, TN = 47114
+recall = 0.9881967213114754, precision = 0.9993368700265252, F1 = 0.9937355753379492, bal_acc = 0.9940877483242085
+training step: 243	training file: train_00032.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0040 - accuracy: 0.9985 - val_loss: 0.0039 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009203720092773437
+	done
+TP = 1514, FP = 4, FN = 11, TN = 47111
+recall = 0.9927868852459016, precision = 0.997364953886693, F1 = 0.9950706539599081, bal_acc = 0.9963509932968339
+training step: 244	training file: train_00010.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0042 - accuracy: 0.9984 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.008669471740722657
+	done
+TP = 1507, FP = 3, FN = 18, TN = 47112
+recall = 0.9881967213114754, precision = 0.9980132450331126, F1 = 0.9930807248764415, bal_acc = 0.99406652366115
+training step: 245	training file: train_00000.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0039 - accuracy: 0.9985 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008786296844482422
+	done
+TP = 1508, FP = 2, FN = 17, TN = 47113
+recall = 0.9888524590163934, precision = 0.9986754966887417, F1 = 0.9937397034596375, bal_acc = 0.9944050048451383
+training step: 246	training file: train_00000.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0037 - accuracy: 0.9986 - val_loss: 0.0039 - val_accuracy: 0.9986 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.008685970306396484
+	done
+TP = 1506, FP = 2, FN = 19, TN = 47113
+recall = 0.9875409836065574, precision = 0.9986737400530504, F1 = 0.9930761622156281, bal_acc = 0.9937492671402202
+training step: 247	training file: train_00005.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0040 - accuracy: 0.9985 - val_loss: 0.0039 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008510589599609375
+	done
+TP = 1507, FP = 2, FN = 18, TN = 47113
+recall = 0.9881967213114754, precision = 0.998674618952949, F1 = 0.9934080421885298, bal_acc = 0.9940771359926792
+training step: 248	training file: train_00000.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0037 - accuracy: 0.9986 - val_loss: 0.0040 - val_accuracy: 0.9986 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.00876760482788086
+	done
+TP = 1499, FP = 1, FN = 26, TN = 47114
+recall = 0.9829508196721312, precision = 0.9993333333333333, F1 = 0.9910743801652893, bal_acc = 0.9914647975045363
+training step: 249	training file: train_00014.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0042 - accuracy: 0.9984 - val_loss: 0.0039 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008925247192382812
+	done
+TP = 1506, FP = 2, FN = 19, TN = 47113
+recall = 0.9875409836065574, precision = 0.9986737400530504, F1 = 0.9930761622156281, bal_acc = 0.9937492671402202
+training step: 250	training file: train_00001.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9983 - val_loss: 0.0039 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008923149108886719
+	done
+TP = 1510, FP = 4, FN = 15, TN = 47111
+recall = 0.9901639344262295, precision = 0.9973579920739762, F1 = 0.993747943402435, bal_acc = 0.9950395178869977
+training step: 251	training file: train_00009.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0045 - accuracy: 0.9983 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008956241607666015
+	done
+TP = 1496, FP = 0, FN = 29, TN = 47115
+recall = 0.980983606557377, precision = 1.0, F1 = 0.9904005296259517, bal_acc = 0.9904918032786885
+training step: 252	training file: train_00010.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0041 - accuracy: 0.9984 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008868122100830078
+	done
+TP = 1512, FP = 2, FN = 13, TN = 47113
+recall = 0.9914754098360655, precision = 0.9986789960369881, F1 = 0.9950641658440276, bal_acc = 0.9957164802549743
+training step: 253	training file: train_00005.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0038 - accuracy: 0.9985 - val_loss: 0.0039 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008748531341552734
+	done
+TP = 1511, FP = 7, FN = 14, TN = 47108
+recall = 0.9908196721311475, precision = 0.9953886693017128, F1 = 0.9930989155438712, bal_acc = 0.995335549744869
+training step: 254	training file: train_00002.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0044 - accuracy: 0.9983 - val_loss: 0.0040 - val_accuracy: 0.9985 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.009409618377685548
+	done
+TP = 1511, FP = 2, FN = 14, TN = 47113
+recall = 0.9908196721311475, precision = 0.998678122934567, F1 = 0.9947333772218564, bal_acc = 0.9953886114025152
+training step: 255	training file: train_00025.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9982 - val_loss: 0.0055 - val_accuracy: 0.9979 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008552837371826171
+	done
+TP = 1493, FP = 0, FN = 32, TN = 47115
+recall = 0.9790163934426229, precision = 1.0, F1 = 0.9893969516235918, bal_acc = 0.9895081967213115
+training step: 256	training file: train_00012.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0074 - accuracy: 0.9971 - val_loss: 0.0045 - val_accuracy: 0.9981 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.00970611572265625
+	done
+TP = 1500, FP = 0, FN = 25, TN = 47115
+recall = 0.9836065573770492, precision = 1.0, F1 = 0.9917355371900827, bal_acc = 0.9918032786885246
+training step: 257	training file: train_00030.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0063 - accuracy: 0.9975 - val_loss: 0.0049 - val_accuracy: 0.9979 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.010323429107666015
+	done
+TP = 1505, FP = 4, FN = 20, TN = 47111
+recall = 0.9868852459016394, precision = 0.9973492379058979, F1 = 0.9920896506262359, bal_acc = 0.9934001736247027
+training step: 258	training file: train_00032.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0042 - accuracy: 0.9985 - val_loss: 0.0042 - val_accuracy: 0.9984 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009640121459960937
+	done
+TP = 1512, FP = 2, FN = 13, TN = 47113
+recall = 0.9914754098360655, precision = 0.9986789960369881, F1 = 0.9950641658440276, bal_acc = 0.9957164802549743
+training step: 259	training file: train_00021.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0053 - accuracy: 0.9979 - val_loss: 0.0041 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008623695373535157
+	done
+TP = 1495, FP = 1, FN = 30, TN = 47114
+recall = 0.980327868852459, precision = 0.9993315508021391, F1 = 0.9897384971863622, bal_acc = 0.9901533220947003
+training step: 260	training file: train_00018.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0056 - accuracy: 0.9979 - val_loss: 0.0040 - val_accuracy: 0.9983 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009556007385253907
+	done
+TP = 1505, FP = 3, FN = 20, TN = 47112
+recall = 0.9868852459016394, precision = 0.9980106100795756, F1 = 0.9924167490933069, bal_acc = 0.993410785956232
+training step: 261	training file: train_00009.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9982 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008654499053955078
+	done
+TP = 1488, FP = 0, FN = 37, TN = 47115
+recall = 0.9757377049180328, precision = 1.0, F1 = 0.9877198805177564, bal_acc = 0.9878688524590165
+training step: 262	training file: train_00020.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9982 - val_loss: 0.0039 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008637714385986327
+	done
+TP = 1485, FP = 0, FN = 40, TN = 47115
+recall = 0.9737704918032787, precision = 1.0, F1 = 0.9867109634551495, bal_acc = 0.9868852459016393
+training step: 263	training file: train_00022.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0047 - accuracy: 0.9981 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008940410614013673
+	done
+TP = 1491, FP = 0, FN = 34, TN = 47115
+recall = 0.9777049180327869, precision = 1.0, F1 = 0.9887267904509285, bal_acc = 0.9888524590163934
+training step: 264	training file: train_00010.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0042 - accuracy: 0.9984 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008580684661865234
+	done
+TP = 1510, FP = 2, FN = 15, TN = 47113
+recall = 0.9901639344262295, precision = 0.9986772486772487, F1 = 0.9944023707606191, bal_acc = 0.9950607425500563
+training step: 265	training file: train_00022.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0045 - accuracy: 0.9982 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.00892791748046875
+	done
+TP = 1489, FP = 0, FN = 36, TN = 47115
+recall = 0.9763934426229508, precision = 1.0, F1 = 0.9880557398805574, bal_acc = 0.9881967213114754
+training step: 266	training file: train_00021.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0054 - accuracy: 0.9979 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008757305145263673
+	done
+TP = 1494, FP = 0, FN = 31, TN = 47115
+recall = 0.979672131147541, precision = 1.0, F1 = 0.9897316992381583, bal_acc = 0.9898360655737706
+training step: 267	training file: train_00016.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0051 - accuracy: 0.9980 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008517932891845704
+	done
+TP = 1498, FP = 0, FN = 27, TN = 47115
+recall = 0.9822950819672132, precision = 1.0, F1 = 0.9910684750248098, bal_acc = 0.9911475409836066
+training step: 268	training file: train_00001.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0046 - accuracy: 0.9983 - val_loss: 0.0036 - val_accuracy: 0.9986 - 6s/epoch - 175ms/step
+	calculating accuracy
+0.008768749237060548
+	done
+TP = 1492, FP = 0, FN = 33, TN = 47115
+recall = 0.9783606557377049, precision = 1.0, F1 = 0.9890619821014253, bal_acc = 0.9891803278688525
+training step: 269	training file: train_00008.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0047 - accuracy: 0.9982 - val_loss: 0.0039 - val_accuracy: 0.9985 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.008248329162597656
+	done
+TP = 1499, FP = 0, FN = 26, TN = 47115
+recall = 0.9829508196721312, precision = 1.0, F1 = 0.9914021164021164, bal_acc = 0.9914754098360656
+training step: 270	training file: train_00012.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0074 - accuracy: 0.9970 - val_loss: 0.0044 - val_accuracy: 0.9981 - 6s/epoch - 173ms/step
+	calculating accuracy
+0.009940719604492188
+	done
+TP = 1515, FP = 0, FN = 10, TN = 47115
+recall = 0.9934426229508196, precision = 1.0, F1 = 0.9967105263157894, bal_acc = 0.9967213114754099
+training step: 271	training file: train_00012.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0068 - accuracy: 0.9972 - val_loss: 0.0043 - val_accuracy: 0.9982 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009694290161132813
+	done
+TP = 1513, FP = 14, FN = 12, TN = 47101
+recall = 0.9921311475409836, precision = 0.9908316961362148, F1 = 0.9914809960681521, bal_acc = 0.9959170011290825
+training step: 272	training file: train_00024.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0061 - accuracy: 0.9976 - val_loss: 0.0040 - val_accuracy: 0.9984 - 6s/epoch - 173ms/step
+	calculating accuracy
+0.009422206878662109
+	done
+TP = 1514, FP = 25, FN = 11, TN = 47090
+recall = 0.9927868852459016, precision = 0.9837556855100714, F1 = 0.9882506527415145, bal_acc = 0.9961281343347199
+training step: 273	training file: train_00017.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0045 - accuracy: 0.9982 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.00855083465576172
+	done
+TP = 1504, FP = 2, FN = 21, TN = 47113
+recall = 0.9862295081967213, precision = 0.99867197875166, F1 = 0.9924117452985812, bal_acc = 0.9930935294353022
+training step: 274	training file: train_00015.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0045 - accuracy: 0.9983 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.009119892120361328
+	done
+TP = 1507, FP = 3, FN = 18, TN = 47112
+recall = 0.9881967213114754, precision = 0.9980132450331126, F1 = 0.9930807248764415, bal_acc = 0.99406652366115
+training step: 275	training file: train_00027.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0051 - accuracy: 0.9980 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009258079528808593
+	done
+TP = 1513, FP = 2, FN = 12, TN = 47113
+recall = 0.9921311475409836, precision = 0.9986798679867986, F1 = 0.9953947368421052, bal_acc = 0.9960443491074333
+training step: 276	training file: train_00028.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0068 - accuracy: 0.9974 - val_loss: 0.0039 - val_accuracy: 0.9985 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.008654975891113281
+	done
+TP = 1495, FP = 7, FN = 30, TN = 47108
+recall = 0.980327868852459, precision = 0.9953395472703063, F1 = 0.9877766765774696, bal_acc = 0.9900896481055248
+training step: 277	training file: train_00024.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0061 - accuracy: 0.9976 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008953857421875
+	done
+TP = 1492, FP = 1, FN = 33, TN = 47114
+recall = 0.9783606557377049, precision = 0.999330207635633, F1 = 0.9887342611000662, bal_acc = 0.9891697155373232
+training step: 278	training file: train_00019.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0049 - accuracy: 0.9981 - val_loss: 0.0039 - val_accuracy: 0.9984 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008756637573242188
+	done
+TP = 1501, FP = 0, FN = 24, TN = 47115
+recall = 0.9842622950819672, precision = 1.0, F1 = 0.9920687376074026, bal_acc = 0.9921311475409835
+training step: 279	training file: train_00008.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0045 - accuracy: 0.9983 - val_loss: 0.0041 - val_accuracy: 0.9984 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008391380310058594
+	done
+TP = 1510, FP = 1, FN = 15, TN = 47114
+recall = 0.9901639344262295, precision = 0.99933818663137, F1 = 0.9947299077733861, bal_acc = 0.9950713548815855
+training step: 280	training file: train_00004.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0043 - accuracy: 0.9983 - val_loss: 0.0041 - val_accuracy: 0.9984 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009652805328369141
+	done
+TP = 1511, FP = 2, FN = 14, TN = 47113
+recall = 0.9908196721311475, precision = 0.998678122934567, F1 = 0.9947333772218564, bal_acc = 0.9953886114025152
+training step: 281	training file: train_00013.p
+	grabbing data
+	done
+32/32 - 8s - loss: 0.0051 - accuracy: 0.9980 - val_loss: 0.0038 - val_accuracy: 0.9986 - 8s/epoch - 244ms/step
+	calculating accuracy
+0.008714771270751953
+	done
+TP = 1515, FP = 46, FN = 10, TN = 47069
+recall = 0.9934426229508196, precision = 0.9705317104420244, F1 = 0.981853532080363, bal_acc = 0.9962331442250649
+training step: 282	training file: train_00030.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0066 - accuracy: 0.9974 - val_loss: 0.0055 - val_accuracy: 0.9977 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.010695838928222656
+	done
+TP = 1512, FP = 4, FN = 13, TN = 47111
+recall = 0.9914754098360655, precision = 0.9973614775725593, F1 = 0.9944097336402499, bal_acc = 0.9956952555919159
+training step: 283	training file: train_00017.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0048 - accuracy: 0.9981 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008734989166259765
+	done
+TP = 1509, FP = 1, FN = 16, TN = 47114
+recall = 0.9895081967213115, precision = 0.9993377483443708, F1 = 0.9943986820428337, bal_acc = 0.9947434860291265
+training step: 284	training file: train_00036.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0059 - accuracy: 0.9977 - val_loss: 0.0039 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009032249450683594
+	done
+TP = 1504, FP = 2, FN = 21, TN = 47113
+recall = 0.9862295081967213, precision = 0.99867197875166, F1 = 0.9924117452985812, bal_acc = 0.9930935294353022
+training step: 285	training file: train_00017.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9983 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008486080169677734
+	done
+TP = 1502, FP = 0, FN = 23, TN = 47115
+recall = 0.9849180327868853, precision = 1.0, F1 = 0.9924017178724811, bal_acc = 0.9924590163934426
+training step: 286	training file: train_00033.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0050 - accuracy: 0.9981 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008843803405761718
+	done
+TP = 1505, FP = 1, FN = 20, TN = 47114
+recall = 0.9868852459016394, precision = 0.99933598937583, F1 = 0.9930715935334873, bal_acc = 0.9934320106192904
+training step: 287	training file: train_00026.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9984 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.009296989440917969
+	done
+TP = 1513, FP = 2, FN = 12, TN = 47113
+recall = 0.9921311475409836, precision = 0.9986798679867986, F1 = 0.9953947368421052, bal_acc = 0.9960443491074333
+training step: 288	training file: train_00035.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0050 - accuracy: 0.9981 - val_loss: 0.0040 - val_accuracy: 0.9984 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008464527130126954
+	done
+TP = 1491, FP = 1, FN = 34, TN = 47114
+recall = 0.9777049180327869, precision = 0.9993297587131368, F1 = 0.988399071925754, bal_acc = 0.9888418466848643
+training step: 289	training file: train_00005.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0039 - accuracy: 0.9985 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008410358428955078
+	done
+TP = 1501, FP = 1, FN = 24, TN = 47114
+recall = 0.9842622950819672, precision = 0.9993342210386151, F1 = 0.9917409976874794, bal_acc = 0.9921205352094544
+training step: 290	training file: train_00008.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9982 - val_loss: 0.0039 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.00823516845703125
+	done
+TP = 1496, FP = 0, FN = 29, TN = 47115
+recall = 0.980983606557377, precision = 1.0, F1 = 0.9904005296259517, bal_acc = 0.9904918032786885
+training step: 291	training file: train_00023.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0048 - accuracy: 0.9982 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009153652191162109
+	done
+TP = 1509, FP = 2, FN = 16, TN = 47113
+recall = 0.9895081967213115, precision = 0.99867637326274, F1 = 0.9940711462450593, bal_acc = 0.9947328736975973
+training step: 292	training file: train_00032.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0039 - accuracy: 0.9986 - val_loss: 0.0040 - val_accuracy: 0.9985 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.009464168548583984
+	done
+TP = 1515, FP = 6, FN = 10, TN = 47109
+recall = 0.9934426229508196, precision = 0.9960552268244576, F1 = 0.9947472094550228, bal_acc = 0.9966576374862344
+training step: 293	training file: train_00031.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0049 - accuracy: 0.9981 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008690547943115235
+	done
+TP = 1511, FP = 1, FN = 14, TN = 47114
+recall = 0.9908196721311475, precision = 0.9993386243386243, F1 = 0.9950609153770167, bal_acc = 0.9953992237340445
+training step: 294	training file: train_00031.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0047 - accuracy: 0.9982 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.008828353881835938
+	done
+TP = 1510, FP = 0, FN = 15, TN = 47115
+recall = 0.9901639344262295, precision = 1.0, F1 = 0.9950576606260296, bal_acc = 0.9950819672131148
+training step: 295	training file: train_00003.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0054 - accuracy: 0.9979 - val_loss: 0.0036 - val_accuracy: 0.9985 - 6s/epoch - 173ms/step
+	calculating accuracy
+0.009374523162841797
+	done
+TP = 1511, FP = 2, FN = 14, TN = 47113
+recall = 0.9908196721311475, precision = 0.998678122934567, F1 = 0.9947333772218564, bal_acc = 0.9953886114025152
+training step: 296	training file: train_00001.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9983 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008884525299072266
+	done
+TP = 1507, FP = 1, FN = 18, TN = 47114
+recall = 0.9881967213114754, precision = 0.9993368700265252, F1 = 0.9937355753379492, bal_acc = 0.9940877483242085
+training step: 297	training file: train_00031.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9982 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.00864238739013672
+	done
+TP = 1506, FP = 0, FN = 19, TN = 47115
+recall = 0.9875409836065574, precision = 1.0, F1 = 0.9937314417683932, bal_acc = 0.9937704918032787
+training step: 298	training file: train_00001.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9984 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009089374542236328
+	done
+TP = 1510, FP = 1, FN = 15, TN = 47114
+recall = 0.9901639344262295, precision = 0.99933818663137, F1 = 0.9947299077733861, bal_acc = 0.9950713548815855
+training step: 299	training file: train_00018.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0054 - accuracy: 0.9979 - val_loss: 0.0036 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009040451049804688
+	done
+TP = 1499, FP = 0, FN = 26, TN = 47115
+recall = 0.9829508196721312, precision = 1.0, F1 = 0.9914021164021164, bal_acc = 0.9914754098360656
+training step: 300	training file: train_00029.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0056 - accuracy: 0.9978 - val_loss: 0.0036 - val_accuracy: 0.9985 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.00904378890991211
+	done
+TP = 1501, FP = 1, FN = 24, TN = 47114
+recall = 0.9842622950819672, precision = 0.9993342210386151, F1 = 0.9917409976874794, bal_acc = 0.9921205352094544
+training step: 301	training file: train_00001.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0045 - accuracy: 0.9984 - val_loss: 0.0035 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008917236328125
+	done
+TP = 1514, FP = 1, FN = 11, TN = 47114
+recall = 0.9927868852459016, precision = 0.9993399339933994, F1 = 0.9960526315789473, bal_acc = 0.9963828302914216
+training step: 302	training file: train_00031.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9982 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.008839988708496093
+	done
+TP = 1510, FP = 1, FN = 15, TN = 47114
+recall = 0.9901639344262295, precision = 0.99933818663137, F1 = 0.9947299077733861, bal_acc = 0.9950713548815855
+training step: 303	training file: train_00002.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0043 - accuracy: 0.9983 - val_loss: 0.0040 - val_accuracy: 0.9984 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009555816650390625
+	done
+TP = 1512, FP = 5, FN = 13, TN = 47110
+recall = 0.9914754098360655, precision = 0.996704021094265, F1 = 0.9940828402366862, bal_acc = 0.9956846432603865
+training step: 304	training file: train_00036.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0060 - accuracy: 0.9977 - val_loss: 0.0041 - val_accuracy: 0.9983 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009253597259521485
+	done
+TP = 1506, FP = 3, FN = 19, TN = 47112
+recall = 0.9875409836065574, precision = 0.9980119284294234, F1 = 0.992748846407383, bal_acc = 0.9937386548086911
+training step: 305	training file: train_00018.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0056 - accuracy: 0.9979 - val_loss: 0.0038 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009415817260742188
+	done
+TP = 1505, FP = 2, FN = 20, TN = 47113
+recall = 0.9868852459016394, precision = 0.9986728599867286, F1 = 0.9927440633245384, bal_acc = 0.9934213982877612
+training step: 306	training file: train_00032.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0040 - accuracy: 0.9986 - val_loss: 0.0039 - val_accuracy: 0.9984 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.00955791473388672
+	done
+TP = 1512, FP = 1, FN = 13, TN = 47114
+recall = 0.9914754098360655, precision = 0.9993390614672836, F1 = 0.9953917050691244, bal_acc = 0.9957270925865036
+training step: 307	training file: train_00015.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9983 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009271621704101562
+	done
+TP = 1507, FP = 0, FN = 18, TN = 47115
+recall = 0.9881967213114754, precision = 1.0, F1 = 0.9940633245382586, bal_acc = 0.9940983606557376
+training step: 308	training file: train_00035.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0049 - accuracy: 0.9982 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.00848855972290039
+	done
+TP = 1499, FP = 1, FN = 26, TN = 47114
+recall = 0.9829508196721312, precision = 0.9993333333333333, F1 = 0.9910743801652893, bal_acc = 0.9914647975045363
+training step: 309	training file: train_00031.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9982 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008594799041748046
+	done
+TP = 1503, FP = 0, FN = 22, TN = 47115
+recall = 0.9855737704918033, precision = 1.0, F1 = 0.9927344782034346, bal_acc = 0.9927868852459016
+training step: 310	training file: train_00029.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0056 - accuracy: 0.9978 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009054946899414062
+	done
+TP = 1507, FP = 2, FN = 18, TN = 47113
+recall = 0.9881967213114754, precision = 0.998674618952949, F1 = 0.9934080421885298, bal_acc = 0.9940771359926792
+training step: 311	training file: train_00015.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9983 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.00929574966430664
+	done
+TP = 1514, FP = 3, FN = 11, TN = 47112
+recall = 0.9927868852459016, precision = 0.998022412656559, F1 = 0.9953977646285339, bal_acc = 0.9963616056283631
+training step: 312	training file: train_00018.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0053 - accuracy: 0.9980 - val_loss: 0.0038 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009087371826171874
+	done
+TP = 1499, FP = 0, FN = 26, TN = 47115
+recall = 0.9829508196721312, precision = 1.0, F1 = 0.9914021164021164, bal_acc = 0.9914754098360656
+training step: 313	training file: train_00016.p
+	grabbing data
+	done
+32/32 - 10s - loss: 0.0049 - accuracy: 0.9981 - val_loss: 0.0038 - val_accuracy: 0.9985 - 10s/epoch - 316ms/step
+	calculating accuracy
+0.008514785766601562
+	done
+TP = 1509, FP = 1, FN = 16, TN = 47114
+recall = 0.9895081967213115, precision = 0.9993377483443708, F1 = 0.9943986820428337, bal_acc = 0.9947434860291265
+training step: 314	training file: train_00011.p
+	grabbing data
+	done
+32/32 - 11s - loss: 0.0051 - accuracy: 0.9980 - val_loss: 0.0038 - val_accuracy: 0.9985 - 11s/epoch - 349ms/step
+	calculating accuracy
+0.008962726593017578
+	done
+TP = 1511, FP = 5, FN = 14, TN = 47110
+recall = 0.9908196721311475, precision = 0.9967018469656992, F1 = 0.9937520552449852, bal_acc = 0.9953567744079276
+training step: 315	training file: train_00024.p
+	grabbing data
+	done
+32/32 - 10s - loss: 0.0062 - accuracy: 0.9976 - val_loss: 0.0036 - val_accuracy: 0.9985 - 10s/epoch - 313ms/step
+	calculating accuracy
+0.009160995483398438
+	done
+TP = 1510, FP = 1, FN = 15, TN = 47114
+recall = 0.9901639344262295, precision = 0.99933818663137, F1 = 0.9947299077733861, bal_acc = 0.9950713548815855
+training step: 316	training file: train_00016.p
+	grabbing data
+	done
+32/32 - 9s - loss: 0.0049 - accuracy: 0.9981 - val_loss: 0.0036 - val_accuracy: 0.9986 - 9s/epoch - 287ms/step
+	calculating accuracy
+0.008654594421386719
+	done
+TP = 1505, FP = 1, FN = 20, TN = 47114
+recall = 0.9868852459016394, precision = 0.99933598937583, F1 = 0.9930715935334873, bal_acc = 0.9934320106192904
+training step: 317	training file: train_00006.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0042 - accuracy: 0.9985 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008771800994873047
+	done
+TP = 1510, FP = 2, FN = 15, TN = 47113
+recall = 0.9901639344262295, precision = 0.9986772486772487, F1 = 0.9944023707606191, bal_acc = 0.9950607425500563
+training step: 318	training file: train_00027.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0049 - accuracy: 0.9981 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009171867370605468
+	done
+TP = 1509, FP = 1, FN = 16, TN = 47114
+recall = 0.9895081967213115, precision = 0.9993377483443708, F1 = 0.9943986820428337, bal_acc = 0.9947434860291265
+training step: 319	training file: train_00002.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0043 - accuracy: 0.9983 - val_loss: 0.0040 - val_accuracy: 0.9984 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009539318084716798
+	done
+TP = 1513, FP = 1, FN = 12, TN = 47114
+recall = 0.9921311475409836, precision = 0.9993394980184941, F1 = 0.995722277064824, bal_acc = 0.9960549614389627
+training step: 320	training file: train_00012.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0072 - accuracy: 0.9971 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009124374389648438
+	done
+TP = 1493, FP = 0, FN = 32, TN = 47115
+recall = 0.9790163934426229, precision = 1.0, F1 = 0.9893969516235918, bal_acc = 0.9895081967213115
+training step: 321	training file: train_00014.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0045 - accuracy: 0.9983 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.009111499786376953
+	done
+TP = 1506, FP = 0, FN = 19, TN = 47115
+recall = 0.9875409836065574, precision = 1.0, F1 = 0.9937314417683932, bal_acc = 0.9937704918032787
+training step: 322	training file: train_00015.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9983 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.00911865234375
+	done
+TP = 1508, FP = 0, FN = 17, TN = 47115
+recall = 0.9888524590163934, precision = 1.0, F1 = 0.9943949884602703, bal_acc = 0.9944262295081967
+training step: 323	training file: train_00026.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0043 - accuracy: 0.9984 - val_loss: 0.0038 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009412670135498047
+	done
+TP = 1512, FP = 2, FN = 13, TN = 47113
+recall = 0.9914754098360655, precision = 0.9986789960369881, F1 = 0.9950641658440276, bal_acc = 0.9957164802549743
+training step: 324	training file: train_00012.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0069 - accuracy: 0.9972 - val_loss: 0.0039 - val_accuracy: 0.9984 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009481525421142578
+	done
+TP = 1506, FP = 0, FN = 19, TN = 47115
+recall = 0.9875409836065574, precision = 1.0, F1 = 0.9937314417683932, bal_acc = 0.9937704918032787
+training step: 325	training file: train_00003.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0054 - accuracy: 0.9979 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.009476661682128906
+	done
+TP = 1506, FP = 0, FN = 19, TN = 47115
+recall = 0.9875409836065574, precision = 1.0, F1 = 0.9937314417683932, bal_acc = 0.9937704918032787
+training step: 326	training file: train_00001.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0045 - accuracy: 0.9983 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.009110069274902344
+	done
+TP = 1512, FP = 2, FN = 13, TN = 47113
+recall = 0.9914754098360655, precision = 0.9986789960369881, F1 = 0.9950641658440276, bal_acc = 0.9957164802549743
+training step: 327	training file: train_00034.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0041 - accuracy: 0.9984 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008937835693359375
+	done
+TP = 1519, FP = 7, FN = 6, TN = 47108
+recall = 0.9960655737704918, precision = 0.9954128440366973, F1 = 0.9957391019337921, bal_acc = 0.9979585005645413
+training step: 328	training file: train_00000.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0039 - accuracy: 0.9985 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008846664428710937
+	done
+TP = 1509, FP = 2, FN = 16, TN = 47113
+recall = 0.9895081967213115, precision = 0.99867637326274, F1 = 0.9940711462450593, bal_acc = 0.9947328736975973
+training step: 329	training file: train_00002.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0042 - accuracy: 0.9984 - val_loss: 0.0040 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009447956085205078
+	done
+TP = 1511, FP = 3, FN = 14, TN = 47112
+recall = 0.9908196721311475, precision = 0.9980184940554822, F1 = 0.9944060546232313, bal_acc = 0.9953779990709861
+training step: 330	training file: train_00026.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0042 - accuracy: 0.9984 - val_loss: 0.0039 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009451866149902344
+	done
+TP = 1510, FP = 3, FN = 15, TN = 47112
+recall = 0.9901639344262295, precision = 0.9980171844018506, F1 = 0.9940750493745886, bal_acc = 0.9950501302185271
+training step: 331	training file: train_00031.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9982 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008730316162109375
+	done
+TP = 1510, FP = 2, FN = 15, TN = 47113
+recall = 0.9901639344262295, precision = 0.9986772486772487, F1 = 0.9944023707606191, bal_acc = 0.9950607425500563
+training step: 332	training file: train_00034.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0041 - accuracy: 0.9984 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008944129943847657
+	done
+TP = 1515, FP = 6, FN = 10, TN = 47109
+recall = 0.9934426229508196, precision = 0.9960552268244576, F1 = 0.9947472094550228, bal_acc = 0.9966576374862344
+training step: 333	training file: train_00001.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0043 - accuracy: 0.9984 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008868408203125
+	done
+TP = 1508, FP = 0, FN = 17, TN = 47115
+recall = 0.9888524590163934, precision = 1.0, F1 = 0.9943949884602703, bal_acc = 0.9944262295081967
+training step: 334	training file: train_00033.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0050 - accuracy: 0.9981 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008848762512207032
+	done
+TP = 1508, FP = 5, FN = 17, TN = 47110
+recall = 0.9888524590163934, precision = 0.9966953073364178, F1 = 0.9927583936800527, bal_acc = 0.9943731678505505
+training step: 335	training file: train_00023.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0047 - accuracy: 0.9982 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.009024524688720703
+	done
+TP = 1508, FP = 5, FN = 17, TN = 47110
+recall = 0.9888524590163934, precision = 0.9966953073364178, F1 = 0.9927583936800527, bal_acc = 0.9943731678505505
+training step: 336	training file: train_00012.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0069 - accuracy: 0.9972 - val_loss: 0.0043 - val_accuracy: 0.9981 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009366035461425781
+	done
+TP = 1508, FP = 5, FN = 17, TN = 47110
+recall = 0.9888524590163934, precision = 0.9966953073364178, F1 = 0.9927583936800527, bal_acc = 0.9943731678505505
+training step: 337	training file: train_00012.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0064 - accuracy: 0.9973 - val_loss: 0.0038 - val_accuracy: 0.9984 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009324741363525391
+	done
+TP = 1491, FP = 0, FN = 34, TN = 47115
+recall = 0.9777049180327869, precision = 1.0, F1 = 0.9887267904509285, bal_acc = 0.9888524590163934
+training step: 338	training file: train_00019.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0050 - accuracy: 0.9981 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008893394470214843
+	done
+TP = 1491, FP = 1, FN = 34, TN = 47114
+recall = 0.9777049180327869, precision = 0.9993297587131368, F1 = 0.988399071925754, bal_acc = 0.9888418466848643
+training step: 339	training file: train_00026.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0042 - accuracy: 0.9984 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009379196166992187
+	done
+TP = 1512, FP = 5, FN = 13, TN = 47110
+recall = 0.9914754098360655, precision = 0.996704021094265, F1 = 0.9940828402366862, bal_acc = 0.9956846432603865
+training step: 340	training file: train_00009.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9983 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008561515808105468
+	done
+TP = 1500, FP = 1, FN = 25, TN = 47114
+recall = 0.9836065573770492, precision = 0.9993337774816788, F1 = 0.991407799074686, bal_acc = 0.9917926663569954
+training step: 341	training file: train_00035.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0048 - accuracy: 0.9982 - val_loss: 0.0043 - val_accuracy: 0.9983 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.00855550765991211
+	done
+TP = 1493, FP = 0, FN = 32, TN = 47115
+recall = 0.9790163934426229, precision = 1.0, F1 = 0.9893969516235918, bal_acc = 0.9895081967213115
+training step: 342	training file: train_00016.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0050 - accuracy: 0.9981 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008477878570556641
+	done
+TP = 1503, FP = 0, FN = 22, TN = 47115
+recall = 0.9855737704918033, precision = 1.0, F1 = 0.9927344782034346, bal_acc = 0.9927868852459016
+training step: 343	training file: train_00005.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0039 - accuracy: 0.9985 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008485984802246094
+	done
+TP = 1515, FP = 4, FN = 10, TN = 47111
+recall = 0.9934426229508196, precision = 0.9973666886109283, F1 = 0.995400788436268, bal_acc = 0.9966788621492928
+training step: 344	training file: train_00027.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0049 - accuracy: 0.9981 - val_loss: 0.0038 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009192752838134765
+	done
+TP = 1512, FP = 4, FN = 13, TN = 47111
+recall = 0.9914754098360655, precision = 0.9973614775725593, F1 = 0.9944097336402499, bal_acc = 0.9956952555919159
+training step: 345	training file: train_00027.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0046 - accuracy: 0.9982 - val_loss: 0.0038 - val_accuracy: 0.9985 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.009031009674072266
+	done
+TP = 1509, FP = 0, FN = 16, TN = 47115
+recall = 0.9895081967213115, precision = 1.0, F1 = 0.994726433750824, bal_acc = 0.9947540983606558
+training step: 346	training file: train_00020.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0045 - accuracy: 0.9982 - val_loss: 0.0039 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008633136749267578
+	done
+TP = 1507, FP = 1, FN = 18, TN = 47114
+recall = 0.9881967213114754, precision = 0.9993368700265252, F1 = 0.9937355753379492, bal_acc = 0.9940877483242085
+training step: 347	training file: train_00035.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9983 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008582687377929688
+	done
+TP = 1507, FP = 1, FN = 18, TN = 47114
+recall = 0.9881967213114754, precision = 0.9993368700265252, F1 = 0.9937355753379492, bal_acc = 0.9940877483242085
+training step: 348	training file: train_00022.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0050 - accuracy: 0.9980 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008799076080322266
+	done
+TP = 1493, FP = 0, FN = 32, TN = 47115
+recall = 0.9790163934426229, precision = 1.0, F1 = 0.9893969516235918, bal_acc = 0.9895081967213115
+training step: 349	training file: train_00036.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0060 - accuracy: 0.9977 - val_loss: 0.0036 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009191417694091797
+	done
+TP = 1512, FP = 2, FN = 13, TN = 47113
+recall = 0.9914754098360655, precision = 0.9986789960369881, F1 = 0.9950641658440276, bal_acc = 0.9957164802549743
+training step: 350	training file: train_00033.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0051 - accuracy: 0.9980 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009232807159423827
+	done
+TP = 1513, FP = 3, FN = 12, TN = 47112
+recall = 0.9921311475409836, precision = 0.9980211081794196, F1 = 0.9950674120355147, bal_acc = 0.9960337367759041
+training step: 351	training file: train_00026.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0042 - accuracy: 0.9984 - val_loss: 0.0037 - val_accuracy: 0.9985 - 6s/epoch - 174ms/step
+	calculating accuracy
+0.009392166137695312
+	done
+TP = 1514, FP = 3, FN = 11, TN = 47112
+recall = 0.9927868852459016, precision = 0.998022412656559, F1 = 0.9953977646285339, bal_acc = 0.9963616056283631
+training step: 352	training file: train_00001.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0044 - accuracy: 0.9983 - val_loss: 0.0036 - val_accuracy: 0.9986 - 6s/epoch - 175ms/step
+	calculating accuracy
+0.009133434295654297
+	done
+TP = 1512, FP = 2, FN = 13, TN = 47113
+recall = 0.9914754098360655, precision = 0.9986789960369881, F1 = 0.9950641658440276, bal_acc = 0.9957164802549743
+training step: 353	training file: train_00006.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0040 - accuracy: 0.9985 - val_loss: 0.0041 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008568859100341797
+	done
+TP = 1512, FP = 4, FN = 13, TN = 47111
+recall = 0.9914754098360655, precision = 0.9973614775725593, F1 = 0.9944097336402499, bal_acc = 0.9956952555919159
+training step: 354	training file: train_00001.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0041 - accuracy: 0.9984 - val_loss: 0.0037 - val_accuracy: 0.9987 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008895111083984376
+	done
+TP = 1513, FP = 2, FN = 12, TN = 47113
+recall = 0.9921311475409836, precision = 0.9986798679867986, F1 = 0.9953947368421052, bal_acc = 0.9960443491074333
+training step: 355	training file: train_00032.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0039 - accuracy: 0.9986 - val_loss: 0.0043 - val_accuracy: 0.9984 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009587860107421875
+	done
+TP = 1513, FP = 2, FN = 12, TN = 47113
+recall = 0.9921311475409836, precision = 0.9986798679867986, F1 = 0.9953947368421052, bal_acc = 0.9960443491074333
+training step: 356	training file: train_00012.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0071 - accuracy: 0.9972 - val_loss: 0.0038 - val_accuracy: 0.9984 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009554386138916016
+	done
+TP = 1510, FP = 1, FN = 15, TN = 47114
+recall = 0.9901639344262295, precision = 0.99933818663137, F1 = 0.9947299077733861, bal_acc = 0.9950713548815855
+training step: 357	training file: train_00008.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0047 - accuracy: 0.9982 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008505916595458985
+	done
+TP = 1509, FP = 1, FN = 16, TN = 47114
+recall = 0.9895081967213115, precision = 0.9993377483443708, F1 = 0.9943986820428337, bal_acc = 0.9947434860291265
+training step: 358	training file: train_00013.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0051 - accuracy: 0.9980 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008797359466552735
+	done
+TP = 1519, FP = 36, FN = 6, TN = 47079
+recall = 0.9960655737704918, precision = 0.9768488745980708, F1 = 0.9863636363636363, bal_acc = 0.9976507429501933
+training step: 359	training file: train_00003.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0054 - accuracy: 0.9979 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009450626373291016
+	done
+TP = 1513, FP = 6, FN = 12, TN = 47109
+recall = 0.9921311475409836, precision = 0.9960500329163924, F1 = 0.9940867279894875, bal_acc = 0.9960018997813165
+training step: 360	training file: train_00029.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0056 - accuracy: 0.9978 - val_loss: 0.0035 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008932113647460938
+	done
+TP = 1508, FP = 4, FN = 17, TN = 47111
+recall = 0.9888524590163934, precision = 0.9973544973544973, F1 = 0.9930852815278235, bal_acc = 0.9943837801820797
+training step: 361	training file: train_00018.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0052 - accuracy: 0.9980 - val_loss: 0.0036 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.00920400619506836
+	done
+TP = 1510, FP = 1, FN = 15, TN = 47114
+recall = 0.9901639344262295, precision = 0.99933818663137, F1 = 0.9947299077733861, bal_acc = 0.9950713548815855
+training step: 362	training file: train_00003.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0051 - accuracy: 0.9980 - val_loss: 0.0036 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009353065490722656
+	done
+TP = 1510, FP = 3, FN = 15, TN = 47112
+recall = 0.9901639344262295, precision = 0.9980171844018506, F1 = 0.9940750493745886, bal_acc = 0.9950501302185271
+training step: 363	training file: train_00025.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9982 - val_loss: 0.0039 - val_accuracy: 0.9984 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008688259124755859
+	done
+TP = 1497, FP = 0, FN = 28, TN = 47115
+recall = 0.981639344262295, precision = 1.0, F1 = 0.9907346128391793, bal_acc = 0.9908196721311475
+training step: 364	training file: train_00021.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0056 - accuracy: 0.9978 - val_loss: 0.0035 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008608245849609375
+	done
+TP = 1500, FP = 1, FN = 25, TN = 47114
+recall = 0.9836065573770492, precision = 0.9993337774816788, F1 = 0.991407799074686, bal_acc = 0.9917926663569954
+training step: 365	training file: train_00020.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0045 - accuracy: 0.9982 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008553600311279297
+	done
+TP = 1500, FP = 3, FN = 25, TN = 47112
+recall = 0.9836065573770492, precision = 0.998003992015968, F1 = 0.9907529722589168, bal_acc = 0.9917714416939369
+training step: 366	training file: train_00025.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9982 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.00877552032470703
+	done
+TP = 1497, FP = 0, FN = 28, TN = 47115
+recall = 0.981639344262295, precision = 1.0, F1 = 0.9907346128391793, bal_acc = 0.9908196721311475
+training step: 367	training file: train_00020.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0045 - accuracy: 0.9982 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008576202392578124
+	done
+TP = 1506, FP = 0, FN = 19, TN = 47115
+recall = 0.9875409836065574, precision = 1.0, F1 = 0.9937314417683932, bal_acc = 0.9937704918032787
+training step: 368	training file: train_00013.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0049 - accuracy: 0.9980 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008749008178710938
+	done
+TP = 1515, FP = 8, FN = 10, TN = 47107
+recall = 0.9934426229508196, precision = 0.9947472094550229, F1 = 0.9940944881889763, bal_acc = 0.9966364128231759
+training step: 369	training file: train_00012.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0069 - accuracy: 0.9972 - val_loss: 0.0037 - val_accuracy: 0.9984 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009532546997070313
+	done
+TP = 1511, FP = 10, FN = 14, TN = 47105
+recall = 0.9908196721311475, precision = 0.9934253780407627, F1 = 0.9921208141825345, bal_acc = 0.9953037127502814
+training step: 370	training file: train_00025.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9983 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.008849334716796876
+	done
+TP = 1502, FP = 0, FN = 23, TN = 47115
+recall = 0.9849180327868853, precision = 1.0, F1 = 0.9924017178724811, bal_acc = 0.9924590163934426
+training step: 371	training file: train_00008.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9983 - val_loss: 0.0041 - val_accuracy: 0.9984 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008188819885253907
+	done
+TP = 1508, FP = 0, FN = 17, TN = 47115
+recall = 0.9888524590163934, precision = 1.0, F1 = 0.9943949884602703, bal_acc = 0.9944262295081967
+training step: 372	training file: train_00017.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9982 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008632183074951172
+	done
+TP = 1512, FP = 3, FN = 13, TN = 47112
+recall = 0.9914754098360655, precision = 0.998019801980198, F1 = 0.9947368421052631, bal_acc = 0.9957058679234451
+training step: 373	training file: train_00010.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0041 - accuracy: 0.9984 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008620357513427735
+	done
+TP = 1515, FP = 6, FN = 10, TN = 47109
+recall = 0.9934426229508196, precision = 0.9960552268244576, F1 = 0.9947472094550228, bal_acc = 0.9966576374862344
+training step: 374	training file: train_00036.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0059 - accuracy: 0.9977 - val_loss: 0.0042 - val_accuracy: 0.9984 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009232234954833985
+	done
+TP = 1508, FP = 6, FN = 17, TN = 47109
+recall = 0.9888524590163934, precision = 0.9960369881109643, F1 = 0.9924317209608424, bal_acc = 0.9943625555190213
+training step: 375	training file: train_00021.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0048 - accuracy: 0.9981 - val_loss: 0.0045 - val_accuracy: 0.9983 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008474445343017578
+	done
+TP = 1495, FP = 1, FN = 30, TN = 47114
+recall = 0.980327868852459, precision = 0.9993315508021391, F1 = 0.9897384971863622, bal_acc = 0.9901533220947003
+training step: 376	training file: train_00026.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0045 - accuracy: 0.9983 - val_loss: 0.0038 - val_accuracy: 0.9984 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.009499740600585938
+	done
+TP = 1503, FP = 0, FN = 22, TN = 47115
+recall = 0.9855737704918033, precision = 1.0, F1 = 0.9927344782034346, bal_acc = 0.9927868852459016
+training step: 377	training file: train_00004.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0042 - accuracy: 0.9984 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.009398746490478515
+	done
+TP = 1510, FP = 1, FN = 15, TN = 47114
+recall = 0.9901639344262295, precision = 0.99933818663137, F1 = 0.9947299077733861, bal_acc = 0.9950713548815855
+training step: 378	training file: train_00031.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0047 - accuracy: 0.9982 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.00882892608642578
+	done
+TP = 1509, FP = 3, FN = 16, TN = 47112
+recall = 0.9895081967213115, precision = 0.998015873015873, F1 = 0.9937438261442213, bal_acc = 0.994722261366068
+training step: 379	training file: train_00018.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0053 - accuracy: 0.9980 - val_loss: 0.0038 - val_accuracy: 0.9984 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.009549617767333984
+	done
+TP = 1511, FP = 5, FN = 14, TN = 47110
+recall = 0.9908196721311475, precision = 0.9967018469656992, F1 = 0.9937520552449852, bal_acc = 0.9953567744079276
+training step: 380	training file: train_00035.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0048 - accuracy: 0.9982 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008669185638427734
+	done
+TP = 1511, FP = 3, FN = 14, TN = 47112
+recall = 0.9908196721311475, precision = 0.9980184940554822, F1 = 0.9944060546232313, bal_acc = 0.9953779990709861
+training step: 381	training file: train_00023.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0049 - accuracy: 0.9982 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009210300445556641
+	done
+TP = 1511, FP = 3, FN = 14, TN = 47112
+recall = 0.9908196721311475, precision = 0.9980184940554822, F1 = 0.9944060546232313, bal_acc = 0.9953779990709861
+training step: 382	training file: train_00020.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0045 - accuracy: 0.9982 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.00859241485595703
+	done
+TP = 1499, FP = 1, FN = 26, TN = 47114
+recall = 0.9829508196721312, precision = 0.9993333333333333, F1 = 0.9910743801652893, bal_acc = 0.9914647975045363
+training step: 383	training file: train_00027.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0048 - accuracy: 0.9981 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.00922088623046875
+	done
+TP = 1509, FP = 2, FN = 16, TN = 47113
+recall = 0.9895081967213115, precision = 0.99867637326274, F1 = 0.9940711462450593, bal_acc = 0.9947328736975973
+training step: 384	training file: train_00012.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0068 - accuracy: 0.9972 - val_loss: 0.0037 - val_accuracy: 0.9984 - 6s/epoch - 173ms/step
+	calculating accuracy
+0.009312820434570313
+	done
+TP = 1502, FP = 0, FN = 23, TN = 47115
+recall = 0.9849180327868853, precision = 1.0, F1 = 0.9924017178724811, bal_acc = 0.9924590163934426
+training step: 385	training file: train_00005.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0042 - accuracy: 0.9984 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008521270751953126
+	done
+TP = 1510, FP = 2, FN = 15, TN = 47113
+recall = 0.9901639344262295, precision = 0.9986772486772487, F1 = 0.9944023707606191, bal_acc = 0.9950607425500563
+training step: 386	training file: train_00001.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0043 - accuracy: 0.9984 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.008899593353271484
+	done
+TP = 1510, FP = 6, FN = 15, TN = 47109
+recall = 0.9901639344262295, precision = 0.996042216358839, F1 = 0.9930943768497205, bal_acc = 0.9950182932239393
+training step: 387	training file: train_00000.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0038 - accuracy: 0.9985 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.00898571014404297
+	done
+TP = 1514, FP = 5, FN = 11, TN = 47110
+recall = 0.9927868852459016, precision = 0.9967083607636603, F1 = 0.9947437582128779, bal_acc = 0.9963403809653046
+training step: 388	training file: train_00030.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0067 - accuracy: 0.9974 - val_loss: 0.0054 - val_accuracy: 0.9977 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.01070089340209961
+	done
+TP = 1508, FP = 5, FN = 17, TN = 47110
+recall = 0.9888524590163934, precision = 0.9966953073364178, F1 = 0.9927583936800527, bal_acc = 0.9943731678505505
+training step: 389	training file: train_00017.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9982 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008852386474609375
+	done
+TP = 1510, FP = 1, FN = 15, TN = 47114
+recall = 0.9901639344262295, precision = 0.99933818663137, F1 = 0.9947299077733861, bal_acc = 0.9950713548815855
+training step: 390	training file: train_00023.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0047 - accuracy: 0.9982 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.00926971435546875
+	done
+TP = 1511, FP = 2, FN = 14, TN = 47113
+recall = 0.9908196721311475, precision = 0.998678122934567, F1 = 0.9947333772218564, bal_acc = 0.9953886114025152
+training step: 391	training file: train_00001.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0042 - accuracy: 0.9984 - val_loss: 0.0035 - val_accuracy: 0.9987 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.00889434814453125
+	done
+TP = 1511, FP = 1, FN = 14, TN = 47114
+recall = 0.9908196721311475, precision = 0.9993386243386243, F1 = 0.9950609153770167, bal_acc = 0.9953992237340445
+training step: 392	training file: train_00006.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0040 - accuracy: 0.9985 - val_loss: 0.0039 - val_accuracy: 0.9986 - 6s/epoch - 173ms/step
+	calculating accuracy
+0.008436012268066406
+	done
+TP = 1510, FP = 3, FN = 15, TN = 47112
+recall = 0.9901639344262295, precision = 0.9980171844018506, F1 = 0.9940750493745886, bal_acc = 0.9950501302185271
+training step: 393	training file: train_00002.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0043 - accuracy: 0.9983 - val_loss: 0.0040 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009529495239257812
+	done
+TP = 1517, FP = 6, FN = 8, TN = 47109
+recall = 0.9947540983606558, precision = 0.9960604070912672, F1 = 0.9954068241469817, bal_acc = 0.9973133751911525
+training step: 394	training file: train_00008.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0045 - accuracy: 0.9982 - val_loss: 0.0042 - val_accuracy: 0.9984 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.008100509643554688
+	done
+TP = 1506, FP = 0, FN = 19, TN = 47115
+recall = 0.9875409836065574, precision = 1.0, F1 = 0.9937314417683932, bal_acc = 0.9937704918032787
+training step: 395	training file: train_00012.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0069 - accuracy: 0.9972 - val_loss: 0.0044 - val_accuracy: 0.9981 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.00971536636352539
+	done
+TP = 1517, FP = 7, FN = 8, TN = 47108
+recall = 0.9947540983606558, precision = 0.9954068241469817, F1 = 0.9950803542144967, bal_acc = 0.9973027628596232
+training step: 396	training file: train_00028.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0066 - accuracy: 0.9974 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008781337738037109
+	done
+TP = 1511, FP = 1, FN = 14, TN = 47114
+recall = 0.9908196721311475, precision = 0.9993386243386243, F1 = 0.9950609153770167, bal_acc = 0.9953992237340445
+training step: 397	training file: train_00015.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0047 - accuracy: 0.9982 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009018039703369141
+	done
+TP = 1505, FP = 0, FN = 20, TN = 47115
+recall = 0.9868852459016394, precision = 1.0, F1 = 0.9933993399339933, bal_acc = 0.9934426229508198
+training step: 398	training file: train_00018.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0052 - accuracy: 0.9980 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.009024620056152344
+	done
+TP = 1500, FP = 0, FN = 25, TN = 47115
+recall = 0.9836065573770492, precision = 1.0, F1 = 0.9917355371900827, bal_acc = 0.9918032786885246
+training step: 399	training file: train_00009.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0045 - accuracy: 0.9983 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008480167388916016
+	done
+TP = 1495, FP = 0, FN = 30, TN = 47115
+recall = 0.980327868852459, precision = 1.0, F1 = 0.990066225165563, bal_acc = 0.9901639344262295
+training step: 400	training file: train_00023.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9983 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009102344512939453
+	done
+TP = 1504, FP = 3, FN = 21, TN = 47112
+recall = 0.9862295081967213, precision = 0.9980092899800929, F1 = 0.9920844327176781, bal_acc = 0.9930829171037729
+training step: 401	training file: train_00005.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0039 - accuracy: 0.9985 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.00849742889404297
+	done
+TP = 1515, FP = 3, FN = 10, TN = 47112
+recall = 0.9934426229508196, precision = 0.9980237154150198, F1 = 0.995727900098587, bal_acc = 0.9966894744808221
+training step: 402	training file: train_00006.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0039 - accuracy: 0.9985 - val_loss: 0.0039 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008511066436767578
+	done
+TP = 1513, FP = 7, FN = 12, TN = 47108
+recall = 0.9921311475409836, precision = 0.9953947368421052, F1 = 0.99376026272578, bal_acc = 0.9959912874497872
+training step: 403	training file: train_00010.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0040 - accuracy: 0.9984 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.00861053466796875
+	done
+TP = 1517, FP = 9, FN = 8, TN = 47106
+recall = 0.9947540983606558, precision = 0.9941022280471822, F1 = 0.994428056374959, bal_acc = 0.9972815381965647
+training step: 404	training file: train_00015.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0043 - accuracy: 0.9983 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009171390533447265
+	done
+TP = 1516, FP = 5, FN = 9, TN = 47110
+recall = 0.9940983606557378, precision = 0.9967126890203813, F1 = 0.9954038082731451, bal_acc = 0.9969961186702228
+training step: 405	training file: train_00034.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0041 - accuracy: 0.9984 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008932399749755859
+	done
+TP = 1517, FP = 6, FN = 8, TN = 47109
+recall = 0.9947540983606558, precision = 0.9960604070912672, F1 = 0.9954068241469817, bal_acc = 0.9973133751911525
+training step: 406	training file: train_00030.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0067 - accuracy: 0.9975 - val_loss: 0.0059 - val_accuracy: 0.9976 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.010891914367675781
+	done
+TP = 1512, FP = 7, FN = 13, TN = 47108
+recall = 0.9914754098360655, precision = 0.9953917050691244, F1 = 0.9934296977660972, bal_acc = 0.9956634185973281
+training step: 407	training file: train_00009.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0047 - accuracy: 0.9982 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.00883016586303711
+	done
+TP = 1497, FP = 0, FN = 28, TN = 47115
+recall = 0.981639344262295, precision = 1.0, F1 = 0.9907346128391793, bal_acc = 0.9908196721311475
+training step: 408	training file: train_00029.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0055 - accuracy: 0.9978 - val_loss: 0.0036 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009152603149414063
+	done
+TP = 1502, FP = 2, FN = 23, TN = 47113
+recall = 0.9849180327868853, precision = 0.9986702127659575, F1 = 0.9917464509739189, bal_acc = 0.9924377917303842
+training step: 409	training file: train_00023.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0045 - accuracy: 0.9983 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009185314178466797
+	done
+TP = 1512, FP = 4, FN = 13, TN = 47111
+recall = 0.9914754098360655, precision = 0.9973614775725593, F1 = 0.9944097336402499, bal_acc = 0.9956952555919159
+training step: 410	training file: train_00007.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0055 - accuracy: 0.9979 - val_loss: 0.0040 - val_accuracy: 0.9983 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.009706878662109375
+	done
+TP = 1507, FP = 3, FN = 18, TN = 47112
+recall = 0.9881967213114754, precision = 0.9980132450331126, F1 = 0.9930807248764415, bal_acc = 0.99406652366115
+training step: 411	training file: train_00029.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0054 - accuracy: 0.9978 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009095573425292968
+	done
+TP = 1508, FP = 4, FN = 17, TN = 47111
+recall = 0.9888524590163934, precision = 0.9973544973544973, F1 = 0.9930852815278235, bal_acc = 0.9943837801820797
+training step: 412	training file: train_00019.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0050 - accuracy: 0.9981 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008865261077880859
+	done
+TP = 1510, FP = 1, FN = 15, TN = 47114
+recall = 0.9901639344262295, precision = 0.99933818663137, F1 = 0.9947299077733861, bal_acc = 0.9950713548815855
+training step: 413	training file: train_00015.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0043 - accuracy: 0.9983 - val_loss: 0.0036 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009261798858642579
+	done
+TP = 1511, FP = 2, FN = 14, TN = 47113
+recall = 0.9908196721311475, precision = 0.998678122934567, F1 = 0.9947333772218564, bal_acc = 0.9953886114025152
+training step: 414	training file: train_00003.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0053 - accuracy: 0.9980 - val_loss: 0.0037 - val_accuracy: 0.9984 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009542465209960938
+	done
+TP = 1511, FP = 1, FN = 14, TN = 47114
+recall = 0.9908196721311475, precision = 0.9993386243386243, F1 = 0.9950609153770167, bal_acc = 0.9953992237340445
+training step: 415	training file: train_00009.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0043 - accuracy: 0.9983 - val_loss: 0.0035 - val_accuracy: 0.9986 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.00871133804321289
+	done
+TP = 1508, FP = 0, FN = 17, TN = 47115
+recall = 0.9888524590163934, precision = 1.0, F1 = 0.9943949884602703, bal_acc = 0.9944262295081967
+training step: 416	training file: train_00017.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0042 - accuracy: 0.9983 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.00858011245727539
+	done
+TP = 1505, FP = 0, FN = 20, TN = 47115
+recall = 0.9868852459016394, precision = 1.0, F1 = 0.9933993399339933, bal_acc = 0.9934426229508198
+training step: 417	training file: train_00032.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0038 - accuracy: 0.9986 - val_loss: 0.0041 - val_accuracy: 0.9984 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009574794769287109
+	done
+TP = 1520, FP = 11, FN = 5, TN = 47104
+recall = 0.9967213114754099, precision = 0.992815153494448, F1 = 0.9947643979057592, bal_acc = 0.9982439200908833
+training step: 418	training file: train_00017.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0039 - accuracy: 0.9984 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008797264099121094
+	done
+TP = 1506, FP = 0, FN = 19, TN = 47115
+recall = 0.9875409836065574, precision = 1.0, F1 = 0.9937314417683932, bal_acc = 0.9937704918032787
+training step: 419	training file: train_00036.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0059 - accuracy: 0.9977 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009111499786376953
+	done
+TP = 1505, FP = 2, FN = 20, TN = 47113
+recall = 0.9868852459016394, precision = 0.9986728599867286, F1 = 0.9927440633245384, bal_acc = 0.9934213982877612
+training step: 420	training file: train_00031.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0048 - accuracy: 0.9981 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008761024475097657
+	done
+TP = 1511, FP = 1, FN = 14, TN = 47114
+recall = 0.9908196721311475, precision = 0.9993386243386243, F1 = 0.9950609153770167, bal_acc = 0.9953992237340445
+training step: 421	training file: train_00018.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0053 - accuracy: 0.9980 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.00933370590209961
+	done
+TP = 1511, FP = 0, FN = 14, TN = 47115
+recall = 0.9908196721311475, precision = 1.0, F1 = 0.9953886693017128, bal_acc = 0.9954098360655738
+training step: 422	training file: train_00001.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0042 - accuracy: 0.9984 - val_loss: 0.0035 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009047794342041015
+	done
+TP = 1512, FP = 1, FN = 13, TN = 47114
+recall = 0.9914754098360655, precision = 0.9993390614672836, F1 = 0.9953917050691244, bal_acc = 0.9957270925865036
+training step: 423	training file: train_00024.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0061 - accuracy: 0.9977 - val_loss: 0.0035 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008932685852050782
+	done
+TP = 1513, FP = 9, FN = 12, TN = 47106
+recall = 0.9921311475409836, precision = 0.9940867279894875, F1 = 0.9931079750574335, bal_acc = 0.9959700627867287
+training step: 424	training file: train_00009.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0043 - accuracy: 0.9983 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.00851268768310547
+	done
+TP = 1497, FP = 0, FN = 28, TN = 47115
+recall = 0.981639344262295, precision = 1.0, F1 = 0.9907346128391793, bal_acc = 0.9908196721311475
+training step: 425	training file: train_00013.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0049 - accuracy: 0.9980 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.00872182846069336
+	done
+TP = 1513, FP = 17, FN = 12, TN = 47098
+recall = 0.9921311475409836, precision = 0.9888888888888889, F1 = 0.9905073649754501, bal_acc = 0.9958851641344948
+training step: 426	training file: train_00018.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0050 - accuracy: 0.9981 - val_loss: 0.0036 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009104633331298828
+	done
+TP = 1508, FP = 2, FN = 17, TN = 47113
+recall = 0.9888524590163934, precision = 0.9986754966887417, F1 = 0.9937397034596375, bal_acc = 0.9944050048451383
+training step: 427	training file: train_00011.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0050 - accuracy: 0.9980 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008926582336425782
+	done
+TP = 1509, FP = 2, FN = 16, TN = 47113
+recall = 0.9895081967213115, precision = 0.99867637326274, F1 = 0.9940711462450593, bal_acc = 0.9947328736975973
+training step: 428	training file: train_00009.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0042 - accuracy: 0.9984 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008415794372558594
+	done
+TP = 1494, FP = 0, FN = 31, TN = 47115
+recall = 0.979672131147541, precision = 1.0, F1 = 0.9897316992381583, bal_acc = 0.9898360655737706
+training step: 429	training file: train_00036.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0057 - accuracy: 0.9977 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008998584747314454
+	done
+TP = 1501, FP = 0, FN = 24, TN = 47115
+recall = 0.9842622950819672, precision = 1.0, F1 = 0.9920687376074026, bal_acc = 0.9921311475409835
+training step: 430	training file: train_00028.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0069 - accuracy: 0.9974 - val_loss: 0.0038 - val_accuracy: 0.9985 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.008666610717773438
+	done
+TP = 1493, FP = 5, FN = 32, TN = 47110
+recall = 0.9790163934426229, precision = 0.9966622162883845, F1 = 0.9877605028117764, bal_acc = 0.9894551350636653
+training step: 431	training file: train_00022.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0048 - accuracy: 0.9981 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.008727264404296876
+	done
+TP = 1498, FP = 1, FN = 27, TN = 47114
+recall = 0.9822950819672132, precision = 0.9993328885923949, F1 = 0.9907407407407407, bal_acc = 0.9911369286520774
+training step: 432	training file: train_00020.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0044 - accuracy: 0.9982 - val_loss: 0.0036 - val_accuracy: 0.9986 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.008529567718505859
+	done
+TP = 1499, FP = 0, FN = 26, TN = 47115
+recall = 0.9829508196721312, precision = 1.0, F1 = 0.9914021164021164, bal_acc = 0.9914754098360656
+training step: 433	training file: train_00004.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0041 - accuracy: 0.9984 - val_loss: 0.0038 - val_accuracy: 0.9985 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.009500598907470703
+	done
+TP = 1514, FP = 3, FN = 11, TN = 47112
+recall = 0.9927868852459016, precision = 0.998022412656559, F1 = 0.9953977646285339, bal_acc = 0.9963616056283631
+training step: 434	training file: train_00009.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0040 - accuracy: 0.9984 - val_loss: 0.0038 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008686161041259766
+	done
+TP = 1495, FP = 0, FN = 30, TN = 47115
+recall = 0.980327868852459, precision = 1.0, F1 = 0.990066225165563, bal_acc = 0.9901639344262295
+training step: 435	training file: train_00016.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0049 - accuracy: 0.9981 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008617782592773437
+	done
+TP = 1511, FP = 1, FN = 14, TN = 47114
+recall = 0.9908196721311475, precision = 0.9993386243386243, F1 = 0.9950609153770167, bal_acc = 0.9953992237340445
+training step: 436	training file: train_00031.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9982 - val_loss: 0.0036 - val_accuracy: 0.9987 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.008777141571044922
+	done
+TP = 1513, FP = 4, FN = 12, TN = 47111
+recall = 0.9921311475409836, precision = 0.997363216875412, F1 = 0.9947403024326101, bal_acc = 0.9960231244443749
+training step: 437	training file: train_00018.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0049 - accuracy: 0.9981 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009396743774414063
+	done
+TP = 1518, FP = 7, FN = 7, TN = 47108
+recall = 0.9954098360655738, precision = 0.9954098360655738, F1 = 0.9954098360655738, bal_acc = 0.9976306317120822
+training step: 438	training file: train_00025.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0044 - accuracy: 0.9983 - val_loss: 0.0035 - val_accuracy: 0.9986 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.008878421783447266
+	done
+TP = 1504, FP = 0, FN = 21, TN = 47115
+recall = 0.9862295081967213, precision = 1.0, F1 = 0.9930670188180917, bal_acc = 0.9931147540983607
+training step: 439	training file: train_00003.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0053 - accuracy: 0.9979 - val_loss: 0.0040 - val_accuracy: 0.9983 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009797286987304688
+	done
+TP = 1508, FP = 0, FN = 17, TN = 47115
+recall = 0.9888524590163934, precision = 1.0, F1 = 0.9943949884602703, bal_acc = 0.9944262295081967
+training step: 440	training file: train_00005.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0040 - accuracy: 0.9985 - val_loss: 0.0035 - val_accuracy: 0.9987 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.008780670166015626
+	done
+TP = 1518, FP = 9, FN = 7, TN = 47106
+recall = 0.9954098360655738, precision = 0.9941060903732809, F1 = 0.9947575360419397, bal_acc = 0.9976094070490238
+training step: 441	training file: train_00024.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0061 - accuracy: 0.9977 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009012413024902344
+	done
+TP = 1516, FP = 21, FN = 9, TN = 47094
+recall = 0.9940983606557378, precision = 0.9863370201691607, F1 = 0.9902024820378837, bal_acc = 0.9968263213657549
+training step: 442	training file: train_00014.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0045 - accuracy: 0.9983 - val_loss: 0.0035 - val_accuracy: 0.9986 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.009039783477783203
+	done
+TP = 1511, FP = 3, FN = 14, TN = 47112
+recall = 0.9908196721311475, precision = 0.9980184940554822, F1 = 0.9944060546232313, bal_acc = 0.9953779990709861
+training step: 443	training file: train_00006.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0040 - accuracy: 0.9985 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008654499053955078
+	done
+TP = 1508, FP = 3, FN = 17, TN = 47112
+recall = 0.9888524590163934, precision = 0.9980145598941098, F1 = 0.9934123847167325, bal_acc = 0.994394392513609
+training step: 444	training file: train_00001.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0040 - accuracy: 0.9985 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.008980464935302735
+	done
+TP = 1513, FP = 5, FN = 12, TN = 47110
+recall = 0.9921311475409836, precision = 0.9967061923583662, F1 = 0.994413407821229, bal_acc = 0.9960125121128456
+training step: 445	training file: train_00034.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0039 - accuracy: 0.9985 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008840465545654297
+	done
+TP = 1513, FP = 2, FN = 12, TN = 47113
+recall = 0.9921311475409836, precision = 0.9986798679867986, F1 = 0.9953947368421052, bal_acc = 0.9960443491074333
+training step: 446	training file: train_00007.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0054 - accuracy: 0.9979 - val_loss: 0.0041 - val_accuracy: 0.9983 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009755134582519531
+	done
+TP = 1507, FP = 1, FN = 18, TN = 47114
+recall = 0.9881967213114754, precision = 0.9993368700265252, F1 = 0.9937355753379492, bal_acc = 0.9940877483242085
+training step: 447	training file: train_00036.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0055 - accuracy: 0.9978 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009049224853515624
+	done
+TP = 1501, FP = 3, FN = 24, TN = 47112
+recall = 0.9842622950819672, precision = 0.9980053191489362, F1 = 0.9910861670518323, bal_acc = 0.9920993105463959
+training step: 448	training file: train_00024.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0063 - accuracy: 0.9976 - val_loss: 0.0035 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009084606170654297
+	done
+TP = 1509, FP = 4, FN = 16, TN = 47111
+recall = 0.9895081967213115, precision = 0.9973562458691342, F1 = 0.9934167215273205, bal_acc = 0.9947116490345388
+training step: 449	training file: train_00023.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0047 - accuracy: 0.9982 - val_loss: 0.0035 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009105587005615234
+	done
+TP = 1509, FP = 1, FN = 16, TN = 47114
+recall = 0.9895081967213115, precision = 0.9993377483443708, F1 = 0.9943986820428337, bal_acc = 0.9947434860291265
+training step: 450	training file: train_00010.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0041 - accuracy: 0.9984 - val_loss: 0.0035 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008649349212646484
+	done
+TP = 1514, FP = 3, FN = 11, TN = 47112
+recall = 0.9927868852459016, precision = 0.998022412656559, F1 = 0.9953977646285339, bal_acc = 0.9963616056283631
+training step: 451	training file: train_00006.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0038 - accuracy: 0.9986 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.008558177947998047
+	done
+TP = 1511, FP = 3, FN = 14, TN = 47112
+recall = 0.9908196721311475, precision = 0.9980184940554822, F1 = 0.9944060546232313, bal_acc = 0.9953779990709861
+training step: 452	training file: train_00004.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0042 - accuracy: 0.9984 - val_loss: 0.0038 - val_accuracy: 0.9985 - 6s/epoch - 173ms/step
+	calculating accuracy
+0.009489822387695312
+	done
+TP = 1511, FP = 4, FN = 14, TN = 47111
+recall = 0.9908196721311475, precision = 0.9973597359735974, F1 = 0.9940789473684211, bal_acc = 0.9953673867394568
+training step: 453	training file: train_00012.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0068 - accuracy: 0.9973 - val_loss: 0.0038 - val_accuracy: 0.9984 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.00942840576171875
+	done
+TP = 1506, FP = 1, FN = 19, TN = 47114
+recall = 0.9875409836065574, precision = 0.9993364299933643, F1 = 0.9934036939313985, bal_acc = 0.9937598794717495
+training step: 454	training file: train_00017.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0043 - accuracy: 0.9983 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008673381805419923
+	done
+TP = 1508, FP = 0, FN = 17, TN = 47115
+recall = 0.9888524590163934, precision = 1.0, F1 = 0.9943949884602703, bal_acc = 0.9944262295081967
+training step: 455	training file: train_00004.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0040 - accuracy: 0.9985 - val_loss: 0.0038 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009465408325195313
+	done
+TP = 1517, FP = 3, FN = 8, TN = 47112
+recall = 0.9947540983606558, precision = 0.9980263157894737, F1 = 0.9963875205254515, bal_acc = 0.9973452121857402
+training step: 456	training file: train_00011.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0048 - accuracy: 0.9981 - val_loss: 0.0039 - val_accuracy: 0.9985 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.009106063842773437
+	done
+TP = 1511, FP = 2, FN = 14, TN = 47113
+recall = 0.9908196721311475, precision = 0.998678122934567, F1 = 0.9947333772218564, bal_acc = 0.9953886114025152
+training step: 457	training file: train_00019.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0051 - accuracy: 0.9981 - val_loss: 0.0035 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008952045440673828
+	done
+TP = 1511, FP = 4, FN = 14, TN = 47111
+recall = 0.9908196721311475, precision = 0.9973597359735974, F1 = 0.9940789473684211, bal_acc = 0.9953673867394568
+training step: 458	training file: train_00015.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0043 - accuracy: 0.9984 - val_loss: 0.0037 - val_accuracy: 0.9986 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.009272193908691407
+	done
+TP = 1518, FP = 8, FN = 7, TN = 47107
+recall = 0.9954098360655738, precision = 0.9947575360419397, F1 = 0.9950835791543756, bal_acc = 0.997620019380553
+training step: 459	training file: train_00008.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9983 - val_loss: 0.0040 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.00830984115600586
+	done
+TP = 1513, FP = 3, FN = 12, TN = 47112
+recall = 0.9921311475409836, precision = 0.9980211081794196, F1 = 0.9950674120355147, bal_acc = 0.9960337367759041
+training step: 460	training file: train_00023.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9983 - val_loss: 0.0038 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009134006500244141
+	done
+TP = 1514, FP = 5, FN = 11, TN = 47110
+recall = 0.9927868852459016, precision = 0.9967083607636603, F1 = 0.9947437582128779, bal_acc = 0.9963403809653046
+training step: 461	training file: train_00017.p
+	grabbing data
+	done
+32/32 - 6s - loss: 0.0040 - accuracy: 0.9983 - val_loss: 0.0039 - val_accuracy: 0.9985 - 6s/epoch - 172ms/step
+	calculating accuracy
+0.008527755737304688
+	done
+TP = 1515, FP = 2, FN = 10, TN = 47113
+recall = 0.9934426229508196, precision = 0.998681608437706, F1 = 0.9960552268244576, bal_acc = 0.9967000868123513
+training step: 462	training file: train_00011.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0048 - accuracy: 0.9981 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.008892059326171875
+	done
+TP = 1513, FP = 2, FN = 12, TN = 47113
+recall = 0.9921311475409836, precision = 0.9986798679867986, F1 = 0.9953947368421052, bal_acc = 0.9960443491074333
+training step: 463	training file: train_00003.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0051 - accuracy: 0.9980 - val_loss: 0.0036 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009397506713867188
+	done
+TP = 1511, FP = 4, FN = 14, TN = 47111
+recall = 0.9908196721311475, precision = 0.9973597359735974, F1 = 0.9940789473684211, bal_acc = 0.9953673867394568
+training step: 464	training file: train_00011.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9982 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008938789367675781
+	done
+TP = 1515, FP = 5, FN = 10, TN = 47110
+recall = 0.9934426229508196, precision = 0.9967105263157895, F1 = 0.9950738916256158, bal_acc = 0.9966682498177637
+training step: 465	training file: train_00028.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0069 - accuracy: 0.9974 - val_loss: 0.0039 - val_accuracy: 0.9985 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.009026145935058594
+	done
+TP = 1500, FP = 25, FN = 25, TN = 47090
+recall = 0.9836065573770492, precision = 0.9836065573770492, F1 = 0.9836065573770492, bal_acc = 0.9915379704002937
+training step: 466	training file: train_00028.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0059 - accuracy: 0.9976 - val_loss: 0.0039 - val_accuracy: 0.9984 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008510684967041016
+	done
+TP = 1497, FP = 2, FN = 28, TN = 47113
+recall = 0.981639344262295, precision = 0.9986657771847899, F1 = 0.9900793650793651, bal_acc = 0.9907984474680891
+training step: 467	training file: train_00023.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0045 - accuracy: 0.9983 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008988475799560547
+	done
+TP = 1508, FP = 0, FN = 17, TN = 47115
+recall = 0.9888524590163934, precision = 1.0, F1 = 0.9943949884602703, bal_acc = 0.9944262295081967
+training step: 468	training file: train_00033.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0048 - accuracy: 0.9981 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009006881713867187
+	done
+TP = 1512, FP = 6, FN = 13, TN = 47109
+recall = 0.9914754098360655, precision = 0.9960474308300395, F1 = 0.9937561616825501, bal_acc = 0.9956740309288574
+training step: 469	training file: train_00001.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0043 - accuracy: 0.9984 - val_loss: 0.0035 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008973312377929688
+	done
+TP = 1516, FP = 5, FN = 9, TN = 47110
+recall = 0.9940983606557378, precision = 0.9967126890203813, F1 = 0.9954038082731451, bal_acc = 0.9969961186702228
+training step: 470	training file: train_00031.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9982 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.00867910385131836
+	done
+TP = 1512, FP = 1, FN = 13, TN = 47114
+recall = 0.9914754098360655, precision = 0.9993390614672836, F1 = 0.9953917050691244, bal_acc = 0.9957270925865036
+training step: 471	training file: train_00023.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0041 - accuracy: 0.9984 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.00906963348388672
+	done
+TP = 1503, FP = 1, FN = 22, TN = 47114
+recall = 0.9855737704918033, precision = 0.9993351063829787, F1 = 0.9924067348960053, bal_acc = 0.9927762729143724
+training step: 472	training file: train_00027.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0050 - accuracy: 0.9980 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009092140197753906
+	done
+TP = 1511, FP = 2, FN = 14, TN = 47113
+recall = 0.9908196721311475, precision = 0.998678122934567, F1 = 0.9947333772218564, bal_acc = 0.9953886114025152
+training step: 473	training file: train_00023.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0040 - accuracy: 0.9984 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009211540222167969
+	done
+TP = 1518, FP = 5, FN = 7, TN = 47110
+recall = 0.9954098360655738, precision = 0.9967170059093894, F1 = 0.9960629921259843, bal_acc = 0.9976518563751406
+training step: 474	training file: train_00028.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0063 - accuracy: 0.9976 - val_loss: 0.0038 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008710956573486328
+	done
+TP = 1503, FP = 8, FN = 22, TN = 47107
+recall = 0.9855737704918033, precision = 0.9947054930509597, F1 = 0.9901185770750988, bal_acc = 0.9927019865936677
+training step: 475	training file: train_00029.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0057 - accuracy: 0.9977 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008822822570800781
+	done
+TP = 1510, FP = 2, FN = 15, TN = 47113
+recall = 0.9901639344262295, precision = 0.9986772486772487, F1 = 0.9944023707606191, bal_acc = 0.9950607425500563
+training step: 476	training file: train_00002.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9983 - val_loss: 0.0040 - val_accuracy: 0.9984 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009579086303710937
+	done
+TP = 1514, FP = 3, FN = 11, TN = 47112
+recall = 0.9927868852459016, precision = 0.998022412656559, F1 = 0.9953977646285339, bal_acc = 0.9963616056283631
+training step: 477	training file: train_00000.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0039 - accuracy: 0.9985 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.008987236022949218
+	done
+TP = 1510, FP = 0, FN = 15, TN = 47115
+recall = 0.9901639344262295, precision = 1.0, F1 = 0.9950576606260296, bal_acc = 0.9950819672131148
+training step: 478	training file: train_00007.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0053 - accuracy: 0.9979 - val_loss: 0.0041 - val_accuracy: 0.9983 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.009786033630371093
+	done
+TP = 1508, FP = 2, FN = 17, TN = 47113
+recall = 0.9888524590163934, precision = 0.9986754966887417, F1 = 0.9937397034596375, bal_acc = 0.9944050048451383
+training step: 479	training file: train_00011.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0045 - accuracy: 0.9982 - val_loss: 0.0039 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009054851531982423
+	done
+TP = 1508, FP = 3, FN = 17, TN = 47112
+recall = 0.9888524590163934, precision = 0.9980145598941098, F1 = 0.9934123847167325, bal_acc = 0.994394392513609
+training step: 480	training file: train_00003.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0051 - accuracy: 0.9980 - val_loss: 0.0036 - val_accuracy: 0.9985 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.009317874908447266
+	done
+TP = 1514, FP = 2, FN = 11, TN = 47113
+recall = 0.9927868852459016, precision = 0.9986807387862797, F1 = 0.9957250904307794, bal_acc = 0.9963722179598924
+training step: 481	training file: train_00008.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9982 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.008324527740478515
+	done
+TP = 1510, FP = 1, FN = 15, TN = 47114
+recall = 0.9901639344262295, precision = 0.99933818663137, F1 = 0.9947299077733861, bal_acc = 0.9950713548815855
+training step: 482	training file: train_00026.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0043 - accuracy: 0.9984 - val_loss: 0.0038 - val_accuracy: 0.9985 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.009475898742675782
+	done
+TP = 1516, FP = 4, FN = 9, TN = 47111
+recall = 0.9940983606557378, precision = 0.9973684210526316, F1 = 0.9957307060755336, bal_acc = 0.9970067310017519
+training step: 483	training file: train_00018.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0051 - accuracy: 0.9980 - val_loss: 0.0035 - val_accuracy: 0.9986 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.009087371826171874
+	done
+TP = 1510, FP = 2, FN = 15, TN = 47113
+recall = 0.9901639344262295, precision = 0.9986772486772487, F1 = 0.9944023707606191, bal_acc = 0.9950607425500563
+training step: 484	training file: train_00013.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0050 - accuracy: 0.9980 - val_loss: 0.0035 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008723163604736328
+	done
+TP = 1511, FP = 4, FN = 14, TN = 47111
+recall = 0.9908196721311475, precision = 0.9973597359735974, F1 = 0.9940789473684211, bal_acc = 0.9953673867394568
+training step: 485	training file: train_00021.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0050 - accuracy: 0.9980 - val_loss: 0.0042 - val_accuracy: 0.9984 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.008233642578125
+	done
+TP = 1494, FP = 1, FN = 31, TN = 47114
+recall = 0.979672131147541, precision = 0.9993311036789297, F1 = 0.9894039735099338, bal_acc = 0.9898254532422412
+training step: 486	training file: train_00023.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0045 - accuracy: 0.9983 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 172ms/step
+	calculating accuracy
+0.008986949920654297
+	done
+TP = 1497, FP = 2, FN = 28, TN = 47113
+recall = 0.981639344262295, precision = 0.9986657771847899, F1 = 0.9900793650793651, bal_acc = 0.9907984474680891
+training step: 487	training file: train_00036.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0059 - accuracy: 0.9977 - val_loss: 0.0037 - val_accuracy: 0.9985 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.00888519287109375
+	done
+TP = 1505, FP = 0, FN = 20, TN = 47115
+recall = 0.9868852459016394, precision = 1.0, F1 = 0.9933993399339933, bal_acc = 0.9934426229508198
+training step: 488	training file: train_00024.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0062 - accuracy: 0.9976 - val_loss: 0.0035 - val_accuracy: 0.9986 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.009018898010253906
+	done
+TP = 1510, FP = 1, FN = 15, TN = 47114
+recall = 0.9901639344262295, precision = 0.99933818663137, F1 = 0.9947299077733861, bal_acc = 0.9950713548815855
+training step: 489	training file: train_00008.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0043 - accuracy: 0.9983 - val_loss: 0.0035 - val_accuracy: 0.9986 - 5s/epoch - 171ms/step
+	calculating accuracy
+0.00838470458984375
+	done
+TP = 1507, FP = 1, FN = 18, TN = 47114
+recall = 0.9881967213114754, precision = 0.9993368700265252, F1 = 0.9937355753379492, bal_acc = 0.9940877483242085
+training step: 490	training file: train_00014.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9983 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.00916757583618164
+	done
+TP = 1515, FP = 4, FN = 10, TN = 47111
+recall = 0.9934426229508196, precision = 0.9973666886109283, F1 = 0.995400788436268, bal_acc = 0.9966788621492928
+training step: 491	training file: train_00035.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0047 - accuracy: 0.9982 - val_loss: 0.0038 - val_accuracy: 0.9985 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.008497238159179688
+	done
+TP = 1508, FP = 2, FN = 17, TN = 47113
+recall = 0.9888524590163934, precision = 0.9986754966887417, F1 = 0.9937397034596375, bal_acc = 0.9944050048451383
+training step: 492	training file: train_00020.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0044 - accuracy: 0.9982 - val_loss: 0.0038 - val_accuracy: 0.9985 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008458805084228516
+	done
+TP = 1507, FP = 2, FN = 18, TN = 47113
+recall = 0.9881967213114754, precision = 0.998674618952949, F1 = 0.9934080421885298, bal_acc = 0.9940771359926792
+training step: 493	training file: train_00019.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0051 - accuracy: 0.9981 - val_loss: 0.0035 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008644390106201171
+	done
+TP = 1494, FP = 0, FN = 31, TN = 47115
+recall = 0.979672131147541, precision = 1.0, F1 = 0.9897316992381583, bal_acc = 0.9898360655737706
+training step: 494	training file: train_00020.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0043 - accuracy: 0.9983 - val_loss: 0.0035 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008549880981445313
+	done
+TP = 1510, FP = 2, FN = 15, TN = 47113
+recall = 0.9901639344262295, precision = 0.9986772486772487, F1 = 0.9944023707606191, bal_acc = 0.9950607425500563
+training step: 495	training file: train_00014.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0040 - accuracy: 0.9984 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.008980464935302735
+	done
+TP = 1514, FP = 2, FN = 11, TN = 47113
+recall = 0.9927868852459016, precision = 0.9986807387862797, F1 = 0.9957250904307794, bal_acc = 0.9963722179598924
+training step: 496	training file: train_00000.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0038 - accuracy: 0.9986 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.008962726593017578
+	done
+TP = 1516, FP = 5, FN = 9, TN = 47110
+recall = 0.9940983606557378, precision = 0.9967126890203813, F1 = 0.9954038082731451, bal_acc = 0.9969961186702228
+training step: 497	training file: train_00031.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0046 - accuracy: 0.9982 - val_loss: 0.0037 - val_accuracy: 0.9986 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.008755207061767578
+	done
+TP = 1512, FP = 2, FN = 13, TN = 47113
+recall = 0.9914754098360655, precision = 0.9986789960369881, F1 = 0.9950641658440276, bal_acc = 0.9957164802549743
+training step: 498	training file: train_00018.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0050 - accuracy: 0.9981 - val_loss: 0.0036 - val_accuracy: 0.9986 - 5s/epoch - 170ms/step
+	calculating accuracy
+0.009106731414794922
+	done
+TP = 1513, FP = 3, FN = 12, TN = 47112
+recall = 0.9921311475409836, precision = 0.9980211081794196, F1 = 0.9950674120355147, bal_acc = 0.9960337367759041
+training step: 499	training file: train_00005.p
+	grabbing data
+	done
+32/32 - 5s - loss: 0.0039 - accuracy: 0.9985 - val_loss: 0.0035 - val_accuracy: 0.9986 - 5s/epoch - 169ms/step
+	calculating accuracy
+0.008595466613769531
+	done
+TP = 1517, FP = 2, FN = 8, TN = 47113
+recall = 0.9947540983606558, precision = 0.9986833443054641, F1 = 0.9967148488830486, bal_acc = 0.9973558245172693
+/u/skhan/stem-learning/code/2_trainer/accuracy.py:7: RuntimeWarning: invalid value encountered in true_divide
+  conv_label_img = (label_img - np.min(label_img))/np.ptp(label_img)

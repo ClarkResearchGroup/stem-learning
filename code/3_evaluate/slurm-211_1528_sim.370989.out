@@ -1,0 +1,463 @@
+
+Currently Loaded Modules:
+  1) gcc/11.2.0   2) cudnn/8.4.1.50   3) anaconda3_gpu/4.13.0   4) cuda/11.6.1
+
+ 
+
+job is starting on gpub046.delta.internal.ncsa.edu
+2022-07-08 13:53:40.335486: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-07-08 13:53:49.967071: E tensorflow/stream_executor/cuda/cuda_blas.cc:3005] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2022-07-08 13:54:03.977450: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /sw/spack/delta-2022-03/apps/cuda/11.6.1-gcc-11.2.0-vglutoe/lib64:/sw/external/libraries/cudnn-linux-x86_64-8.4.1.50_cuda11.6-archive/lib:/sw/spack/delta-2022-03/apps/gcc/11.2.0-gcc-8.4.1-fxgnsyr/lib64:/sw/spack/delta-2022-03/apps/gcc/11.2.0-gcc-8.4.1-fxgnsyr/lib
+2022-07-08 13:54:04.005097: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /sw/spack/delta-2022-03/apps/cuda/11.6.1-gcc-11.2.0-vglutoe/lib64:/sw/external/libraries/cudnn-linux-x86_64-8.4.1.50_cuda11.6-archive/lib:/sw/spack/delta-2022-03/apps/gcc/11.2.0-gcc-8.4.1-fxgnsyr/lib64:/sw/spack/delta-2022-03/apps/gcc/11.2.0-gcc-8.4.1-fxgnsyr/lib
+2022-07-08 13:54:04.005110: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2022-07-08 13:54:36.597279: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-07-08 13:54:40.884528: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1616] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 43511 MB memory:  -> device: 0, name: NVIDIA A40, pci bus id: 0000:07:00.0, compute capability: 8.6
+2022-07-08 13:54:47.692254: I tensorflow/stream_executor/cuda/cuda_dnn.cc:384] Loaded cuDNN version 8401
+2022-07-08 13:55:01.214553: I tensorflow/stream_executor/cuda/cuda_blas.cc:1638] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+DATA (211, 1528)
+GANNING /u/skhan/stem-learning/data/WSe/test_experiment/211_day/RR_1528/input.tif
+processing data
+loading model
+strides: (256, 256)
+predicting data
+stitching data
+saving data
+EVALUATING /u/skhan/stem-learning/results/sim/results_20220708_MODEL_unet_ident_gen_fft_10_SIM_pristine_gaussian_0.2_EXP_211_1528/1vacancy/evals/211_1528_cycled.tif
+processing data
+loading model
+strides: (64, 64)
+predicting data
+stitching data
+saving data
+DATA (211, 1922)
+GANNING /u/skhan/stem-learning/data/WSe/test_experiment/211_day/RR_1922/input.tif
+processing data
+loading model
+strides: (256, 256)
+predicting data
+stitching data
+saving data
+EVALUATING /u/skhan/stem-learning/results/sim/results_20220708_MODEL_unet_ident_gen_fft_10_SIM_pristine_gaussian_0.2_EXP_211_1528/1vacancy/evals/211_1922_cycled.tif
+processing data
+loading model
+strides: (64, 64)
+predicting data
+stitching data
+saving data
+DATA (211, 2124)
+GANNING /u/skhan/stem-learning/data/WSe/test_experiment/211_day/RR_2124/input.tif
+processing data
+loading model
+strides: (256, 256)
+predicting data
+stitching data
+saving data
+EVALUATING /u/skhan/stem-learning/results/sim/results_20220708_MODEL_unet_ident_gen_fft_10_SIM_pristine_gaussian_0.2_EXP_211_1528/1vacancy/evals/211_2124_cycled.tif
+processing data
+loading model
+strides: (64, 64)
+predicting data
+stitching data
+saving data
+DATA (107, 1750)
+GANNING /u/skhan/stem-learning/data/WSe/test_experiment/107_day/RR_1750/input.tif
+processing data
+loading model
+strides: (256, 256)
+predicting data
+stitching data
+saving data
+EVALUATING /u/skhan/stem-learning/results/sim/results_20220708_MODEL_unet_ident_gen_fft_10_SIM_pristine_gaussian_0.2_EXP_211_1528/1vacancy/evals/107_1750_cycled.tif
+processing data
+loading model
+strides: (64, 64)
+predicting data
+stitching data
+saving data
+DATA (107, 1840)
+GANNING /u/skhan/stem-learning/data/WSe/test_experiment/107_day/RR_1840/input.tif
+processing data
+loading model
+strides: (256, 256)
+predicting data
+stitching data
+saving data
+EVALUATING /u/skhan/stem-learning/results/sim/results_20220708_MODEL_unet_ident_gen_fft_10_SIM_pristine_gaussian_0.2_EXP_211_1528/1vacancy/evals/107_1840_cycled.tif
+processing data
+loading model
+strides: (64, 64)
+predicting data
+stitching data
+saving data
+DATA (107, 1847)
+GANNING /u/skhan/stem-learning/data/WSe/test_experiment/107_day/RR_1847/input.tif
+processing data
+loading model
+strides: (256, 256)
+predicting data
+stitching data
+saving data
+EVALUATING /u/skhan/stem-learning/results/sim/results_20220708_MODEL_unet_ident_gen_fft_10_SIM_pristine_gaussian_0.2_EXP_211_1528/1vacancy/evals/107_1847_cycled.tif
+processing data
+loading model
+strides: (64, 64)
+predicting data
+stitching data
+saving data
+WARNING:tensorflow:Detecting that an object or model or tf.train.Checkpoint is being deleted with unrestored values. See the following logs for the specific values in question. To silence these warnings, use `status.expect_partial()`. See https://www.tensorflow.org/api_docs/python/tf/train/Checkpoint#restorefor details about the status object returned by the restore function.
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer.beta_1
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer.beta_2
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer.decay
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer.learning_rate
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer.iter
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer.beta_1
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer.beta_2
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer.decay
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer.learning_rate
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer.iter
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer.beta_1
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer.beta_2
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer.decay
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer.learning_rate
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer.iter
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer.beta_1
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer.beta_2
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer.decay
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer.learning_rate
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer.iter
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer.beta_1
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer.beta_2
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer.decay
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer.learning_rate
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer.iter
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer.beta_1
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer.beta_2
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer.decay
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer.learning_rate
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer.iter
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp.layer_with_weights-3.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp.layer_with_weights-4.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp.layer_with_weights-4.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp.layer_with_weights-5.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp.layer_with_weights-5.bias
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft.layer_with_weights-3.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft.layer_with_weights-4.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft.layer_with_weights-4.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft.layer_with_weights-5.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft.layer_with_weights-5.bias
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim.layer_with_weights-3.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim.layer_with_weights-4.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim.layer_with_weights-4.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim.layer_with_weights-5.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim.layer_with_weights-5.bias
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft.layer_with_weights-3.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft.layer_with_weights-4.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft.layer_with_weights-4.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft.layer_with_weights-5.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft.layer_with_weights-5.bias
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp.layer_with_weights-0.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp.layer_with_weights-1.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp.layer_with_weights-1.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp.layer_with_weights-1.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp.layer_with_weights-2.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp.layer_with_weights-2.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp.layer_with_weights-2.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft.layer_with_weights-0.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft.layer_with_weights-1.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft.layer_with_weights-1.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft.layer_with_weights-1.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft.layer_with_weights-2.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft.layer_with_weights-2.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft.layer_with_weights-2.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim.layer_with_weights-0.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim.layer_with_weights-1.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim.layer_with_weights-1.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim.layer_with_weights-1.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim.layer_with_weights-2.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim.layer_with_weights-2.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim.layer_with_weights-2.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft.layer_with_weights-0.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft.layer_with_weights-1.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft.layer_with_weights-1.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft.layer_with_weights-1.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft.layer_with_weights-2.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft.layer_with_weights-2.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft.layer_with_weights-2.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer's state 'm' for (root).discriminator_exp_fft.layer_with_weights-3.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer's state 'm' for (root).discriminator_exp_fft.layer_with_weights-4.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer's state 'm' for (root).discriminator_exp_fft.layer_with_weights-4.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer's state 'm' for (root).discriminator_exp_fft.layer_with_weights-5.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer's state 'm' for (root).discriminator_exp_fft.layer_with_weights-5.bias
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer's state 'm' for (root).discriminator_exp_fft.layer_with_weights-0.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer's state 'm' for (root).discriminator_exp_fft.layer_with_weights-1.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer's state 'm' for (root).discriminator_exp_fft.layer_with_weights-1.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer's state 'm' for (root).discriminator_exp_fft.layer_with_weights-1.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer's state 'm' for (root).discriminator_exp_fft.layer_with_weights-2.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer's state 'm' for (root).discriminator_exp_fft.layer_with_weights-2.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer's state 'm' for (root).discriminator_exp_fft.layer_with_weights-2.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer's state 'v' for (root).discriminator_exp_fft.layer_with_weights-3.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer's state 'v' for (root).discriminator_exp_fft.layer_with_weights-4.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer's state 'v' for (root).discriminator_exp_fft.layer_with_weights-4.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer's state 'v' for (root).discriminator_exp_fft.layer_with_weights-5.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer's state 'v' for (root).discriminator_exp_fft.layer_with_weights-5.bias
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer's state 'v' for (root).discriminator_exp_fft.layer_with_weights-0.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer's state 'v' for (root).discriminator_exp_fft.layer_with_weights-1.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer's state 'v' for (root).discriminator_exp_fft.layer_with_weights-1.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer's state 'v' for (root).discriminator_exp_fft.layer_with_weights-1.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer's state 'v' for (root).discriminator_exp_fft.layer_with_weights-2.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer's state 'v' for (root).discriminator_exp_fft.layer_with_weights-2.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_fft_optimizer's state 'v' for (root).discriminator_exp_fft.layer_with_weights-2.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer's state 'm' for (root).discriminator_exp.layer_with_weights-3.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer's state 'm' for (root).discriminator_exp.layer_with_weights-4.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer's state 'm' for (root).discriminator_exp.layer_with_weights-4.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer's state 'm' for (root).discriminator_exp.layer_with_weights-5.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer's state 'm' for (root).discriminator_exp.layer_with_weights-5.bias
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer's state 'm' for (root).discriminator_exp.layer_with_weights-0.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer's state 'm' for (root).discriminator_exp.layer_with_weights-1.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer's state 'm' for (root).discriminator_exp.layer_with_weights-1.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer's state 'm' for (root).discriminator_exp.layer_with_weights-1.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer's state 'm' for (root).discriminator_exp.layer_with_weights-2.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer's state 'm' for (root).discriminator_exp.layer_with_weights-2.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer's state 'm' for (root).discriminator_exp.layer_with_weights-2.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer's state 'v' for (root).discriminator_exp.layer_with_weights-3.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer's state 'v' for (root).discriminator_exp.layer_with_weights-4.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer's state 'v' for (root).discriminator_exp.layer_with_weights-4.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer's state 'v' for (root).discriminator_exp.layer_with_weights-5.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer's state 'v' for (root).discriminator_exp.layer_with_weights-5.bias
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer's state 'v' for (root).discriminator_exp.layer_with_weights-0.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer's state 'v' for (root).discriminator_exp.layer_with_weights-1.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer's state 'v' for (root).discriminator_exp.layer_with_weights-1.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer's state 'v' for (root).discriminator_exp.layer_with_weights-1.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer's state 'v' for (root).discriminator_exp.layer_with_weights-2.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer's state 'v' for (root).discriminator_exp.layer_with_weights-2.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_exp_optimizer's state 'v' for (root).discriminator_exp.layer_with_weights-2.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer's state 'm' for (root).discriminator_sim_fft.layer_with_weights-3.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer's state 'm' for (root).discriminator_sim_fft.layer_with_weights-4.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer's state 'm' for (root).discriminator_sim_fft.layer_with_weights-4.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer's state 'm' for (root).discriminator_sim_fft.layer_with_weights-5.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer's state 'm' for (root).discriminator_sim_fft.layer_with_weights-5.bias
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer's state 'm' for (root).discriminator_sim_fft.layer_with_weights-0.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer's state 'm' for (root).discriminator_sim_fft.layer_with_weights-1.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer's state 'm' for (root).discriminator_sim_fft.layer_with_weights-1.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer's state 'm' for (root).discriminator_sim_fft.layer_with_weights-1.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer's state 'm' for (root).discriminator_sim_fft.layer_with_weights-2.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer's state 'm' for (root).discriminator_sim_fft.layer_with_weights-2.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer's state 'm' for (root).discriminator_sim_fft.layer_with_weights-2.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer's state 'v' for (root).discriminator_sim_fft.layer_with_weights-3.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer's state 'v' for (root).discriminator_sim_fft.layer_with_weights-4.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer's state 'v' for (root).discriminator_sim_fft.layer_with_weights-4.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer's state 'v' for (root).discriminator_sim_fft.layer_with_weights-5.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer's state 'v' for (root).discriminator_sim_fft.layer_with_weights-5.bias
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer's state 'v' for (root).discriminator_sim_fft.layer_with_weights-0.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer's state 'v' for (root).discriminator_sim_fft.layer_with_weights-1.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer's state 'v' for (root).discriminator_sim_fft.layer_with_weights-1.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer's state 'v' for (root).discriminator_sim_fft.layer_with_weights-1.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer's state 'v' for (root).discriminator_sim_fft.layer_with_weights-2.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer's state 'v' for (root).discriminator_sim_fft.layer_with_weights-2.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_fft_optimizer's state 'v' for (root).discriminator_sim_fft.layer_with_weights-2.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer's state 'm' for (root).discriminator_sim.layer_with_weights-3.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer's state 'm' for (root).discriminator_sim.layer_with_weights-4.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer's state 'm' for (root).discriminator_sim.layer_with_weights-4.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer's state 'm' for (root).discriminator_sim.layer_with_weights-5.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer's state 'm' for (root).discriminator_sim.layer_with_weights-5.bias
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer's state 'm' for (root).discriminator_sim.layer_with_weights-0.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer's state 'm' for (root).discriminator_sim.layer_with_weights-1.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer's state 'm' for (root).discriminator_sim.layer_with_weights-1.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer's state 'm' for (root).discriminator_sim.layer_with_weights-1.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer's state 'm' for (root).discriminator_sim.layer_with_weights-2.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer's state 'm' for (root).discriminator_sim.layer_with_weights-2.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer's state 'm' for (root).discriminator_sim.layer_with_weights-2.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer's state 'v' for (root).discriminator_sim.layer_with_weights-3.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer's state 'v' for (root).discriminator_sim.layer_with_weights-4.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer's state 'v' for (root).discriminator_sim.layer_with_weights-4.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer's state 'v' for (root).discriminator_sim.layer_with_weights-5.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer's state 'v' for (root).discriminator_sim.layer_with_weights-5.bias
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer's state 'v' for (root).discriminator_sim.layer_with_weights-0.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer's state 'v' for (root).discriminator_sim.layer_with_weights-1.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer's state 'v' for (root).discriminator_sim.layer_with_weights-1.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer's state 'v' for (root).discriminator_sim.layer_with_weights-1.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer's state 'v' for (root).discriminator_sim.layer_with_weights-2.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer's state 'v' for (root).discriminator_sim.layer_with_weights-2.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).discriminator_sim_optimizer's state 'v' for (root).discriminator_sim.layer_with_weights-2.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-15.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-15.bias
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-0.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-1.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-1.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-1.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-2.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-2.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-2.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-3.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-3.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-3.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-4.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-4.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-4.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-5.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-5.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-5.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-6.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-6.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-6.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-7.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-7.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-7.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-8.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-8.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-8.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-9.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-9.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-9.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-10.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-10.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-10.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-11.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-11.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-11.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-12.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-12.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-12.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-13.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-13.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-13.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-14.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-14.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'm' for (root).generator_exp.layer_with_weights-14.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-15.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-15.bias
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-0.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-1.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-1.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-1.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-2.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-2.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-2.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-3.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-3.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-3.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-4.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-4.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-4.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-5.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-5.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-5.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-6.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-6.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-6.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-7.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-7.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-7.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-8.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-8.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-8.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-9.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-9.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-9.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-10.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-10.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-10.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-11.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-11.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-11.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-12.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-12.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-12.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-13.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-13.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-13.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-14.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-14.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_exp_optimizer's state 'v' for (root).generator_exp.layer_with_weights-14.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-15.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-15.bias
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-0.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-1.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-1.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-1.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-2.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-2.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-2.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-3.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-3.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-3.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-4.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-4.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-4.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-5.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-5.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-5.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-6.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-6.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-6.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-7.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-7.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-7.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-8.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-8.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-8.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-9.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-9.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-9.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-10.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-10.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-10.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-11.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-11.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-11.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-12.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-12.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-12.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-13.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-13.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-13.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-14.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-14.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'm' for (root).generator_sim.layer_with_weights-14.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-15.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-15.bias
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-0.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-1.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-1.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-1.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-2.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-2.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-2.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-3.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-3.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-3.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-4.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-4.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-4.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-5.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-5.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-5.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-6.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-6.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-6.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-7.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-7.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-7.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-8.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-8.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-8.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-9.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-9.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-9.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-10.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-10.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-10.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-11.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-11.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-11.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-12.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-12.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-12.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-13.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-13.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-13.layer_with_weights-1.offset
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-14.layer_with_weights-0.kernel
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-14.layer_with_weights-1.scale
+WARNING:tensorflow:Value in checkpoint could not be found in the restored object: (root).generator_sim_optimizer's state 'v' for (root).generator_sim.layer_with_weights-14.layer_with_weights-1.offset

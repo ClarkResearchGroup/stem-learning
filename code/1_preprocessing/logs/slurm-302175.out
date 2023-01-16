@@ -1,0 +1,431 @@
+Resetting modules to system default. Reseting $MODULEPATH back to system default. All extra directories will be removed from $MODULEPATH.
+
+Currently Loaded Modules:
+  1) cue-login-env/1.0   4) openmpi/4.1.2   7) default
+  2) gcc/11.2.0          5) cuda/11.6.1     8) anaconda3/2021.05
+  3) ucx/1.11.2          6) modtree/gpu
+
+ 
+
+job is starting on cn033.delta.internal.ncsa.edu
+creating augments in sim_stack_065
+inverting
+rotating
+magnifying
+creating augments in sim_stack_057
+inverting
+rotating
+magnifying
+creating augments in sim_stack_067
+inverting
+rotating
+magnifying
+creating augments in sim_stack_004
+inverting
+rotating
+magnifying
+creating augments in sim_stack_020
+inverting
+rotating
+magnifying
+creating augments in sim_stack_056
+inverting
+rotating
+magnifying
+creating augments in sim_stack_000
+inverting
+rotating
+magnifying
+creating augments in sim_stack_103
+inverting
+rotating
+magnifying
+creating augments in sim_stack_097
+inverting
+rotating
+magnifying
+creating augments in sim_stack_028
+inverting
+rotating
+magnifying
+creating augments in sim_stack_079
+inverting
+rotating
+magnifying
+creating augments in sim_stack_002
+inverting
+rotating
+magnifying
+creating augments in sim_stack_064
+inverting
+rotating
+magnifying
+creating augments in sim_stack_101
+inverting
+rotating
+magnifying
+creating augments in sim_stack_001
+inverting
+rotating
+magnifying
+creating augments in sim_stack_080
+inverting
+rotating
+magnifying
+creating augments in sim_stack_059
+inverting
+rotating
+magnifying
+creating augments in sim_stack_040
+inverting
+rotating
+magnifying
+creating augments in sim_stack_054
+inverting
+rotating
+magnifying
+creating augments in sim_stack_066
+inverting
+rotating
+magnifying
+creating augments in sim_stack_010
+inverting
+rotating
+magnifying
+creating augments in sim_stack_094
+inverting
+rotating
+magnifying
+creating augments in sim_stack_018
+inverting
+rotating
+magnifying
+creating augments in sim_stack_081
+inverting
+rotating
+magnifying
+creating augments in sim_stack_100
+inverting
+rotating
+magnifying
+creating augments in sim_stack_039
+inverting
+rotating
+magnifying
+creating augments in sim_stack_089
+inverting
+rotating
+magnifying
+creating augments in sim_stack_044
+inverting
+rotating
+magnifying
+creating augments in sim_stack_084
+inverting
+rotating
+magnifying
+creating augments in sim_stack_085
+inverting
+rotating
+magnifying
+creating augments in sim_stack_098
+inverting
+rotating
+magnifying
+creating augments in sim_stack_060
+inverting
+rotating
+magnifying
+creating augments in sim_stack_046
+inverting
+rotating
+magnifying
+creating augments in sim_stack_013
+inverting
+rotating
+magnifying
+creating augments in sim_stack_011
+inverting
+rotating
+magnifying
+creating augments in sim_stack_037
+inverting
+rotating
+magnifying
+creating augments in sim_stack_070
+inverting
+rotating
+magnifying
+creating augments in sim_stack_007
+inverting
+rotating
+magnifying
+creating augments in sim_stack_063
+inverting
+rotating
+magnifying
+creating augments in sim_stack_055
+inverting
+rotating
+magnifying
+creating augments in sim_stack_035
+inverting
+rotating
+magnifying
+creating augments in sim_stack_045
+inverting
+rotating
+magnifying
+creating augments in sim_stack_092
+inverting
+rotating
+magnifying
+creating augments in sim_stack_031
+inverting
+rotating
+magnifying
+creating augments in sim_stack_043
+inverting
+rotating
+magnifying
+creating augments in sim_stack_021
+inverting
+rotating
+magnifying
+creating augments in sim_stack_042
+inverting
+rotating
+magnifying
+creating augments in sim_stack_073
+inverting
+rotating
+magnifying
+creating augments in sim_stack_075
+inverting
+rotating
+magnifying
+creating augments in sim_stack_104
+inverting
+rotating
+magnifying
+creating augments in sim_stack_050
+inverting
+rotating
+magnifying
+creating augments in sim_stack_076
+inverting
+rotating
+magnifying
+creating augments in sim_stack_038
+inverting
+rotating
+magnifying
+creating augments in sim_stack_083
+inverting
+rotating
+magnifying
+creating augments in sim_stack_095
+inverting
+rotating
+magnifying
+creating augments in sim_stack_005
+inverting
+rotating
+magnifying
+creating augments in sim_stack_036
+inverting
+rotating
+magnifying
+creating augments in sim_stack_072
+inverting
+rotating
+magnifying
+creating augments in sim_stack_041
+inverting
+rotating
+magnifying
+creating augments in sim_stack_052
+inverting
+rotating
+magnifying
+creating augments in sim_stack_019
+inverting
+rotating
+magnifying
+creating augments in sim_stack_074
+inverting
+rotating
+magnifying
+creating augments in sim_stack_012
+inverting
+rotating
+magnifying
+creating augments in sim_stack_093
+inverting
+rotating
+magnifying
+creating augments in sim_stack_034
+inverting
+rotating
+magnifying
+creating augments in sim_stack_106
+inverting
+rotating
+magnifying
+creating augments in sim_stack_022
+inverting
+rotating
+magnifying
+creating augments in sim_stack_069
+inverting
+rotating
+magnifying
+creating augments in sim_stack_003
+inverting
+rotating
+magnifying
+creating augments in sim_stack_047
+inverting
+rotating
+magnifying
+creating augments in sim_stack_029
+inverting
+rotating
+magnifying
+creating augments in sim_stack_058
+inverting
+rotating
+magnifying
+creating augments in sim_stack_068
+inverting
+rotating
+magnifying
+creating augments in sim_stack_049
+inverting
+rotating
+magnifying
+creating augments in sim_stack_053
+inverting
+rotating
+magnifying
+creating augments in sim_stack_025
+inverting
+rotating
+magnifying
+creating augments in sim_stack_062
+inverting
+rotating
+magnifying
+creating augments in sim_stack_088
+inverting
+rotating
+magnifying
+creating augments in sim_stack_071
+inverting
+rotating
+magnifying
+creating augments in sim_stack_051
+inverting
+rotating
+magnifying
+creating augments in sim_stack_087
+inverting
+rotating
+magnifying
+creating augments in sim_stack_006
+inverting
+rotating
+magnifying
+creating augments in sim_stack_014
+inverting
+rotating
+magnifying
+creating augments in sim_stack_086
+inverting
+rotating
+magnifying
+creating augments in sim_stack_023
+inverting
+rotating
+magnifying
+creating augments in sim_stack_008
+inverting
+rotating
+magnifying
+creating augments in sim_stack_061
+inverting
+rotating
+magnifying
+creating augments in sim_stack_033
+inverting
+rotating
+magnifying
+creating augments in sim_stack_102
+inverting
+rotating
+magnifying
+creating augments in sim_stack_082
+inverting
+rotating
+magnifying
+creating augments in sim_stack_078
+inverting
+rotating
+magnifying
+creating augments in sim_stack_091
+inverting
+rotating
+magnifying
+creating augments in sim_stack_026
+inverting
+rotating
+magnifying
+creating augments in sim_stack_024
+inverting
+rotating
+magnifying
+creating augments in sim_stack_099
+inverting
+rotating
+magnifying
+creating augments in sim_stack_096
+inverting
+rotating
+magnifying
+creating augments in sim_stack_048
+inverting
+rotating
+Traceback (most recent call last):
+  File "/u/skhan/.local/lib/python3.8/site-packages/imageio/plugins/tifffile.py", line 381, in _can_read
+    _tifffile.TiffFile(request.get_file(), **request.kwargs)
+  File "/u/skhan/.local/lib/python3.8/site-packages/imageio/core/request.py", line 492, in get_file
+    self._file = open(self.filename, "rb")
+PermissionError: [Errno 13] Permission denied: '/u/skhan/stem-learning/data/WSe/data_for_gan/generated/GANNED_DATA_FOLDER/sim/data_folder_20220606_MODEL_unet_dist_gen_fft_10_SIM_pristine_gaussian_0.1_EXP_107_1840/sim_stack_048/augments/flip/label_2vacancy.tiff'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "1_preprocess_express.py", line 33, in <module>
+    create_augments(input_dir, train_data_dirs, ftype)
+  File "/u/skhan/stem-learning/code/1_preprocessing/make_data.py", line 16, in create_augments
+    make_augments(augdir, ftype)
+  File "/u/skhan/stem-learning/code/1_preprocessing/generate_augments.py", line 38, in make_augments
+    img_arr = imread(join(augdir, d, img))
+  File "/u/skhan/.local/lib/python3.8/site-packages/imageio/__init__.py", line 97, in imread
+    return imread_v2(uri, format=format, **kwargs)
+  File "/u/skhan/.local/lib/python3.8/site-packages/imageio/v2.py", line 200, in imread
+    with imopen(uri, "ri", **imopen_args) as file:
+  File "/u/skhan/.local/lib/python3.8/site-packages/imageio/core/imopen.py", line 213, in imopen
+    plugin_instance = candidate_plugin(request, **kwargs)
+  File "/u/skhan/.local/lib/python3.8/site-packages/imageio/config/plugins.py", line 107, in partial_legacy_plugin
+    return LegacyPlugin(request, legacy_plugin)
+  File "/u/skhan/.local/lib/python3.8/site-packages/imageio/core/legacy_plugin_wrapper.py", line 78, in __init__
+    if not self._format.can_read(request):
+  File "/u/skhan/.local/lib/python3.8/site-packages/imageio/core/format.py", line 241, in can_read
+    return self._can_read(request)
+  File "/u/skhan/.local/lib/python3.8/site-packages/imageio/plugins/tifffile.py", line 389, in _can_read
+    request.get_file().seek(0)
+  File "/u/skhan/.local/lib/python3.8/site-packages/imageio/core/request.py", line 492, in get_file
+    self._file = open(self.filename, "rb")
+PermissionError: [Errno 13] Permission denied: '/u/skhan/stem-learning/data/WSe/data_for_gan/generated/GANNED_DATA_FOLDER/sim/data_folder_20220606_MODEL_unet_dist_gen_fft_10_SIM_pristine_gaussian_0.1_EXP_107_1840/sim_stack_048/augments/flip/label_2vacancy.tiff'
+srun: error: cn033: task 0: Exited with exit code 1

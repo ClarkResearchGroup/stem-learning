@@ -1,0 +1,77 @@
+
+Currently Loaded Modules:
+  1) gcc/11.2.0   2) anaconda3/2021.05   3) cuda/11.7.0   4) cudnn/8.4.1.50
+
+ 
+
+job is starting on gpub046.delta.internal.ncsa.edu
+2022-07-28 00:02:14.891824: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-07-28 00:02:22.668915: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1525] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 43525 MB memory:  -> device: 0, name: NVIDIA A40, pci bus id: 0000:46:00.0, compute capability: 8.6
+2022-07-28 00:02:40.249645: I tensorflow/stream_executor/cuda/cuda_dnn.cc:368] Loaded cuDNN version 8401
+raw directories:
+/u/skhan/stem-learning/data/STO/STO_1/exp_1K/
+/u/skhan/stem-learning/data/STO/STO_1/sim_1K/
+256 directories:
+/u/skhan/stem-learning/data/STO/STO_1/exp_1K_256_slices/
+/u/skhan/stem-learning/data/STO/STO_1/sim_1K_gauss_0.2_256_slices/
+parsing directories
+batch_idxs =  224
+total epochs =  53.0
+[Errno 2] No such file or directory: '/u/skhan/stem-learning/cycle_gan_results/checkpoints/checkpoint_20220727_MODEL_unet_ident_gen_fft_10_SIM_pristine_gaussian_0.2_EXP_STO_1/data_20220727_MODEL_unet_ident_gen_fft_10_SIM_pristine_gaussian_0.2_EXP_STO_1.p'
+0 0.002
+[0/224]: 1.0528502407528104
+[1/224]: 0.08548444225674584
+[2/224]: 0.05471664950961158
+[3/224]: 0.07024419875372023
+[4/224]: 0.05665233589354016
+[5/224]: 0.06118376482100714
+[6/224]: 0.05766564891451881
+[7/224]: 0.05381975855146136
+[8/224]: 0.05624757494245257
+[9/224]: 0.05889703546251569
+[10/224]: 0.05702715828305199
+[11/224]: 0.0651484387261527
+[12/224]: 0.07325335343678792
+[13/224]: 0.05737142903464181
+[14/224]: 0.05786254860105969
+[15/224]: 0.056538201513744536
+[16/224]: 0.05710425263359433
+[17/224]: 0.05915498165857224
+[18/224]: 0.07502253282637823
+[19/224]: 0.05666686807359968
+[20/224]: 0.0680865730558123
+[21/224]: 0.06407431761423747
+[22/224]: 0.06943842342921666
+[23/224]: 0.06319462117694673
+[24/224]: 0.06046383153824579
+[25/224]: 0.06063371045248849
+[26/224]: 0.05800183614095052
+[27/224]: 0.056837689308893116
+[28/224]: 0.05560673418499175
+[29/224]: 0.057756265004475914
+[30/224]: 0.05680295399257115
+[31/224]: 0.05403643562680199
+[32/224]: 0.057414900688898
+[33/224]: 0.057413765362330844
+[34/224]: 0.05682433219183059
+[35/224]: 0.0691934483391898
+Traceback (most recent call last):
+  File "cycleGAN_for_STEM.py", line 349, in <module>
+    real_sim = np.array([load_train_data(fn, num_channels) for fn in sim_fn_list]).astype(np.float32)
+  File "cycleGAN_for_STEM.py", line 349, in <listcomp>
+    real_sim = np.array([load_train_data(fn, num_channels) for fn in sim_fn_list]).astype(np.float32)
+  File "/u/skhan/stem-learning/code/cycle_gan/make_dataset.py", line 85, in load_train_data
+    arr = process_image(fn)
+  File "/u/skhan/stem-learning/code/cycle_gan/make_dataset.py", line 11, in process_image
+    input_img = imread(input_file).astype(np.float32)
+  File "/u/skhan/.local/lib/python3.8/site-packages/tifffile/tifffile.py", line 973, in imread
+    with TiffFile(
+  File "/u/skhan/.local/lib/python3.8/site-packages/tifffile/tifffile.py", line 3598, in __init__
+    fh = FileHandle(file, mode=mode, name=name, offset=offset, size=size)
+  File "/u/skhan/.local/lib/python3.8/site-packages/tifffile/tifffile.py", line 11829, in __init__
+    self.open()
+  File "/u/skhan/.local/lib/python3.8/site-packages/tifffile/tifffile.py", line 11848, in open
+    self._fh = open(self._file, self._mode)  # type: ignore
+PermissionError: [Errno 13] Permission denied: '/u/skhan/stem-learning/data/STO/STO_1/sim_1K_gauss_0.2_256_slices/05-1_Simu_STO_80kV_source_1_008.tiff'
+srun: error: gpub046: task 0: Exited with exit code 1

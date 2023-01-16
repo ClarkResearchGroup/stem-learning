@@ -1,0 +1,66 @@
+
+Currently Loaded Modules:
+  1) gcc/11.2.0   2) cudnn/8.4.1.50   3) anaconda3_gpu/4.13.0   4) cuda/11.6.1
+
+ 
+
+job is starting on gpub045.delta.internal.ncsa.edu
+2022-07-08 13:53:40.335661: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-07-08 13:53:49.959821: E tensorflow/stream_executor/cuda/cuda_blas.cc:3005] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2022-07-08 13:54:04.012884: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /sw/spack/delta-2022-03/apps/cuda/11.6.1-gcc-11.2.0-vglutoe/lib64:/sw/external/libraries/cudnn-linux-x86_64-8.4.1.50_cuda11.6-archive/lib:/sw/spack/delta-2022-03/apps/gcc/11.2.0-gcc-8.4.1-fxgnsyr/lib64:/sw/spack/delta-2022-03/apps/gcc/11.2.0-gcc-8.4.1-fxgnsyr/lib
+2022-07-08 13:54:04.014392: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /sw/spack/delta-2022-03/apps/cuda/11.6.1-gcc-11.2.0-vglutoe/lib64:/sw/external/libraries/cudnn-linux-x86_64-8.4.1.50_cuda11.6-archive/lib:/sw/spack/delta-2022-03/apps/gcc/11.2.0-gcc-8.4.1-fxgnsyr/lib64:/sw/spack/delta-2022-03/apps/gcc/11.2.0-gcc-8.4.1-fxgnsyr/lib
+2022-07-08 13:54:04.014403: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2022-07-08 13:54:36.578786: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-07-08 13:54:40.696766: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1616] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 43511 MB memory:  -> device: 0, name: NVIDIA A40, pci bus id: 0000:46:00.0, compute capability: 8.6
+2022-07-08 13:54:47.815386: I tensorflow/stream_executor/cuda/cuda_dnn.cc:384] Loaded cuDNN version 8401
+2022-07-08 13:54:58.637256: I tensorflow/stream_executor/cuda/cuda_blas.cc:1638] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+DATA (211, 1528)
+EVALUATING /u/skhan/stem-learning/data/WSe/test_experiment/211_day/RR_1528/input.tif
+processing data
+loading model
+strides: (64, 64)
+predicting data
+stitching data
+saving data
+DATA (211, 1922)
+EVALUATING /u/skhan/stem-learning/data/WSe/test_experiment/211_day/RR_1922/input.tif
+processing data
+loading model
+strides: (64, 64)
+predicting data
+stitching data
+saving data
+DATA (211, 2124)
+EVALUATING /u/skhan/stem-learning/data/WSe/test_experiment/211_day/RR_2124/input.tif
+processing data
+loading model
+strides: (64, 64)
+predicting data
+stitching data
+saving data
+DATA (107, 1750)
+EVALUATING /u/skhan/stem-learning/data/WSe/test_experiment/107_day/RR_1750/input.tif
+processing data
+loading model
+strides: (64, 64)
+predicting data
+stitching data
+saving data
+DATA (107, 1840)
+EVALUATING /u/skhan/stem-learning/data/WSe/test_experiment/107_day/RR_1840/input.tif
+processing data
+loading model
+strides: (64, 64)
+predicting data
+stitching data
+saving data
+DATA (107, 1847)
+EVALUATING /u/skhan/stem-learning/data/WSe/test_experiment/107_day/RR_1847/input.tif
+processing data
+loading model
+strides: (64, 64)
+predicting data
+stitching data
+saving data
