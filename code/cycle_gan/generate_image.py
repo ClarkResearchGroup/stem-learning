@@ -55,8 +55,7 @@ def get_avg_pred(model, cut):
     return sum(preds)/8.0
 
 def generate_image(model, input_file, fine_size, stride=None, avg=False, \
-        plot=False, save_data=False, save_dir='./',fname='generated_input.tiff', 
-        watermark=False):
+        plot=False, save_data=False, save_dir='./',fname='generated_input.tiff'):
     ''' evauates an input image given the model'''
 
     print("processing data")
@@ -86,38 +85,13 @@ def generate_image(model, input_file, fine_size, stride=None, avg=False, \
 
     if save_data:
         print("saving data")
-        imwrite(save_dir + fname, a.astype(np.float32))
-        if watermark:
-            # Open the TIFF image
-            with TiffFile(save_dir + fname) as tif:
-                image = tif.asarray()
-
-            # Create a PIL image from the TIFF data
-            pil_image = Image.fromarray(image)
-
-            # Create an ImageDraw object to draw on the image
-            draw = ImageDraw.Draw(pil_image)
-
-            # Define the font and font size to use for the watermark
-            font = font = ImageFont.load_default()
-
-            # Define the watermark text
-            watermark = "Generated STEM image using the \nstem-learning repo \nhttps://github.com/ClarkResearchGroup/stem-learning"
-
-            # Get the size of the image
-            width, height = pil_image.size
-
-            # Draw the watermark on the bottom right corner of the image
-            draw.text((width - 250, height - 50), watermark, font=font, fill=1)
-
-            # Save the image with the watermark
-            pil_image.save(save_dir + fname)
+        imwrite(save_dir + fname, a.astype(np.float32), metadata={"source": "Generated STEM image using the stem-learning repo https://github.com/ClarkResearchGroup/stem-learning"})
 
     return a
 
-def GAN_image_folder(model, input_dir, save_dir, fine_size, stride=None, avg=False, watermark=False):
+def GAN_image_folder(model, input_dir, save_dir, fine_size, stride=None, avg=False):
     """given a model, and input_directory of images, creates a new folder that GANs each image"""
     os.makedirs(save_dir, exist_ok=True)
     for input_file in os.listdir(input_dir):
         generate_image(model, os.path.join(input_dir, input_file), fine_size, stride, \
-            avg, plot=False, save_data=True, save_dir=save_dir,fname=input_file, watermark=watermark)
+            avg, plot=False, save_data=True, save_dir=save_dir,fname=input_file)
