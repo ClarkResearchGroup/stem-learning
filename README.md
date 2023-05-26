@@ -7,6 +7,8 @@ This "stem-learning" repo contains 2 parts:
 
 These models are used to identify point defects like Te substitutions or Se vacancies in WSe<sub>2-2x</sub>Te<sub>2x</sub> and have made sub-pm precision measurement of strain fields of single-atom defects possible. More discussion of the results can be found on this NanoLetter paper <https://pubs.acs.org/doi/abs/10.1021/acs.nanolett.0c00269>.
 
+and more recently, our cycleGAN paper:
+<https://doi.org/10.1038/s41524-023-01042-3>
  
 ## Getting Started
 
